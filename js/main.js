@@ -168,6 +168,7 @@ $(document).ready(function(){
     });
 
     $('.slideshow').draggable({
+        containment: 'parent',
         axis: 'x'
     });
 
