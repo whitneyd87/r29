@@ -167,9 +167,14 @@ $(document).ready(function(){
 
     });
 
-    $('.slideshow').draggable({
-        containment: 'parent',
-        axis: 'x'
+    $('.slideshow-vid').draggable({
+        axis: 'x',
+        containment: [-1200, 0, 20, 0]
+    });
+
+    $('.slideshow-art').draggable({
+        axis: 'x',
+        containment: [-2200, 0, 20, 0]
     });
 
 

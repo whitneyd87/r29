@@ -2635,8 +2635,8 @@ footer figure {
       padding: 90px 0 0 0;
     }
 
-    .originals .slideshow {
-      margin: 0 -1000px 0 0;
+    .vid-gal {
+      overflow-scrolling: auto;
     }
 
     .pagination {
