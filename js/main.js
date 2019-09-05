@@ -15,7 +15,6 @@ $(document).ready(function(){
     var bullets = $('.bullet');
 
     
-
     var originalVidDots = $('.originals').find(bullets); 
 
     var beautyPagDots = $('.beauty').find(bullets);
@@ -135,8 +134,6 @@ $(document).ready(function(){
 
     $(function(){
     
-      var tickerLength = $('.news-story').length;
-    
       var tickerHeight = $('.news-story').outerHeight();
     
       $('.news-story:last-child').prependTo('.latest-scroll ul');
@@ -166,6 +163,29 @@ $(document).ready(function(){
       }, 3000);
 
     });
+
+    $('.arrow-up').click(function(){
+
+        var tickerHeight = $('.news-story').outerHeight();
+
+         $('.latest-scroll ul').animate({
+    
+          top : +tickerHeight
+
+        }, 500);
+    });
+
+    $('.arrow-down').click(function(){
+
+        var tickerHeight = $('.news-story').outerHeight();
+
+         $('.latest-scroll ul').animate({
+    
+          top : -tickerHeight
+
+        },500);
+    });
+
 
     $('.slideshow-vid').draggable({
         axis: 'x',

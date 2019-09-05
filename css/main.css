@@ -548,6 +548,15 @@ i {
   padding: 0 20px;
 }
 
+.arrow-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 200px;
+  width: 20px;
+}
+
 .latest-scroll {
   height: 150px;
   margin-top: 50px;
