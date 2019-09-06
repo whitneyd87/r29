@@ -33,7 +33,9 @@ $(document).ready(function(){
 
     $('#date').html( days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ',' + ' ' + date.getFullYear() );
     
-    $('#search').on('click', function() {
+    $('#search').on('click', function(e) {
+
+        e.preventDefault();
 
         if(clicked === 0) {
 
@@ -82,7 +84,7 @@ $(document).ready(function(){
 
         if (winY > 100) {
             
-            $('#header').css({'position': 'fixed', 'top': '20px', 'background-color': 'white'});
+            $('#header').css({'position': 'fixed', 'background-color': 'white', 'height': '42px'});
             $('#date').css('display', 'none');
             $('#logo').addClass('logo');
             $('#search-box').addClass('searchScroll');
@@ -93,7 +95,7 @@ $(document).ready(function(){
 
         } else if (winY < 100) {
 
-            $('#header').css({'position': 'relative', 'top': '0px', 'background-color': 'none'});
+            $('#header').css({'position': 'relative', 'background-color': 'none', 'height': 'auto'});
             $('#date').css('display', 'block');
             $('#logo').removeClass('logo');
             $('#search-box').removeClass('searchScroll');
