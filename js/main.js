@@ -41,7 +41,7 @@ $(document).ready(function(){
         
             $('#search-input').animate( {
 
-                width: '80%'
+                width: '70%'
 
             }, 'slow');    
 
@@ -75,6 +75,36 @@ $(document).ready(function(){
         });
 
     }
+
+    $(window).scroll(function(){
+     
+        var winY = $(window).scrollTop();
+
+        if (winY > 100) {
+            
+            $('#header').css({'position': 'fixed', 'top': '20px', 'background-color': 'white'});
+            $('#date').css('display', 'none');
+            $('#logo').addClass('logo');
+            $('#search-box').addClass('searchScroll');
+            $('#discover').addClass('scrollDiscover');
+            $('#watch').addClass('scrollWatch');
+            $('#shop').addClass('scrollShop');
+            $('#more').addClass('scrollMore');
+
+        } else if (winY < 100) {
+
+            $('#header').css({'position': 'relative', 'top': '0px', 'background-color': 'none'});
+            $('#date').css('display', 'block');
+            $('#logo').removeClass('logo');
+            $('#search-box').removeClass('searchScroll');
+            $('#discover').removeClass('scrollDiscover');
+            $('#watch').removeClass('scrollWatch');
+            $('#shop').removeClass('scrollShop');
+            $('#more').removeClass('scrollMore');
+
+        }
+
+    });
 
 
     $('#styleInput').on('change', function() {
@@ -402,8 +432,6 @@ $(document).ready(function(){
 
         });
 
-
-
         var vid1 = setTimeout (function () { 
 
             $('.trend-vid4').removeClass('grow');
@@ -510,8 +538,6 @@ $(document).ready(function(){
         clearInterval(intervalBubble);
     
     });
-
-
 
     setInterval(function() { 
 
