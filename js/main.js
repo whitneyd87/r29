@@ -88,7 +88,7 @@ $(document).ready(function(){
             $('#date').css('display', 'none');
             $('#logo').addClass('logo');
             $('#search-box').addClass('searchScroll');
-            $('.main-nav').css ('transform', 'translateX(-10%)');
+            $('.main-nav').css('transform', 'translateX(-15px)');
             $('#discover').addClass('scrollDiscover');
             $('#watch').addClass('scrollWatch');
             $('#shop').addClass('scrollShop');
