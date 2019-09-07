@@ -343,7 +343,7 @@ header nav ul .slide {
 
 @keyframes scrollMore {
     100% {
-    transform: translateX(2%) translateY(-262%);
+    transform: translateX(10%) translateY(-262%);
   }
 } 
 
