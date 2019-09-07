@@ -194,6 +194,7 @@ header {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   padding-top: 20px;
   position: relative;
   width: 100%;
@@ -302,7 +303,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   } 
   100% {
-    transform: translateX(-270px) translateY(40px);
+    transform: translateX(-230%) translateY(143%);
   }
 } 
 
@@ -318,7 +319,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   }
   100% {
-    transform: translateX(-180px) translateY(4px);
+    transform: translateX(-200%) translateY(15%);
   }
 } 
 
@@ -330,7 +331,7 @@ header nav ul .slide {
 
 @keyframes scrollShop {
     100% {
-    transform: translateX(-95px) translateY(-32px);
+    transform: translateX(-110%) translateY(-123%);
   }
 } 
 
@@ -342,7 +343,7 @@ header nav ul .slide {
 
 @keyframes scrollMore {
     100% {
-    transform: translateX(-15px) translateY(-68px);
+    transform: translateX(-15%) translateY(-262%);
   }
 } 
 

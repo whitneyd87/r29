@@ -84,10 +84,11 @@ $(document).ready(function(){
 
         if (winY > 100) {
             
-            $('#header').css({'position': 'fixed', 'background-color': 'white', 'height': '42px'});
+            $('#header').css({'position': 'fixed', 'background-color': 'white', 'height': '42px', 'overflow': 'visible'});
             $('#date').css('display', 'none');
             $('#logo').addClass('logo');
             $('#search-box').addClass('searchScroll');
+            $('.main-nav').css ('transform', 'translateX(-10%)');
             $('#discover').addClass('scrollDiscover');
             $('#watch').addClass('scrollWatch');
             $('#shop').addClass('scrollShop');
@@ -99,6 +100,7 @@ $(document).ready(function(){
             $('#date').css('display', 'block');
             $('#logo').removeClass('logo');
             $('#search-box').removeClass('searchScroll');
+            $('.main-nav').css ('transform', 'translateX(0)');
             $('#discover').removeClass('scrollDiscover');
             $('#watch').removeClass('scrollWatch');
             $('#shop').removeClass('scrollShop');
