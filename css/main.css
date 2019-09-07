@@ -319,7 +319,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   }
   100% {
-    transform: translateX(-188%) translateY(15%);
+    transform: translateX(-186%) translateY(15%);
   }
 } 
 
@@ -331,7 +331,7 @@ header nav ul .slide {
 
 @keyframes scrollShop {
     100% {
-    transform: translateX(-95%) translateY(-123%);
+    transform: translateX(-87%) translateY(-123%);
   }
 } 
 
@@ -343,7 +343,7 @@ header nav ul .slide {
 
 @keyframes scrollMore {
     100% {
-    transform: translateX(0) translateY(-262%);
+    transform: translateX(5%) translateY(-262%);
   }
 } 
 
