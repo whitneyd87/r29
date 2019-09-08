@@ -64,7 +64,7 @@ $(document).ready(function(){
            
     });
 
-    window.onload = function () {
+    // window.onload = function () {
     
         $('.main-li').each( function ( i, e ) {
     
@@ -76,7 +76,7 @@ $(document).ready(function(){
     
         });
 
-    }
+    // }
 
     $(window).scroll(function(){
      
