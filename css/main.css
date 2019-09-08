@@ -270,6 +270,14 @@ header nav ul .slide {
   right: 0;
 }
 
+.headerScroll {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  height: 42px;
+  overflow: visible;
+}
+
 @keyframes logoShrink {
   0% {
     transform: scale(1) translateX(0);

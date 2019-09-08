@@ -84,7 +84,7 @@ $(document).ready(function(){
 
         if (winY > 100) {
             
-            $('#header').css({'position': 'fixed', 'background-color': 'white', 'height': '42px', 'overflow': 'visible'});
+            $('#header').addClass('headerScroll');
             $('#date').css('display', 'none');
             $('#logo').addClass('logo');
             $('#search-box').addClass('searchScroll');
@@ -96,7 +96,7 @@ $(document).ready(function(){
 
         } else if (winY < 100) {
 
-            $('#header').css({'position': 'relative', 'background-color': 'none', 'height': 'auto'});
+            $('#header').removeClass('headerScroll');
             $('#date').css('display', 'block');
             $('#logo').removeClass('logo');
             $('#search-box').removeClass('searchScroll');
