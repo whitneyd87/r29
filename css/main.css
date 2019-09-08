@@ -644,7 +644,6 @@ i {
   margin-top: 50px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  pointer-events: none;
   width: 110%;
 }
 
@@ -661,6 +660,10 @@ i {
 
 .latest-scroll .content h6 {
   margin-bottom: 10px;
+}
+
+.latest-scroll .content h4 {
+  padding-bottom: 10px;
 }
 
 
@@ -2623,6 +2626,7 @@ footer figure {
     }
 
     .latest-scroll {
+      pointer-events: none;
       width: 120%;
     }
 
