@@ -344,7 +344,7 @@ header nav ul .slide {
 
 @keyframes scrollShop {
     100% {
-    transform: translateX(-84%) translateY(-123%);
+    transform: translateX(-84%) translateY(-124%);
   }
 } 
 
