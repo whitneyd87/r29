@@ -16,6 +16,7 @@
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    width: 100%;
 }
 
 /*
@@ -106,6 +107,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .wrapper {
@@ -216,6 +218,8 @@ header nav {
 
 header nav ul {
   position: relative;
+  top: 0;
+  left: 0;
 }
 
 header nav ul .main-li {
@@ -229,6 +233,7 @@ header nav ul .main-li {
   margin-bottom: 10px;
   padding: 5px 10px;
   position: relative;
+  overflow: hidden;
 }
 
 @keyframes slide {
@@ -311,7 +316,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   } 
   100% {
-    transform: translateX(-220%) translateY(143%);
+    transform: translateX(-219%) translateY(143%);
   }
 } 
 
@@ -327,7 +332,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   }
   100% {
-    transform: translateX(-190%) translateY(15%);
+    transform: translateX(-183%) translateY(15%);
   }
 } 
 
@@ -339,7 +344,7 @@ header nav ul .slide {
 
 @keyframes scrollShop {
     100% {
-    transform: translateX(-95%) translateY(-123%);
+    transform: translateX(-84%) translateY(-123%);
   }
 } 
 
@@ -351,7 +356,7 @@ header nav ul .slide {
 
 @keyframes scrollMore {
   100% {
-    transform: translateX(0) translateY(-262%);
+    transform: translateX(15%) translateY(-262%);
   }
 } 
 
@@ -647,15 +652,23 @@ i {
   display: none;
 }
 
+.hide-ticker {
+  overflow: hidden;
+}
+
 .latest-scroll {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
   height: 150px;
   margin-top: 50px;
-  overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   width: 110%;
 }
 
-.latest-scroll ul{
+.latest-scroll ul {
   list-style: none;
   margin: 0;
   position: relative; 
