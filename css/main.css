@@ -243,7 +243,7 @@ header nav ul .main-li {
 }
 
 @-webkit-keyframes slide {
-   0% {
+  0% {
     right: -300px
   }
   
@@ -271,7 +271,7 @@ header nav ul .slide {
 }
 
 @keyframes logoShrink {
-    0% {
+  0% {
     transform: scale(1) translateX(0);
   }
   
@@ -303,7 +303,7 @@ header nav ul .slide {
     transform: translateX(0) translateY(0);
   } 
   100% {
-    transform: translateX(-222%) translateY(143%);
+    transform: translateX(-220%) translateY(143%);
   }
 } 
 
@@ -331,7 +331,7 @@ header nav ul .slide {
 
 @keyframes scrollShop {
     100% {
-    transform: translateX(-93%) translateY(-123%);
+    transform: translateX(-95%) translateY(-123%);
   }
 } 
 
@@ -342,7 +342,7 @@ header nav ul .slide {
 }
 
 @keyframes scrollMore {
-    100% {
+  100% {
     transform: translateX(0) translateY(-262%);
   }
 } 
