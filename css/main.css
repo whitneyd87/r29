@@ -300,8 +300,8 @@ header nav ul .slide {
 }
 
 @keyframes searchScroll {
-    100% {
-    transform: translateX(1000%) translateY(-60%);
+  100% {
+    transform: translateX(150px) translateY(-10px);
   }
 } 
 
@@ -312,11 +312,8 @@ header nav ul .slide {
 }
 
 @keyframes scrollDiscover {
-  0% {
-    transform: translateX(0) translateY(0);
-  } 
   100% {
-    transform: translateX(-219%) translateY(143%);
+    transform: translateX(-245px) translateY(40px);
   }
 } 
 
@@ -328,11 +325,8 @@ header nav ul .slide {
 }
 
 @keyframes scrollWatch {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
   100% {
-    transform: translateX(-183%) translateY(15%);
+    transform: translateX(-159px) translateY(4px);
   }
 } 
 
@@ -343,8 +337,8 @@ header nav ul .slide {
 }
 
 @keyframes scrollShop {
-    100% {
-    transform: translateX(-84%) translateY(-124%);
+   100% {
+    transform: translateX(-73px) translateY(-32px);
   }
 } 
 
@@ -356,7 +350,7 @@ header nav ul .slide {
 
 @keyframes scrollMore {
   100% {
-    transform: translateX(15%) translateY(-262%);
+    transform: translateX(14px) translateY(-68px);
   }
 } 
 
@@ -2079,40 +2073,35 @@ footer figure {
     }
 
 	@keyframes searchScroll {
-	    100% {
-	    transform: translateX(60%) translateY(-35%);
+	  100% {
+	    transform: translateX(250px) translateY(-10px);
 	  }
 	} 
 
     @keyframes scrollDiscover {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  } 
 	  100% {
-	    transform: translateX(-213%) translateY(140%);
+	    transform: translateX(-420px) translateY(50px);
 	  }
 	} 
 
 	@keyframes scrollWatch {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  }
 	  100% {
-	    transform: translateX(-204%) translateY(17%);
+	    transform: translateX(-285px) translateY(8px);
 	  }
 	} 
 
 	@keyframes scrollShop {
-	    100% {
-	    transform: translateX(-105%) translateY(-114%);
+	   100% {
+	    transform: translateX(-150px) translateY(-34px);
 	  }
 	} 
 
 	@keyframes scrollMore {
 	  100% {
-	    transform: translateX(-7%) translateY(-245%);
+	    transform: translateX(-15px) translateY(-76px);
 	  }
 	} 
+
 
 
     /*--- HERO AREA ---*/
@@ -2415,36 +2404,36 @@ footer figure {
 
     /*HEADER*/
 
+    @keyframes searchScroll {
+	  100% {
+	    transform: translateX(250px) translateY(0);
+	  }
+	}
 
     @keyframes scrollDiscover {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  } 
 	  100% {
-	    transform: translateX(-212%) translateY(160%);
+	    transform: translateX(-485px) translateY(50px);
 	  }
 	} 
 
 	@keyframes scrollWatch {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  }
 	  100% {
-	    transform: translateX(-210%) translateY(38%);
+	    transform: translateX(-330px) translateY(8px);
 	  }
 	} 
 
 	@keyframes scrollShop {
-	    100% {
-	    transform: translateX(-111%) translateY(-94%);
+	   100% {
+	    transform: translateX(-175px) translateY(-34px);
 	  }
 	} 
 
 	@keyframes scrollMore {
 	  100% {
-	    transform: translateX(-12%) translateY(-225%);
+	    transform: translateX(-20px) translateY(-76px);
 	  }
 	} 
+
 
     /*CALL TO ACTION*/
 
@@ -2605,52 +2594,36 @@ footer figure {
     	height: 80px;
     }
 
-    @keyframes searchScroll {
-	    100% {
-	    transform: translateX(70%) translateY(5%);
-	  }
-	} 
-
     @keyframes scrollDiscover {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  } 
 	  100% {
-	    transform: translateX(-295%) translateY(160%);
+	    transform: translateX(-910px) translateY(60px);
 	  }
 	} 
-
-	.scrollDiscover {
-		width: 300px !important;
-	}
-
-	.scrollWatch,
-	.scrollShop,
-	.scrollMore {
-		width: 280px !important;
-	}
 
 	@keyframes scrollWatch {
-	  0% {
-	    transform: translateX(0) translateY(0);
-	  }
 	  100% {
-	    transform: translateX(-190%) translateY(38%);
+	    transform: translateX(-611px) translateY(18px);
 	  }
 	} 
 
 	@keyframes scrollShop {
-	    100% {
-	    transform: translateX(-95%) translateY(-94%);
+	  100% {
+	    transform: translateX(-312px) translateY(-24px);
 	  }
 	} 
 
 	@keyframes scrollMore {
 	  100% {
-	    transform: translateX(5%) translateY(-225%);
+	    transform: translateX(-15px) translateY(-66px);
 	  }
 	} 
 
+	.scrollDiscovers,
+	.scrollWatch,
+	.scrollShop,
+	.scrollMore {
+		width: 280px !important;
+	}
 
     /*HERO AREA*/
 
