@@ -279,7 +279,7 @@ header nav ul .slide {
   position: fixed;
   top: 0;
   background-color: white;
-  height: 42px;
+  height: 50px;
   overflow: visible;
 }
 
@@ -301,7 +301,7 @@ header nav ul .slide {
 
 @keyframes searchScroll {
     100% {
-    transform: translateX(145px) translateY(-7px);
+    transform: translateX(1000%) translateY(-60%);
   }
 } 
 
@@ -2074,6 +2074,46 @@ footer figure {
       left: 40px;
     }
 
+    .headerScroll {
+      height: 60px;
+    }
+
+	@keyframes searchScroll {
+	    100% {
+	    transform: translateX(60%) translateY(-35%);
+	  }
+	} 
+
+    @keyframes scrollDiscover {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  } 
+	  100% {
+	    transform: translateX(-213%) translateY(140%);
+	  }
+	} 
+
+	@keyframes scrollWatch {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  }
+	  100% {
+	    transform: translateX(-204%) translateY(17%);
+	  }
+	} 
+
+	@keyframes scrollShop {
+	    100% {
+	    transform: translateX(-105%) translateY(-114%);
+	  }
+	} 
+
+	@keyframes scrollMore {
+	  100% {
+	    transform: translateX(-7%) translateY(-245%);
+	  }
+	} 
+
 
     /*--- HERO AREA ---*/
 
@@ -2373,6 +2413,39 @@ footer figure {
     }
 
 
+    /*HEADER*/
+
+
+    @keyframes scrollDiscover {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  } 
+	  100% {
+	    transform: translateX(-212%) translateY(160%);
+	  }
+	} 
+
+	@keyframes scrollWatch {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  }
+	  100% {
+	    transform: translateX(-210%) translateY(38%);
+	  }
+	} 
+
+	@keyframes scrollShop {
+	    100% {
+	    transform: translateX(-111%) translateY(-94%);
+	  }
+	} 
+
+	@keyframes scrollMore {
+	  100% {
+	    transform: translateX(-12%) translateY(-225%);
+	  }
+	} 
+
     /*CALL TO ACTION*/
 
 
@@ -2527,6 +2600,56 @@ footer figure {
       top: 100%;
       left: 10%;
     }
+
+    .headerScroll {
+    	height: 80px;
+    }
+
+    @keyframes searchScroll {
+	    100% {
+	    transform: translateX(70%) translateY(5%);
+	  }
+	} 
+
+    @keyframes scrollDiscover {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  } 
+	  100% {
+	    transform: translateX(-295%) translateY(160%);
+	  }
+	} 
+
+	.scrollDiscover {
+		width: 300px !important;
+	}
+
+	.scrollWatch,
+	.scrollShop,
+	.scrollMore {
+		width: 280px !important;
+	}
+
+	@keyframes scrollWatch {
+	  0% {
+	    transform: translateX(0) translateY(0);
+	  }
+	  100% {
+	    transform: translateX(-190%) translateY(38%);
+	  }
+	} 
+
+	@keyframes scrollShop {
+	    100% {
+	    transform: translateX(-95%) translateY(-94%);
+	  }
+	} 
+
+	@keyframes scrollMore {
+	  100% {
+	    transform: translateX(5%) translateY(-225%);
+	  }
+	} 
 
 
     /*HERO AREA*/
