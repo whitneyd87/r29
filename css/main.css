@@ -217,9 +217,22 @@ header nav {
 }
 
 header nav ul {
-  position: relative;
-  top: 0;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+
+.navScroll {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
   left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 
 header nav ul .main-li {
@@ -285,11 +298,11 @@ header nav ul .slide {
 
 @keyframes logoShrink {
   0% {
-    transform: scale(1) translateX(0);
+    transform: scale(1.7) translateX(0);
   }
   
   100% {
-    transform: scale(0.8) translateX(-15px);
+    transform: scale(1.2) translateX(5px);
   }
 } 
 
@@ -301,7 +314,7 @@ header nav ul .slide {
 
 @keyframes searchScroll {
   100% {
-    transform: translateX(150px) translateY(-10px);
+    transform: translateX(145px) translateY(-50%);
   }
 } 
 
@@ -311,62 +324,13 @@ header nav ul .slide {
   -moz-animation: searchScroll 1s ease-out 1 forwards;
 }
 
-@keyframes scrollDiscover {
-  100% {
-    transform: translateX(-245px) translateY(40px);
-  }
-} 
-
-.scrollDiscover {
-  animation: scrollDiscover 1s ease-out 1 forwards;
-  -webkit-animation: scrollDiscover 1s ease-out 1 forwards !important;
-  -moz-animation: scrollDiscover 1s ease-out 1 forwards;
-  z-index: 99;
-}
-
-@keyframes scrollWatch {
-  100% {
-    transform: translateX(-159px) translateY(4px);
-  }
-} 
-
-.scrollWatch {
-  animation: scrollWatch 1s ease-out 1 forwards;
-  -webkit-animation: scrollWatch 1s ease-out 1 forwards !important;
-  -moz-animation: scrollWatch 1s ease-out 1 forwards;
-}
-
-@keyframes scrollShop {
-   100% {
-    transform: translateX(-73px) translateY(-32px);
-  }
-} 
-
-.scrollShop {
-  animation: scrollShop 1s ease-out 1 forwards;
-  -webkit-animation: scrollShop 1s ease-out 1 forwards !important;
-  -moz-animation: scrollShop 1s ease-out 1 forwards;
-}
-
-@keyframes scrollMore {
-  100% {
-    transform: translateX(14px) translateY(-68px);
-  }
-} 
-
-.scrollMore {
-  animation: scrollMore 1s ease-out 1 forwards;
-  -webkit-animation: scrollMore 1s ease-out 1 forwards !important;
-  -moz-animation: scrollMore 1s ease-out 1 forwards;
-}
-
 #discover {
   border-top: 2px solid rgb(252,24,33);
   padding: 5px 10px;
+  width: 100%;
 }
 
 .sec-nav {
-  float: right;
   width: 60%;
 }
 
@@ -380,7 +344,7 @@ i {
   color: rgb(0,0,0);
 }
 
-.search-box {
+#search-box {
   align-items: center;
   display: flex;
   height: 30px;
@@ -2054,8 +2018,9 @@ footer figure {
       font-size: 1rem;
     }
 
-    .search-box {
+    #search-box {
       left: 40px;
+      top: 45%;
       width: 60%;
     }
 
@@ -2066,6 +2031,7 @@ footer figure {
     #date {
       font-size: 1.125rem;
       left: 40px;
+      top: 80%;
     }
 
     .headerScroll {
@@ -2074,34 +2040,9 @@ footer figure {
 
 	@keyframes searchScroll {
 	  100% {
-	    transform: translateX(250px) translateY(-10px);
+	    transform: translateX(250px) translateY(-50%);
 	  }
 	} 
-
-    @keyframes scrollDiscover {
-	  100% {
-	    transform: translateX(-420px) translateY(50px);
-	  }
-	} 
-
-	@keyframes scrollWatch {
-	  100% {
-	    transform: translateX(-285px) translateY(8px);
-	  }
-	} 
-
-	@keyframes scrollShop {
-	   100% {
-	    transform: translateX(-150px) translateY(-34px);
-	  }
-	} 
-
-	@keyframes scrollMore {
-	  100% {
-	    transform: translateX(-15px) translateY(-76px);
-	  }
-	} 
-
 
 
     /*--- HERO AREA ---*/
@@ -2404,35 +2345,20 @@ footer figure {
 
     /*HEADER*/
 
+
+    #search-box {
+    	top: 50%;
+    }
+
+    #date {
+    	top: 80%;
+    }
+
     @keyframes searchScroll {
 	  100% {
-	    transform: translateX(250px) translateY(0);
+	    transform: translateX(250px) translateY(-50%);
 	  }
 	}
-
-    @keyframes scrollDiscover {
-	  100% {
-	    transform: translateX(-485px) translateY(50px);
-	  }
-	} 
-
-	@keyframes scrollWatch {
-	  100% {
-	    transform: translateX(-330px) translateY(8px);
-	  }
-	} 
-
-	@keyframes scrollShop {
-	   100% {
-	    transform: translateX(-175px) translateY(-34px);
-	  }
-	} 
-
-	@keyframes scrollMore {
-	  100% {
-	    transform: translateX(-20px) translateY(-76px);
-	  }
-	} 
 
 
     /*CALL TO ACTION*/
@@ -2573,9 +2499,9 @@ footer figure {
       width: 20%;
     }
 
-    .search-box {
-      top: 30px;
-      left: 480px;
+    #search-box {
+      top: 18%;
+      left: 35%;
       width: 30%;
     }
 
@@ -2594,36 +2520,12 @@ footer figure {
     	height: 80px;
     }
 
-    @keyframes scrollDiscover {
-	  100% {
-	    transform: translateX(-910px) translateY(60px);
+    @keyframes searchScroll {
+	100% {
+	    transform: translateX(250px) translateY(30%);
 	  }
-	} 
-
-	@keyframes scrollWatch {
-	  100% {
-	    transform: translateX(-611px) translateY(18px);
-	  }
-	} 
-
-	@keyframes scrollShop {
-	  100% {
-	    transform: translateX(-312px) translateY(-24px);
-	  }
-	} 
-
-	@keyframes scrollMore {
-	  100% {
-	    transform: translateX(-15px) translateY(-66px);
-	  }
-	} 
-
-	.scrollDiscovers,
-	.scrollWatch,
-	.scrollShop,
-	.scrollMore {
-		width: 280px !important;
 	}
+
 
     /*HERO AREA*/
 
