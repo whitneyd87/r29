@@ -82,7 +82,9 @@ $(document).ready(function(){
             
             $('#header').addClass('headerScroll');
             $('#date').css('display', 'none');
-            $('#logo').addClass('logo');
+            $('#logo').removeClass('logoGrow');
+            $('#logo').addClass('logoShrink');
+            $('#search-box').removeClass('searchTop');
             $('#search-box').addClass('searchScroll');
             $('header nav').css('width', '100%');
             $('header nav ul').addClass('navScroll');
@@ -92,8 +94,10 @@ $(document).ready(function(){
 
             $('#header').removeClass('headerScroll');
             $('#date').css('display', 'block');
-            $('#logo').removeClass('logo');
+            $('#logo').removeClass('logoShrink');
+            $('#logo').addClass('logoGrow');
             $('#search-box').removeClass('searchScroll');
+            $('#search-box').addClass('searchTop');
             $('header nav').css ('width', '30%');
             $('header nav ul').removeClass('navScroll');
             $('.main-li').css('margin-bottom', '10px');

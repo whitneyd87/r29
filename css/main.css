@@ -298,18 +298,34 @@ header nav ul .slide {
 
 @keyframes logoShrink {
   0% {
-    transform: scale(1.7) translateX(0);
+    transform: scale(1) translateX(0);
   }
   
   100% {
     transform: scale(1.2) translateX(5px);
   }
+}
+
+@keyframes logoGrow {
+  0% {
+    transform: scale(0.7) translateX(5px);
+  }
+  
+  100% {
+    transform: scale(1) translateX(0);
+  }
 } 
 
-.logo {
+.logoShrink {
   animation: logoShrink 1s ease-out 1 forwards;
   -webkit-animation: logoShrink 1s ease-out 1 forwards;
   -moz-animation: logoShrink 1s ease-out 1 forwards;
+}
+
+.logoGrow {
+  animation: logoGrow 1s ease-out 1 forwards;
+  -webkit-animation: logoGrow 1s ease-out 1 forwards;
+  -moz-animation: logoGrow 1s ease-out 1 forwards;
 }
 
 @keyframes searchScroll {
@@ -322,6 +338,21 @@ header nav ul .slide {
   animation: searchScroll 1s ease-out 1 forwards;
   -webkit-animation: searchScroll 1s ease-out 1 forwards;
   -moz-animation: searchScroll 1s ease-out 1 forwards;
+}
+
+@keyframes searchTop {
+  0% {
+  	transform: translateX(145px) translateY(-50%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+} 
+
+.searchTop {
+  animation: searchTop 1s ease-out 1 forwards;
+  -webkit-animation: searchTop 1s ease-out 1 forwards;
+  -moz-animation: searchTop 1s ease-out 1 forwards;
 }
 
 #discover {
