@@ -223,8 +223,20 @@ header nav ul {
   flex-flow: row wrap;
 }
 
+@keyframes navScroll {
+	0% {
+		transform: translateX(200%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 .navScroll {
   align-items: center;
+   animation: navScroll 1s ease-out 1;
+  -webkit-animation: navScroll 1s ease-out 1;
+  -moz-animation: navScroll 1s ease-out 1;
   background-color: black;
   display: flex;
   justify-content: flex-end;
@@ -298,7 +310,7 @@ header nav ul .slide {
 
 @keyframes logoShrink {
   0% {
-    transform: scale(1.5) translateX(5px);
+    transform: scale(1.5) translateX(10px);
   }
   
   100% {
@@ -308,7 +320,7 @@ header nav ul .slide {
 
 @keyframes logoGrow {
   0% {
-    transform: scale(0.9) translateX(5px);
+    transform: scale(0.8) translateX(0);
   }
   
   100% {
@@ -2050,11 +2062,9 @@ footer figure {
       height: 60px;
     }
 
-	@keyframes searchScroll {
-	  100% {
+	.searchScroll {
 	    transform: translateX(250px) translateY(-50%);
 	  }
-	} 
 
 
     /*--- HERO AREA ---*/
@@ -2366,10 +2376,8 @@ footer figure {
     	top: 80%;
     }
 
-    @keyframes searchScroll {
-	  100% {
+    .searchScroll {
 	    transform: translateX(250px) translateY(-50%);
-	  }
 	}
 
 
@@ -2532,10 +2540,8 @@ footer figure {
     	height: 80px;
     }
 
-    @keyframes searchScroll {
-	100% {
+    .searchScroll {
 	    transform: translateX(250px) translateY(30%);
-	  }
 	}
 
 
