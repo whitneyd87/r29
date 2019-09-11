@@ -308,7 +308,7 @@ header nav ul .slide {
 
 @keyframes logoGrow {
   0% {
-    transform: scale(0.8) translateX(5px);
+    transform: scale(0.9) translateX(5px);
   }
   
   100% {
@@ -328,29 +328,11 @@ header nav ul .slide {
   -moz-animation: logoGrow 1s ease-out 1 forwards;
 }
 
-/*@keyframes searchScroll {
-  100% {
-    transform: translateX(150px) translateY(-50%);
-  }
-} */
-
 .searchScroll {
-/*  animation: searchScroll 1s ease-out 1 forwards;
-  -webkit-animation: searchScroll 1s ease-out 1 forwards;
-  -moz-animation: searchScroll 1s ease-out 1 forwards;*/
   transform: translateX(150px) translateY(-50%);
 }
 
-/*@keyframes searchTop {
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-} */
-
 .searchTop {
-/*  animation: searchTop 1s ease-out 1 forwards;
-  -webkit-animation: searchTop 1s ease-out 1 forwards;
-  -moz-animation: searchTop 1s ease-out 1 forwards;*/
   transform: translateX(0) translateY(0)
 }
 
