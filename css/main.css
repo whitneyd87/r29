@@ -2540,8 +2540,8 @@ footer figure {
     }
 
     .searchScroll {
-	    transform: translateX(250px) translateY(30%);
-	}
+	    transform: translateX(250px) translateY(50%);
+	  }
 
 
     /*HERO AREA*/
