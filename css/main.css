@@ -2421,8 +2421,14 @@ footer figure {
       height: 190px;
     }
 
-    .slider-btns::-ms-thumb {
+    .call-to-action .slider-btns::-ms-thumb {
       height: 190px;
+      width: 190px;
+    }    
+
+    .final-cta .slider-btns::-ms-thumb {
+      height: 120px;
+      width: 120px;
     }
 
     .style-out-there .content,
