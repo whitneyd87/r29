@@ -2422,13 +2422,13 @@ footer figure {
     }
 
     .call-to-action .slider-btns::-ms-thumb {
-      height: 190px;
-      width: 190px;
+      height: 140px;
+      width: 140px;
     }    
 
     .final-cta .slider-btns::-ms-thumb {
-      height: 120px;
-      width: 120px;
+      height: 140px;
+      width: 140px;
     }
 
     .style-out-there .content,
