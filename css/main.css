@@ -2422,8 +2422,8 @@ footer figure {
     }
 
     .call-to-action .slider-btns::-ms-thumb {
-      height: 130px;
-      width: 130px;
+      height: 125px;
+      width: 125px;
     }    
 
     .final-cta .slider-btns::-ms-thumb {
