@@ -1056,7 +1056,7 @@ i {
   -moz-animation: grow 2.5s ease 2 alternate;
   -ms-animation: grow 2.5s ease 2 alternate;
   -webkit-backface-visibility: hidden;
-  z-index: 8;
+  z-index: 99;
 }
 
 .trend-vid2,
@@ -1191,13 +1191,13 @@ i {
 .grow1 {
   animation: growOne 2.5s ease 2 alternate; 
   -webkit-animation: growOne 2.5s ease 2 alternate;
-  z-index: 8;
+  z-index: 99;
 }
 
 .grow2 {
   animation: growTwo 2.5s ease 2 alternate;
   -webkit-animation: growTwo 2.5s ease 2 alternate;
-  z-index: 8;
+  z-index: 99;
 }
 
 .trend-vid1 {
