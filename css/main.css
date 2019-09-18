@@ -2061,7 +2061,7 @@ footer figure {
       height: 60px;
     }
 
-	.searchScroll {
+	  .searchScroll {
 	    transform: translateX(250px) translateY(-50%);
 	  }
 

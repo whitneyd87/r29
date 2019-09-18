@@ -215,15 +215,23 @@ $(document).ready(function(){
         },500);
     });
 
+    function dragFix(event, ui) {
+    var contWidth = containmentArea.width(), contHeight = containmentArea.height();
+    ui.position.left = Math.max(0, Math.min(ui.position.left / percent , contWidth - ui.helper.width()));
+    ui.position.top = Math.max(0, Math.min(ui.position.top  / percent,  contHeight- ui.helper.height()));
+    }
+
 
     $('.slideshow-vid').draggable({
         axis: 'x',
-        containment: [-1200, 0, 20, 0]
+        // containment: [-1200, 0, 20, 0]
+        drag: dragFix,
     });
 
     $('.slideshow-art').draggable({
         axis: 'x',
-        containment: [-2200, 0, 20, 0]
+        // containment: [-2200, 0, 20, 0]
+        drag: dragFix,
     });
 
 
