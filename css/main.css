@@ -503,11 +503,13 @@ i {
 
 
 .hero-area {
+  align-items: center;
   background-image: url('../img/woman.png');
   background-position: center top;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-between;
   height: 680px;
   width: 100%;
 }
@@ -518,7 +520,7 @@ i {
 }
 
 .hero-area h1 {
-  margin-bottom: 320px;
+  height: 125%;
 }
 
 .hero-area .hero-article {
@@ -542,8 +544,23 @@ i {
   padding: 30px 0;
 }
 
-.call-to-action .content {
+.call-to-action h6, 
+.call-to-action h4 {
+  width: 100%;
+}
+
+.style-out-there,
+.pinterest,
+.podcast {
+  margin: 40px 0;
+  position: relative;
+}
+
+.styleCon, 
+.pinCon, 
+.podCon {
   align-items: center;
+  box-sizing: border-box;
   color: rgb(255,255,255);
   display: flex;
   flex-flow: row wrap;
@@ -553,20 +570,24 @@ i {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  width: 60%;
-}
-
-.call-to-action .content h6, 
-.call-to-action .content h4 {
+  -webkit-box-sizing: border-box;
   width: 100%;
 }
 
-.style-out-there,
-.pinterest,
-.podcast {
-  margin: 40px 0;
-  position: relative;
+.styleCon,
+.podCon {
+  padding-right: 10%;
+  text-align: right;
+}
+
+.styleCon h4 {
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.pinCon {
+  padding-left: 10%;
+  text-align: left;
 }
 
 .slider-btns {
@@ -627,39 +648,25 @@ i {
   height: 120px;
 }
 
-.style-out-there .slider-btns::-webkit-slider-thumb {
+#styleInput.slider-btns::-webkit-slider-thumb {
   background-image: url('../img/subculture.jpeg');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,24,33);
 }
 
-.style-out-there .slider-btns::-moz-range-thumb {
+#styleInput.slider-btns::-moz-range-thumb {
   background-image: url('../img/subculture.jpeg');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,24,33);
 } 
 
-.style-out-there .slider-btns::-ms-thumb {
+#styleInput.slider-btns::-ms-thumb {
   background-image: url('../img/subculture.jpeg');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,24,33);
-}
-
-.style-out-there .content,
-.podcast .content {
-  box-sizing: border-box;
-  padding-right: 40px;
-  text-align: right;
-  -webkit-box-sizing: border-box;
-  width: 100%;
-}
-
-.style-out-there .content h4 {
-  font-size: 1.2em;
-  width: 100%;
 }
 
 .pinterest .btn-container {
@@ -668,33 +675,25 @@ i {
   height: 120px;
 }
 
-.pinterest .slider-btns::-webkit-slider-thumb {
+#pinterestInput.slider-btns::-webkit-slider-thumb {
   background-image: url('../img/pinterest2.png');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,65,180);
 }
 
-.pinterest .slider-btns::-moz-range-thumb {
+#pinterestInput.slider-btns::-moz-range-thumb {
   background-image: url('../img/pinterest2.png');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,65,180);
 }
 
-.pinterest .slider-btns::-ms-thumb {
+#pinterestInput.slider-btns::-ms-thumb {
   background-image: url('../img/pinterest2.png');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(252,65,180);
-}
-
-.pinterest .content {
-  box-sizing: border-box;
-  padding-left: 40px;
-  text-align: left;
-  -webkit-box-sizing: border-box;
-  width: 100%;
 }
 
 .podcast .btn-container {
@@ -703,21 +702,21 @@ i {
   height: 120px;
 }
 
-.podcast .slider-btns::-webkit-slider-thumb {
+#podcastInput.slider-btns::-webkit-slider-thumb {
   background-image: url('../img/blog.jpg');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(255,128,48);
 }
 
-.podcast .slider-btns::-moz-range-thumb {
+#podcastInput.slider-btns::-moz-range-thumb {
   background-image: url('../img/blog.jpg');
   background-position: center;
   background-size: cover;
   border: 15px solid rgb(255,128,48);
 }
 
-.podcast .slider-btns::-ms-thumb {
+#podcastInput.slider-btns::-ms-thumb {
   background-image: url('../img/blog.jpg');
   background-position: center;
   background-size: cover;
@@ -753,6 +752,10 @@ i {
 }
 
 .latest-scroll ul {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
   list-style: none;
   margin: 0;
   position: relative; 
@@ -776,7 +779,11 @@ i {
 
 
 .secondary-articles {
-  padding-top: 90px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-top: 60px;
 }
 
 .secondary-articles h6 {
@@ -785,10 +792,17 @@ i {
   justify-content: space-between;
 }
 
-.sec-art,
+.sec-art-one,
+.sec-art-two,
+.sec-art-three,
 .trend-art {
   height: 500px;
   width: 100%;
+}
+
+.sec-art-one {
+  background: url('../img/sansa.png') center top no-repeat; 
+  background-size: cover;
 }
 
 #triangle-container {
@@ -806,7 +820,7 @@ i {
   box-sizing: border-box;
   position: absolute;
   top: 25%;
-  left: 30%;
+  left: 0;
 }
 
 #triangle-container .content {
@@ -834,31 +848,47 @@ i {
   display: block;
 }
 
-.art-two {
-  padding-top: 90px;
+.sec-art-two {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 60px;
 }
 
-.art-two h4 {
-  padding: 50px 20px 218px 20px;
+.sec-art-two .content {
+  background: url('../img/fish-nails.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+  height: 100%;
 }
 
-.art-two h6 {
+.sec-art-two h4 {
+  padding: 50px 20px 0 20px;
+}
+
+.sec-art-two h6 {
   padding: 0 20px;
 }
 
-.art-two .author {
+.sec-art-two .author {
   border-top: 3px solid #ff8030;
   border-bottom: 3px solid #ff41b4;
+  width: 100%;
 }
 
-.art-three {
+.sec-art-three {
   align-items: flex-start;
+  background: url('../img/notre.jpg') center top no-repeat; 
+  background-size: cover;
   display: flex;
   justify-content: flex-end;
   flex-flow: column;
+  margin-top: 60px;
 }
 
-.art-three .content {
+.sec-art-three .content {
   background-color: rgba(0,0,0,0.7);
   box-sizing: border-box;
   color: rgb(255,255,255);
@@ -866,7 +896,7 @@ i {
   width: 100%;
 }
 
-.art-three .content h4 {
+.sec-art-three .content h4 {
   padding: 10px 0;
 }
 
@@ -875,11 +905,11 @@ i {
 
 
 .trending {
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 .trending h3 {
-  padding: 0 0 75px 20px;
+  padding: 0 0 60px 20px;
 }
 
 .trending h6 {
@@ -893,7 +923,7 @@ i {
   width: 100%;
 }
 
-.main-trend-art {
+.trend-art-one {
   align-items: flex-start;
   color: rgb(255,255,255);
   display: flex;
@@ -902,34 +932,42 @@ i {
   flex-flow: column wrap;
 }
 
-.main-trend-art h6 {
+.trend-art-one h6 {
   background-color: rgb(252,24,33);
 }
 
-.main-trend-art h4 {
+.trend-art-one h4 {
   padding: 50px 20px;
   text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
 
-.second-trend-art h6 {
+.trend-art-two h6 {
   background-color: rgb(255,65,180);
 }
 
-.third-trend-art h6 {
+.trend-art-three h6 {
   background-color: rgb(255,128,48);
 }
 
-.trend-art-sec {
+.trend-art-two, 
+.trend-art-three {
   margin: 20px 0;
 }
 
-.trend-art-sec .content {
+.trend-art-two .content,
+.trend-art-three .content {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
   height: 150px;
   justify-content: space-between;
 } 
+
+.trend-art-two .content h5,
+.trend-art-three .content h5 {
+  padding: 0 20px 0 25px;
+  width: 60%;
+}
 
 .art-img {
   align-items: center;
@@ -945,11 +983,6 @@ i {
   width: 100%
 }
 
-.trend-art-sec h5 {
-  padding: 0 20px 0 25px;
-  width: 60%;
-}
-
 
 /*--- WATCH ---*/
 
@@ -958,7 +991,7 @@ i {
   background-color: rgba(0,0,0,1);
   color: rgb(255,255,255);
   cursor: pointer;
-  padding: 90px 0;
+  padding: 60px 0;
 }
 
 .watch h2,
@@ -1382,7 +1415,7 @@ i {
 
 
 .shopping {
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 .shopping h2 {
@@ -1409,7 +1442,7 @@ i {
 
 .collections,
 .presented {
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 .more-collection,
@@ -1419,7 +1452,7 @@ i {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  padding: 90px 20px 10px 20px;
+  padding: 60px 20px 10px 20px;
 }
 
 .more-collection h4,
@@ -1493,7 +1526,7 @@ i {
 
 
 .now h3 {
-  padding: 90px 20px 75px 20px;
+  padding: 60px 20px;
 }
 
 .collapsible {
@@ -2246,7 +2279,7 @@ footer figure {
       width: 550px;
     }
 
-    .art-one {
+    .sec-art-one {
       overflow: hidden;
     }
 
@@ -2255,6 +2288,7 @@ footer figure {
       border-left: 340px solid transparent;
       border-right: 340px solid rgba(0,0,0,0.5);
       border-bottom: 340px solid rgba(0,0,0,0.5);
+      left: 0;
       top: 0;
     }
 
@@ -2264,19 +2298,19 @@ footer figure {
     }
 
     #triangle-contatiner .content h4,
-    .sec-art h4 {
+    .sec-art-one h4 {
       font-size: 1.875rem;
     }
 
-    .art-two h6 {
+    .sec-art-two h6 {
       padding: 0 40px;
     }
 
-    .art-two h4 {
+    .sec-art-two h4 {
       padding: 50px 40px 230px 40px;
     }
 
-    .art-three .content {
+    .sec-art-three .content {
       padding: 20px 40px;
     }
 
@@ -2629,11 +2663,52 @@ footer figure {
     }
 
 
+    /*LATEST NEWS*/
+
+
+    .latest-scroll {
+      height: 100px;
+    }
+
+    .latest-scroll .content {
+      width: 90%;
+    }
+
+
     /*TRENDING*/
 
 
+    .secondary-articles {
+      padding-top: 60px;
+      position: relative;
+    }
+
+    .sec-art-one {
+      height: 450px;
+      width: 50%;
+    }
+
     .triangle {
-      left: 30%;
+      left: -50%;
+    }
+
+    .sec-art-one h4 {
+      font-size: 1.5rem;
+    }
+
+    .sec-art-two, 
+    .sec-art-three {
+      height: 220px;
+      padding-top: 0px;
+      width: 50%;
+    } 
+
+    .sec-art-two h6 {
+      padding-top: 0;
+    }
+
+    .sec-art-two h4 {
+      padding: 20px 40px 40px 40px;
     }
 
     .main-trend-art {
@@ -2692,6 +2767,7 @@ footer figure {
 
   }
 
+
   @media only screen and (min-width: 1200px) {
 
 
@@ -2720,7 +2796,7 @@ footer figure {
     }
 
     #date {
-      font-size: 1rem;
+      font-size: 0.875rem;
       top: 75%;
       left: 10%;
     }
@@ -2876,7 +2952,9 @@ footer figure {
       padding-top: 0;
     }
 
-    .art-one {
+    .sec-art-one,
+    .sec-art-two,
+    .sec-art-three {
       width: 50%;
     }
 
@@ -2884,23 +2962,23 @@ footer figure {
       left: 20%;
     }
 
-    .art-two,
-    .art-three {
+    .sec-art-two,
+    .sec-art-three {
       width: 23%;
     }
 
-    .art-two {
+    .sec-art-two {
       background-position: bottom !important;
       height: 480px;
       padding-top: 0;
     }
 
-    .art-two h4 {
+    .sec-art-two h4 {
       height: 355px;
       padding: 50px 10px; 
     }
 
-    .art-two h6 {
+    .sec-art-two h6 {
       padding: 0 10px;
     }
 
