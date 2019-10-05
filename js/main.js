@@ -78,7 +78,7 @@ $(document).ready(function(){
      
         var winY = $(window).scrollTop();
 
-        if (winY > 100) {
+        if (winY > 1100) {
             
             $('#header').addClass('headerScroll');
             $('#date').css('display', 'none');
@@ -90,7 +90,7 @@ $(document).ready(function(){
             $('header nav ul').addClass('navScroll');
             $('.main-li').css('margin-bottom', '0px');
 
-        } else if (winY < 100) {
+        } else if (winY < 1100) {
 
             $('#header').removeClass('headerScroll');
             $('#date').css('display', 'block');
