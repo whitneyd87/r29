@@ -555,7 +555,7 @@ $(document).ready(function(){
 
     var scrolling = function() {
 
-        $(".article").each(function(i, e) {
+        $(".slideshow .sec-art").each(function(i, e) {
       
             var animateLeft = function() {
 
@@ -593,7 +593,7 @@ $(document).ready(function(){
   	
     clearInterval(intervalScroll);
 
-    $('.tv').on('click', function () {
+    $('.tv figure').on('click', function () {
 
         clearInterval(intervalBubble);
     
