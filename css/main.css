@@ -573,8 +573,13 @@ i {
 
 .styleCon,
 .podCon {
-  padding-right: 10%;
+  left: -10%;
   text-align: right;
+}
+
+.pinCon {
+  left: 10%;
+  text-align: left;
 }
 
 .styleCon h4 {
@@ -590,11 +595,6 @@ i {
 .podCon h4 {
   font-size: 1.75rem;
   padding-top: 10px;
-}
-
-.pinCon {
-  padding-left: 10%;
-  text-align: left;
 }
 
 .slider-btns {
@@ -2256,10 +2256,11 @@ footer figure {
 
    /*--- CALL-TO-ACTION ---*/
 
-   .call-to-action {
+
+    .call-to-action {
       padding: 0;
       transform: translateY(-50px);
-   }
+    }
 
     .call-to-action h6 {
       font-size: 1.125rem;
@@ -2271,11 +2272,11 @@ footer figure {
 
     .styleCon,
     .podCon {
-      padding-right: 20%;
+      left: -20%;
     }
 
     .pinCon {
-      padding-left: 20%;
+      left: 20%;
     }
 
     .styleCon h4 {
@@ -2594,6 +2595,10 @@ footer figure {
       -moz-transform: translateY(-100px);
     }
 
+    .hero-area h1 {
+      padding-bottom: 15%;
+    }
+
 
     /*CALL TO ACTION*/
 
@@ -2630,25 +2635,29 @@ footer figure {
 
     .styleCon,
     .podCon {
-      left: 10%;
-      padding-right: 0px;
-      width: 75%;
-    }
-
-    .styleCon h4 {
-      font-size: 0.7rem;
+      left:;
+      padding: 5px 0px;
     }
 
     .pinCon {
       left: 10%;
-      padding-left: 0px;
-      width: 75%;
+      padding: 5px 0;
+    }
+
+    .styleCon h4 {
+      font-size: 0.75rem;
+      padding-top: 5%;
+    }
+
+    .podCon h4 {
+      font-size: 1.125rem;
+      padding-top: 10px;
     }
 
     .style-out-there .btn-container, 
     .pinterest .btn-container, 
     .podcast .btn-container {
-      height: 70px;
+      height: 80px;
       width: 100%;
     }
 
@@ -2666,8 +2675,8 @@ footer figure {
     }
 
     .slider-btns::-webkit-slider-thumb {
-      height: 80px;
-      width: 35%;
+      height: 100px;
+      width: 40%;
     }
 
     .slider-btns::-moz-range-thumb {
