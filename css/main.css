@@ -97,7 +97,7 @@ textarea {
 
 
 
-/*--- BASE STYLE ---*/
+/*BASE STYLE*/
 
 
 body {
@@ -152,10 +152,6 @@ p {
   text-transform: lowercase;
 }
 
-
-/*--- FONT STYLE ---*/
-
-
 h1 {
   font-size: 3rem;
 }
@@ -186,10 +182,11 @@ p {
 }
 
 
-/*--- HEADER ---*/
+/*HEADER*/
 
 
 @keyframes onload {
+ 
   0% {
     opacity: 0;
   }
@@ -199,6 +196,7 @@ p {
 }
 
 @-webkit-keyframes onload {
+  
   0% {
     opacity: 0;
   }
@@ -208,6 +206,7 @@ p {
 }
 
 @-moz-keyframes onload {
+  
   0% {
     opacity: 0;
   }
@@ -251,7 +250,8 @@ header nav ul {
 }
 
 @keyframes navScroll {
-	0% {
+	
+  0% {
     opacity: 0;
 		transform: translateX(200%);
 	}
@@ -262,6 +262,7 @@ header nav ul {
 }
 
 @-webkit-keyframes navScroll {
+  
   0% {
     opacity: 0;
     -webkit-transform: translateX(200%);
@@ -273,6 +274,7 @@ header nav ul {
 }
 
 @-moz-keyframes navScroll {
+  
   0% {
     opacity: 0;
     -moz-transform: translateX(200%);
@@ -313,7 +315,7 @@ header nav ul .main-li {
 }
 
 @keyframes slide {
-
+  
   0% {
     opacity: 0;
     right: -300px
@@ -325,6 +327,7 @@ header nav ul .main-li {
 }
 
 @-webkit-keyframes slide {
+  
   0% {
     opacity: 0;
     right: -300px
@@ -362,10 +365,13 @@ header nav ul .slide {
   position: fixed;
   top: 0;
   transition: 500ms 300ms ease-in;
+  -webkit-transition: 500ms 300ms ease-in;
+  -moz-transition: 500ms 300ms ease-in;
   z-index: 1001;
 }
 
 @keyframes logoShrink {
+  
   0% {
     opacity: 0;
     transform: scale(1) translateX(10px);
@@ -378,6 +384,7 @@ header nav ul .slide {
 }
 
 @-webkit-keyframes logoShrink {
+  
   0% {
     -webkit-transform: scale(1) translateX(10px);
   }
@@ -388,6 +395,7 @@ header nav ul .slide {
 }
 
 @-moz-keyframes logoShrink {
+  
   0% {
     -moz-transform: scale(1) translateX(10px);
   }
@@ -398,6 +406,7 @@ header nav ul .slide {
 }
 
 @keyframes logoGrow {
+  
   0% {
     transform: scale(0.8) translateX(0);
   }
@@ -408,6 +417,7 @@ header nav ul .slide {
 } 
 
 @-webkit-keyframes logoGrow {
+  
   0% {
     -webkit-transform: scale(0.8) translateX(0);
   }
@@ -418,6 +428,7 @@ header nav ul .slide {
 } 
 
 @-moz-keyframes logoGrow {
+  
   0% {
     -moz-transform: scale(0.8) translateX(0);
   }
@@ -499,7 +510,7 @@ i {
  }
 
 
-/*--- HERO AREA ---*/
+/*HERO AREA*/
 
 
 .hero-area {
@@ -537,7 +548,7 @@ i {
 }
 
 
-/*--- CALL-TO-ACTION ---*/
+/*CALL TO ACTION*/
 
 
 .call-to-action {
@@ -731,7 +742,7 @@ i {
 }
 
 
-/*--- LATEST NEWS ---*/
+/*LATEST NEWS*/
 
 
 .latest-news {
@@ -785,7 +796,8 @@ i {
 /*SECONDARY ARTICLES*/
 
 
-.secondary-articles {
+.secondary-articles,
+.trending-articles {
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
@@ -907,7 +919,7 @@ i {
 }
 
 
-/*--- TRENDING R29 ---*/
+/*TRENDING*/
 
 
 .trending {
@@ -915,7 +927,7 @@ i {
 }
 
 .trending h3 {
-  padding: 0 0 60px 20px;
+  padding: 0 0 0 20px;
 }
 
 .trending h6 {
@@ -992,7 +1004,7 @@ i {
 }
 
 
-/*--- WATCH ---*/
+/*WATCH*/
 
 
 .watch {
@@ -1107,6 +1119,20 @@ i {
   padding: 0 0 100px 20px;
 }
 
+.trending-vids p {
+  font-family: 'Playfair', serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  width: 90%;
+}
+
+.trending-vids h6 {
+  font-size: 0.5rem;
+  padding-top: 10px;
+}
+
 .tv-wrapper {
   align-items: center;
   display: flex;
@@ -1184,26 +1210,6 @@ i {
   text-align: center;
   width: 100%; 
   z-index: 99;
-}
-
-.tv1-content p,
-.tv2-content p,
-.tv3-content p,
-.tv4-content p {
-  font-family: 'Playfair', serif;
-  font-size: 0.875rem;
-  letter-spacing: 0.5px;
-  margin: 0 auto;
-  text-transform: capitalize;
-  width: 90%;
-}
-
-.tv1-content h6,
-.tv2-content h6,
-.tv3-content h6,
-.tv4-content h6 {
-  font-size: 0.5rem;
-  padding-top: 10px;
 }
 
 @keyframes tvTopBottom {
@@ -1433,16 +1439,23 @@ i {
 }
 
 
-/*--- SHOPPING ---*/
+/*SHOPPING*/
 
 
-.shopping {
+.shopping,
+.collections,
+.presented {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   padding-top: 60px;
 }
 
 .shopping h2 {
   color: rgb(255,128,48);
-  padding-left: 20px
+  padding-left: 20px;
+  width: 100%;
 }
 
 .shopping .ft-art {
@@ -1471,11 +1484,6 @@ i {
 .presented .ft-art {
   background: url('../img/target.png') center top no-repeat; 
   background-size: cover;
-}
-
-.collections,
-.presented {
-  padding-top: 60px;
 }
 
 .more-collection,
@@ -1555,7 +1563,7 @@ i {
 }
 
 
-/*--- NOW R29 ---*/
+/*NOW ON R29*/
 
 
 .now h3 {
@@ -1737,7 +1745,7 @@ i {
 }
 
 
-/*--- MISSION ---*/
+/*MISSION*/
 
 
 .mission {
@@ -1765,7 +1773,7 @@ i {
 }
 
 
-/*--- FINAL CTA ---*/
+/*FINAL CTA*/
 
 
 .discover-cta,
@@ -1940,7 +1948,7 @@ i {
 }
 
 
-/*--- FOOTER ---*/
+/*FOOTER*/
 
 
 footer {
@@ -2198,7 +2206,7 @@ footer figure {
   @media only screen and (min-width: 650px) {
 
 
-    /*--- HEADER AREA ---*/
+    /*HEADER*/
 
 
     header figure {
@@ -2235,7 +2243,7 @@ footer figure {
 	  }
 
 
-    /*--- HERO AREA ---*/
+    /*HERO AREA*/
 
 
     .hero-area {
@@ -2254,7 +2262,7 @@ footer figure {
     }
 
 
-   /*--- CALL-TO-ACTION ---*/
+    /*CALL TO ACTION*/
 
 
     .call-to-action {
@@ -2312,7 +2320,7 @@ footer figure {
     }
 
 
-    /*--- LATEST NEWS ---*/
+    /*LATEST NEWS*/
 
 
     .latest-news {
@@ -2322,6 +2330,10 @@ footer figure {
     .ls-story {
       width: 550px;
     }
+
+
+    /*SECONDARY ARTICLES*/
+
 
     .sec-art1 {
       overflow: hidden;
@@ -2360,7 +2372,7 @@ footer figure {
     }
 
 
-    /*--- TRENDING ---*/
+    /*TRENDING*/
 
 
     .trending h3 {
@@ -2396,7 +2408,7 @@ footer figure {
     }
 
 
-    /*--- WATCH ---*/
+    /*WATCH*/
 
 
     .watch h2,
@@ -2433,7 +2445,7 @@ footer figure {
     }
 
 
-    /*--- SHOPPING ---*/
+    /*SHOPPING*/
 
 
     .shopping h2 {
@@ -2471,7 +2483,7 @@ footer figure {
     }
 
 
-    /*--- NOW ON R29 ---*/
+    /*NOW ON R29*/
 
 
     .now h3 {
@@ -2511,12 +2523,13 @@ footer figure {
     }
 
 
-    /*--- FINAL CTA ---*/
+    /*FINAL CTA*/
 
 
     .final-cta {
       padding-top: 60px;
     }
+
     .discover-cta .btn-container,
     .watch-cta .btn-container,
     .shop-cta .btn-container {
@@ -2557,12 +2570,6 @@ footer figure {
   @media only screen and (min-width: 768px) {
 
 
-    #search i,
-    i {
-      font-size: 1.5rem;
-    }
-
-
     /*HEADER*/
 
 
@@ -2573,6 +2580,11 @@ footer figure {
     #search-box {
     	top: 50%;
       width: 40%;
+    }
+
+    #search i,
+    i {
+      font-size: 1.5rem;
     }
 
     #date {
@@ -2622,20 +2634,16 @@ footer figure {
     .pinterest,
     .podcast {
       margin: 0;
-      width: 30%;
+      width: 32%;
     }
 
     .call-to-action h6 {
       font-size: 0.5rem;
     }
 
-    .call-to-action h4 {
-      font-size: 1rem;
-    }
-
     .styleCon,
     .podCon {
-      left:;
+      left: -10%;
       padding: 5px 0px;
     }
 
@@ -2645,12 +2653,17 @@ footer figure {
     }
 
     .styleCon h4 {
-      font-size: 0.75rem;
-      padding-top: 5%;
+      font-size: 0.875rem;
+      padding-top: 2px;
+    }
+
+    .pinCon h4 {
+      font-size: 1.125rem;
+      padding-top: 5px;
     }
 
     .podCon h4 {
-      font-size: 1.125rem;
+      font-size: 1.3rem;
       padding-top: 10px;
     }
 
@@ -2732,20 +2745,27 @@ footer figure {
       height: 100px;
     }
 
-    .latest-scroll .content {
-      width: 90%;
+    .ls-story {
+      width: 650px;
+    }
+
+    .ls-story h4 {
+      font-size: 1.25rem;
     }
 
 
-    /*TRENDING*/
+    /*SECONDARY ARTICLES & TRENDING*/
 
 
-    .secondary-articles {
-      padding-top: 60px;
-      position: relative;
+    .secondary-articles,
+    .trending-articles {
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      width: 100%;
     }
 
-    .sec-art-one {
+    .sec-art1,
+    .trend-art1 {
       height: 450px;
       width: 50%;
     }
@@ -2754,36 +2774,85 @@ footer figure {
       left: -50%;
     }
 
-    .sec-art-one h4 {
+    .sec-art-container,
+    .trend-art-container {
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      height: 450px;
+      width: 45%;
+    }
+
+    .trend-art-container {
+      padding-bottom: 60px;
+    }
+
+    .sec-art2, 
+    .sec-art3 {
+      height: 220px;
+      padding-top: 0px;
+      width: 100%;
+    } 
+
+    .sec-art3 {
+      margin-top: 0;
+    }
+
+    .sec-art2 .content {
+      background-size: contain;
+    }
+
+    .sec-art1 h4 {
       font-size: 1.5rem;
     }
 
-    .sec-art-two, 
-    .sec-art-three {
-      height: 220px;
-      padding-top: 0px;
-      width: 50%;
-    } 
-
-    .sec-art-two h6 {
+    .sec-art2 h6,
+    .sec-art3 h6 {
+      font-size: 0.75rem;
       padding-top: 0;
     }
 
-    .sec-art-two h4 {
+    .sec-art2 h4 {
       padding: 20px 40px 40px 40px;
     }
 
-    .main-trend-art {
-      height: 600px;
+     .sec-art2 h4,
+     .sec-art3 h4 {
+      font-size: 1.25rem;
+     }
+
+    .trend-art2,
+    .trend-art3 {
+      margin: 0;
     }
 
-    .trend-art-sec .content {
-      height: 300px;
+    .trend-art2 .content,
+    .trend-art3 .content {
+      height: 180px;
+    }
+
+    .art-img {
+      align-items: center;
+    }
+
+    .trend-art1 h4 {
+      font-size: 1.5rem;
+    }
+
+    .trend-art2 h5,
+    .trend-art3 h5 {
+      font-size: 1.25rem;
     }
 
 
     /*SHOPPING*/
 
+
+    .shopping .ft-art {
+      height: 400px;
+      width: 80%;
+    }
 
     .shop-opt {
       width: 270px;
@@ -2915,7 +2984,7 @@ footer figure {
     }
 
 
-    /*CALL-TO-ACTION*/
+    /*CALL TO ACTION*/
 
 
     .call-to-action {
@@ -3021,9 +3090,9 @@ footer figure {
       padding-top: 0;
     }
 
-    .sec-art-one,
-    .sec-art-two,
-    .sec-art-three {
+    .sec-art1,
+    .sec-art2,
+    .sec-art3 {
       width: 50%;
     }
 
@@ -3031,23 +3100,23 @@ footer figure {
       left: 20%;
     }
 
-    .sec-art-two,
-    .sec-art-three {
+    .sec-art2,
+    .sec-art3 {
       width: 23%;
     }
 
-    .sec-art-two {
+    .sec-art2 {
       background-position: bottom !important;
       height: 480px;
       padding-top: 0;
     }
 
-    .sec-art-two h4 {
+    .sec-art2 h4 {
       height: 355px;
       padding: 50px 10px; 
     }
 
-    .sec-art-two h6 {
+    .sec-art2 h6 {
       padding: 0 10px;
     }
 
@@ -3073,16 +3142,16 @@ footer figure {
       justify-content: space-between;
     }
 
-    .main-trend-art {
+    .trend-art1 {
       height: 550px;
       width: 50%;
     }
 
-    .main-trend-art .content {
+    .trend-art1 .content {
       width: 100%;
     }
 
-    .main-trend-art h4 {
+    .trend-art1 h4 {
       padding: 50px 10%;
     }
 
@@ -3095,12 +3164,12 @@ footer figure {
       width: 50%;
     }
 
-    .trend-art-sec {
+    .trend-art2 {
       margin: 0;
       width: 100%;
     }
 
-    .trend-art-sec .content {
+    .trend-art2 .content {
       height: 230px;
     }
 
@@ -3138,11 +3207,14 @@ footer figure {
       padding: 70px 0;
     }
 
-    .trend-vid {
+    .tv {
       width: 25%;
     }
 
-    .trend-vid .content {
+    .tv1-content,
+    .tv2-content,
+    .tv3-content,
+    .tv4-content {
       height: 55%;
       top: 90px;
     }
@@ -3161,18 +3233,18 @@ footer figure {
       width: 50%;
     }
 
-    .trend-vid-container .trend-vid {
+    .trend-vid-container .tv {
       width: 100%;
     }
 
-    .trend-vid1, 
-    .trend-vid4 {
+    .tv1, 
+    .tv4 {
       padding-bottom: 65%;
       width: 65%;
     }
 
-    .trend-vid2,
-    .trend-vid3 {
+    .tv2,
+    .tv3 {
       padding-bottom: 65%;
       width: 65%;
     }
