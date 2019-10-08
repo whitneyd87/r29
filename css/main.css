@@ -91,9 +91,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-
-
-
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -249,8 +246,8 @@ header nav {
 header nav ul {
   align-items: center;
   display: flex;
-  justify-content: flex-end;
   flex-flow: row wrap;
+  justify-content: flex-end;  
 }
 
 @keyframes navScroll {
@@ -267,22 +264,22 @@ header nav ul {
 @-webkit-keyframes navScroll {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    -webkit-transform: translateX(200%);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
   }
 }
 
 @-moz-keyframes navScroll {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    -moz-transform: translateX(200%);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -moz-transform: translateX(0);
   }
 }
 
@@ -293,11 +290,11 @@ header nav ul {
   -moz-animation: navScroll 1s ease-out 1;
   background-color: black;
   display: flex;
-  justify-content: flex-end;
   flex-flow: row nowrap;
-  left: 0;
+  justify-content: flex-end;
   position: absolute;
   top: 100%;
+  left: 0;
   width: 100%;
 }
 
@@ -307,12 +304,12 @@ header nav ul .main-li {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
-  text-align: center;
-  right: -300px;
   margin-bottom: 10px;
   padding: 5px 10px;
   position: relative;
   overflow: hidden;
+  right: -300px;
+  text-align: center; 
 }
 
 @keyframes slide {
@@ -358,12 +355,12 @@ header nav ul .slide {
 }
 
 .headerScroll {
-  position: fixed;
-  top: 0;
   background-color: white;
   height: 50px;
   opacity: 1;
   overflow: visible;
+  position: fixed;
+  top: 0;
   transition: 500ms 300ms ease-in;
   z-index: 1001;
 }
@@ -376,28 +373,27 @@ header nav ul .slide {
   
   100% {
     opacity: 1;
-    transition: 500ms 500ms ease-in;
     transform: scale(0.8) translateX(10px);
   }
 }
 
 @-webkit-keyframes logoShrink {
   0% {
-    transform: scale(1) translateX(10px);
+    -webkit-transform: scale(1) translateX(10px);
   }
   
   100% {
-    transform: scale(0.8) translateX(10px);
+    -webkit-transform: scale(0.8) translateX(10px);
   }
 }
 
 @-moz-keyframes logoShrink {
   0% {
-    transform: scale(1) translateX(10px);
+    -moz-transform: scale(1) translateX(10px);
   }
   
   100% {
-    transform: scale(0.8) translateX(10px);
+    -moz-transform: scale(0.8) translateX(10px);
   }
 }
 
@@ -413,21 +409,21 @@ header nav ul .slide {
 
 @-webkit-keyframes logoGrow {
   0% {
-    transform: scale(0.8) translateX(0);
+    -webkit-transform: scale(0.8) translateX(0);
   }
   
   100% {
-    transform: scale(1) translateX(0);
+    -webkit-transform: scale(1) translateX(0);
   }
 } 
 
 @-moz-keyframes logoGrow {
   0% {
-    transform: scale(0.8) translateX(0);
+    -moz-transform: scale(0.8) translateX(0);
   }
   
   100% {
-    transform: scale(1) translateX(0);
+    -moz-transform: scale(1) translateX(0);
   }
 } 
 
@@ -495,10 +491,10 @@ i {
 
 #date {
   justify-content: flex-start;
+  margin: 0;
   position: absolute;
   top: 75%;
   left: 20px;
-  margin: 0;
   width: 80%;
  }
 
@@ -513,14 +509,14 @@ i {
   background-size: cover;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
   height: 680px;
+  justify-content: space-between;
   width: 100%;
 }
 
 .hero-area h3 {
-  padding-bottom: 10px;
   margin: 0;
+  padding-bottom: 10px;
 }
 
 .hero-area h1 {
@@ -530,8 +526,8 @@ i {
 .hero-area .hero-article {
   background: rgba(0,0,0,0.6);
   color: rgb(255,255,255);
-  padding: 10px;
   margin: 0 auto;
+  padding: 10px;
   width: 95%;
 }
 
@@ -602,12 +598,12 @@ i {
 }
 
 .slider-btns {
+  -webkit-appearance: none;
   background: transparent;
   border-radius: 100px;
-  outline: none;
   height: 120px;
-  transition: .2s;
-  -webkit-appearance: none;
+  outline: none;
+  transition: .2s; 
   -webkit-transition: .2s;
   -moz-transition: .2s;
   -ms-transition: .2s;
@@ -753,9 +749,9 @@ i {
 .latest-scroll {
   align-items: center;
   display: flex;
-  justify-content: flex-start;
   flex-flow: row wrap;
   height: 150px;
+  justify-content: flex-start;
   margin-top: 50px;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -765,8 +761,8 @@ i {
 .latest-scroll ul {
   align-items: center;
   display: flex;
-  justify-content: flex-start;
   flex-flow: row wrap;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   position: relative; 
@@ -792,8 +788,8 @@ i {
 .secondary-articles {
   align-items: flex-start;
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
+  justify-content: center;
   padding-top: 60px;
 }
 
@@ -816,9 +812,9 @@ i {
 }
 
 #triangle-container {
+  height: 500px;
   overflow: hidden;
   position: relative;
-  height: 500px;
   width: 100%;
 }
 
@@ -837,9 +833,9 @@ i {
   color: rgb(255,255,255);
   padding: 0 0 0 20px;
   position: absolute;
-  text-align: right;
   top: 50%;
   left: 0;
+  text-align: right;
 }
 
 #triangle-container .content h6 {
@@ -861,8 +857,8 @@ i {
 .sec-art2 {
   align-items: flex-start;
   display: flex;
-  justify-content: center;
   flex-flow: column;
+  justify-content: center;
   padding-top: 60px;
 }
 
@@ -893,8 +889,8 @@ i {
   background: url('../img/notre.jpg') center top no-repeat; 
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
   flex-flow: column;
+  justify-content: flex-end;
   margin-top: 60px;
 }
 
@@ -940,8 +936,8 @@ i {
   color: rgb(255,255,255);
   display: flex;
   height: 500px;
-  justify-content: space-between;
   flex-flow: column wrap;
+  justify-content: space-between;
 }
 
 .trend-art1 h6 {
@@ -1074,8 +1070,8 @@ i {
 .originals .pagination {
   align-items: center;
   display: flex;
-  justify-content: center;
   height: 40px;
+  justify-content: center;
   margin: 50px 0;
 }
 
@@ -1308,7 +1304,7 @@ i {
   }
 }
 
-@keyframes tvLeftIE {
+/*@keyframes tvLeftIE {
     
   0% {
     transform: scale(1);
@@ -1321,7 +1317,7 @@ i {
   100% {
     transform: scale(2);
   }
-}
+}*/
 
 .tvLeft {
   animation: tvLeft 2.5s ease 2 alternate;
@@ -1377,7 +1373,7 @@ i {
   }
 }
 
-@keyframes tvRightIE {
+/*@keyframes tvRightIE {
   
   0% {
     transform: scale(1);
@@ -1391,7 +1387,7 @@ i {
     transform: scale(2);
     
   }
-}
+}*/
 
 .tvRight {
   animation: tvRight 2.5s ease 2 alternate;
@@ -1403,11 +1399,11 @@ i {
 
 .trending-vids figure .tv-frame {
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  position: absolute;
-  left: -5%;
-  top: -5%;
   filter: brightness(60%);
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  -webkit-border-radius: 50%; 
 }
 
 .trending-vids figure .tv-frame.bright {
@@ -1487,8 +1483,8 @@ i {
   align-items: flex-start;
   color: rgb(252,24,33);
   display: flex;
-  justify-content: space-between;
   flex-flow: row wrap;
+  justify-content: space-between;
   padding: 60px 20px 10px 20px;
 }
 
@@ -1650,25 +1646,23 @@ i {
 .slideshow {
   display: flex;
   margin: 0 -2500px 0 0;
-  position: relative; 
 }
 
 .now .sec-art {
   align-items: flex-start;
   display: flex;
-  justify-content: space-between;
   height: 130px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   padding: 0 30px;
-  position: relative;
-  float: left;
   width: 375px;
 }
 
 .now .art-img {
   align-items: flex-start;
   display: flex;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
   margin: 0;
   overflow: hidden;
   width: 50%;
@@ -1683,9 +1677,9 @@ i {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
+  height: 100%;
   justify-content: flex-start;
   padding-left: 20px;
-  height: 100%;
   width: 50%;
 }
 
@@ -1703,8 +1697,8 @@ i {
 .now .pagination {
   align-items: center;
   display: flex;
-  justify-content: center;
   height: 20px;
+  justify-content: center;
   margin: 50px 0 100px 0;
   width: 100%;
 }
@@ -2263,8 +2257,8 @@ footer figure {
    /*--- CALL-TO-ACTION ---*/
 
    .call-to-action {
-    padding: 0;
-    transform: translateY(-50px);
+      padding: 0;
+      transform: translateY(-50px);
    }
 
     .call-to-action h6 {
@@ -2289,7 +2283,7 @@ footer figure {
     }
 
     .podCon h4 {
-       font-size: 2.125rem;
+      font-size: 2.125rem;
       padding-top: 20px;
     }
 
@@ -2298,8 +2292,8 @@ footer figure {
     .podcast .btn-container {
       align-items: center;
       display: flex;
-      justify-content: center;
       height: 150px;
+      justify-content: center;
       margin: 0 auto;
       width: 80%;
     }
@@ -2337,8 +2331,8 @@ footer figure {
       border-left: 340px solid transparent;
       border-right: 340px solid rgba(0,0,0,0.5);
       border-bottom: 340px solid rgba(0,0,0,0.5);
-      left: 0;
       top: 0;
+      left: 0;
     }
 
     #triangle-container .content {
@@ -2413,6 +2407,10 @@ footer figure {
       margin-left: 40px;
     }  
 
+    .trending-vids {
+      padding: 0 0 50px 0;
+    }
+
     .tv1,
     .tv4 {
       padding-bottom: 25%;
@@ -2451,7 +2449,7 @@ footer figure {
 
     .more-collection,
     .more-presented {
-      padding: 90px 40px 10px 40px; 
+      padding: 60px 40px 10px 40px; 
     }
 
     .shop-opt {
@@ -2476,7 +2474,7 @@ footer figure {
 
 
     .now h3 {
-      padding: 90px 40px 75px 40px;
+      padding: 60px 40px 60px 40px;
     }
 
     .now-hr {
@@ -2515,13 +2513,16 @@ footer figure {
     /*--- FINAL CTA ---*/
 
 
+    .final-cta {
+      padding-top: 60px;
+    }
     .discover-cta .btn-container,
     .watch-cta .btn-container,
     .shop-cta .btn-container {
       align-items: center;
       display: flex;
-      justify-content: center;
       height: 150px;
+      justify-content: center;
       margin: 0 auto;
       width: 80%;
     }
@@ -2540,6 +2541,10 @@ footer figure {
 
     /*FOOTER*/
 
+
+    footer {
+      padding-top: 60px;
+    }
 
     .email-form input[type = 'submit'] {
       left: 85%;
@@ -2575,6 +2580,8 @@ footer figure {
 
     .searchScroll {
 	    transform: translateX(250px) translateY(-50%);
+      -webkit-transform: translateX(250px) translateY(-50%);
+      -moz-transform: translateX(250px) translateY(-50%);
 	  }
 
 
@@ -2583,6 +2590,8 @@ footer figure {
 
     .hero-area {
       transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
+      -moz-transform: translateY(-100px);
     }
 
 
@@ -2591,6 +2600,8 @@ footer figure {
 
     .call-to-action {
       transform: translateY(-50px);
+      -webkit-transform: translateY(-50px);
+      -moz-transform: translateY(-50px);
     }
 
     .call-to-action,
@@ -2655,8 +2666,8 @@ footer figure {
     }
 
     .slider-btns::-webkit-slider-thumb {
-      width: 35%;
       height: 80px;
+      width: 35%;
     }
 
     .slider-btns::-moz-range-thumb {
@@ -2854,6 +2865,8 @@ footer figure {
 
     .searchScroll {
 	    transform: translateX(450px) translateY(30%);
+      -webkit-transform: translateX(450px) translateY(30%);
+      -moz-transform: translateX(450px) translateY(30%);
 	  }
 
 
@@ -2926,8 +2939,8 @@ footer figure {
     .style-out-there .btn-container, 
     .pinterest .btn-container, 
     .podcast .btn-container {
-      width: 100%;
       height: 120px;
+      width: 100%;  
     }
 
     .slider-btns {
@@ -2968,9 +2981,9 @@ footer figure {
     .arrow-container {
       align-items: center;
       display: flex;
-      justify-content: center;
       flex-flow: row wrap;
       height: 200px;
+      justify-content: center;
       width: 20px;
     }
 
@@ -3068,8 +3081,8 @@ footer figure {
       align-items: flex-start;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       height: 550px;
+      justify-content: space-between;
       width: 50%;
     }
 
@@ -3127,8 +3140,8 @@ footer figure {
 
     .trending-vids-container {
       align-items: flex-start;
-      justify-content: space-around;
       height: 300px;
+      justify-content: space-around;
       margin: 50px auto;
       width: 90%;
     }
@@ -3170,12 +3183,14 @@ footer figure {
     .selected1 {
       transform: scale(2);
       -webkit-transform: scale(2);
+      -moz-transform: scale(2);
       z-index: 9;
     }
 
     .selected2 {
       transform:  scale(2);
       -webkit-transform:  scale(2);
+      -moz-transform:  scale(2);
       z-index: 9;
     }
 

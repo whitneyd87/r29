@@ -563,7 +563,7 @@ $(document).ready(function(){
               
                     scrollLeft: $(e).offset().left - $('.slideshow').offset().left
               
-                }, 2000).delay(500);
+                }, 3000).delay(1500);
 
                 $('.more-art').on('touchstart', function (){
                     
