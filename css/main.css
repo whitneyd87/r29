@@ -293,7 +293,7 @@ header nav ul {
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
+  justify-content: center;
   position: absolute;
   top: 100%;
   left: 0;
@@ -464,11 +464,11 @@ header nav ul .slide {
 
 #discover {
   padding: 5px 10px;
-  width: 100%;
+  width: 100px;
 }
 
 .sec-nav {
-  width: 60%;
+  width: 60px;
 }
 
 header ul li a {
@@ -531,7 +531,7 @@ i {
 }
 
 .hero-area h1 {
-  padding-bottom: 95%;
+  padding-bottom: 85%;
 }
 
 .hero-area .hero-article {
@@ -552,6 +552,10 @@ i {
 
 
 .call-to-action {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   padding: 30px 0;
 }
 
@@ -563,8 +567,9 @@ i {
 .style-out-there,
 .pinterest,
 .podcast {
-  margin: 40px 0;
+  margin: 20px 0;
   position: relative;
+  width: 90%;
 }
 
 .styleCon, 
@@ -639,7 +644,7 @@ i {
   cursor: pointer;
   height: 150px;
   margin: 0;
-  width: 40%;
+  width: 150px;
 }
 
 .slider-btns::-moz-range-thumb {
@@ -781,7 +786,7 @@ i {
 
 .ls-story {
   height: 150px;
-  width: 300px;
+  width: 90%;
 }
 
 .ls-story h6 {
@@ -827,27 +832,33 @@ i {
   height: 500px;
   overflow: hidden;
   position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
 .triangle {
-  border-top: 188px solid transparent;
-  border-left: 188px solid transparent;
-  border-right: 188px solid rgba(0,0,0,0.5);
-  border-bottom: 188px solid rgba(0,0,0,0.5);
+  border-top: 300px solid transparent;
+  border-left: 300px solid transparent;
+  border-right: 300px solid rgba(0,0,0,0.5);
+  border-bottom: 300px solid rgba(0,0,0,0.5);
   box-sizing: border-box;
+  height: 100%;
   position: absolute;
-  top: 25%;
+  top: 0;
   left: 0;
+  -webkit-box-sizing: border-box;
+  width: 100%;
 }
 
 #triangle-container .content {
   color: rgb(255,255,255);
   padding: 0 0 0 20px;
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 0;
+  left: -10%;
   text-align: right;
+  width: 100%;
 }
 
 #triangle-container .content h6 {
@@ -979,7 +990,6 @@ i {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  height: 150px;
   justify-content: space-between;
 } 
 
@@ -1111,7 +1121,7 @@ i {
 }
 
 .trending-vids {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .trending-vids h3 {
@@ -1138,20 +1148,24 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  position: relative;
 }
 
 .tv {
   height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
 .tv-container {
   align-items: flex-start;
   display: flex;
-  height: 150px;
-  justify-content: center;
+  justify-content: center; 
   position: relative;
-  margin-top: -25px;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -1205,7 +1219,7 @@ i {
   height: 50%;
   padding: 10px 0 0 0;
   position: absolute;
-  top: 75px;
+  top: 50%;
   left: 0;
   text-align: center;
   width: 100%; 
@@ -1533,6 +1547,7 @@ i {
   text-align: right;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .shopping .more i {
@@ -1776,11 +1791,20 @@ i {
 /*FINAL CTA*/
 
 
+.final-cta {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 30px 0;
+}
+
 .discover-cta,
 .watch-cta,
 .shop-cta {
-  margin: 40px 0;
+  margin: 20px 0;
   position: relative;
+  width: 90%;
 }
 
 .discoverCon,
@@ -1956,7 +1980,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-  padding-top: 100px;
+  padding-top: 60px;
 	width: 100%;
 }
 
