@@ -246,14 +246,14 @@ header nav ul {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;  
+  justify-content: flex-end; 
 }
 
 @keyframes navScroll {
 	
   0% {
     opacity: 0;
-		transform: translateX(200%);
+		transform: translateX(100%);
 	}
 	100% {
     opacity: 1;
@@ -265,7 +265,7 @@ header nav ul {
   
   0% {
     opacity: 0;
-    -webkit-transform: translateX(200%);
+    -webkit-transform: translateX(100%);
   }
   100% {
     opacity: 1;
@@ -277,7 +277,7 @@ header nav ul {
   
   0% {
     opacity: 0;
-    -moz-transform: translateX(200%);
+    -moz-transform: translateX(100%);
   }
   100% {
     opacity: 1;
@@ -291,6 +291,7 @@ header nav ul {
   -webkit-animation: navScroll 1s ease-out 1;
   -moz-animation: navScroll 1s ease-out 1;
   background-color: black;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -367,6 +368,7 @@ header nav ul .slide {
   transition: 500ms 300ms ease-in;
   -webkit-transition: 500ms 300ms ease-in;
   -moz-transition: 500ms 300ms ease-in;
+  width: 100%;
   z-index: 1001;
 }
 
@@ -374,34 +376,34 @@ header nav ul .slide {
   
   0% {
     opacity: 0;
-    transform: scale(1) translateX(10px);
+    transform: translateX(10px);
   }
   
   100% {
     opacity: 1;
-    transform: scale(0.8) translateX(10px);
+    transform: translateX(10px);
   }
 }
 
 @-webkit-keyframes logoShrink {
   
   0% {
-    -webkit-transform: scale(1) translateX(10px);
+    -webkit-transform: translateX(10px);
   }
   
   100% {
-    -webkit-transform: scale(0.8) translateX(10px);
+    -webkit-transform: translateX(10px);
   }
 }
 
 @-moz-keyframes logoShrink {
   
   0% {
-    -moz-transform: scale(1) translateX(10px);
+    -moz-transform: translateX(10px);
   }
   
   100% {
-    -moz-transform: scale(0.8) translateX(10px);
+    -moz-transform: translateX(10px);
   }
 }
 
@@ -464,11 +466,11 @@ header nav ul .slide {
 
 #discover {
   padding: 5px 10px;
-  width: 100px;
+  width: 90%;
 }
 
 .sec-nav {
-  width: 60px;
+  width: 60%;
 }
 
 header ul li a {
@@ -584,12 +586,12 @@ i {
   top: 0;
   left: 0;
   -webkit-box-sizing: border-box;
-  width: 100%;
+  width: 80%;
 }
 
 .styleCon,
 .podCon {
-  left: -10%;
+  left: 10%;
   text-align: right;
 }
 
@@ -829,7 +831,7 @@ i {
 }
 
 #triangle-container {
-  height: 500px;
+  height: 100%;
   overflow: hidden;
   position: relative;
   top: 0;
@@ -843,7 +845,7 @@ i {
   border-right: 300px solid rgba(0,0,0,0.5);
   border-bottom: 300px solid rgba(0,0,0,0.5);
   box-sizing: border-box;
-  height: 100%;
+  height: 500px;
   position: absolute;
   top: 0;
   left: 0;
@@ -2244,8 +2246,8 @@ footer figure {
 
     #search-box {
       left: 40px;
-      top: 45%;
-      width: 60%;
+      top: 60%;
+      width: 50%;
     }
 
     #search i {
@@ -2255,7 +2257,7 @@ footer figure {
     #date {
       font-size: 1.125rem;
       left: 40px;
-      top: 80%;
+      top: 90%;
     }
 
     .headerScroll {
@@ -2263,7 +2265,7 @@ footer figure {
     }
 
 	  .searchScroll {
-	    transform: translateX(250px) translateY(-50%);
+	    transform: translateX(250px) translateY(-80%);
 	  }
 
 
@@ -2304,11 +2306,11 @@ footer figure {
 
     .styleCon,
     .podCon {
-      left: -20%;
+      left: 3%;
     }
 
     .pinCon {
-      left: 20%;
+      left: 15%;
     }
 
     .styleCon h4 {
@@ -2333,6 +2335,7 @@ footer figure {
 
     .slider-btns::-webkit-slider-thumb {
       height: 200px;
+      width: 200px;
     }
 
     .slider-btns::-moz-range-thumb {
@@ -2374,6 +2377,7 @@ footer figure {
 
     #triangle-container .content {
       top: 40%;
+      left: 3%;
       width: 90%;
     }
 
@@ -2886,6 +2890,11 @@ footer figure {
       height: 250px;
     }
 
+    .more-collection,
+    .more-presented {
+      width: 80%;
+    }
+
 
     /*FINAL CTA*/
 
@@ -2893,23 +2902,30 @@ footer figure {
     .discover-cta,
     .watch-cta,
     .shop-cta {
-      margin: 25px auto;
+      margin: 0;
+      width: 32%;
+    }
+
+    .discover-cta .btn-container,
+    .watch-cta .btn-container,
+    .shop-cta .btn-container {
+      height: 80px;
       width: 100%;
     }
 
     .discoverCon h1,
     .watchCon h1,
     .shopCon h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
 
     .discoverCon h1,
     .shopCon h1 {
-      padding-left: 150px;
+      padding-left: 20px;
     }
 
     .watchCon h1 {
-      padding-right: 150px;
+      padding-right: 20px;  
     }
 
     .final-cta .slider-btns::-ms-thumb {
@@ -2934,7 +2950,7 @@ footer figure {
     /*HEADER*/
 
 
-    header figure {
+    /*header figure {
       padding-left: 60px;
     }
 
@@ -2970,12 +2986,12 @@ footer figure {
       -webkit-transform: translateX(450px) translateY(30%);
       -moz-transform: translateX(450px) translateY(30%);
 	  }
-
+*/
 
     /*HERO AREA*/
 
 
-    .hero-area {
+  /*  .hero-area {
       background-repeat: no-repeat;
       height: 625px;
     }
@@ -2989,8 +3005,8 @@ footer figure {
       font-size: 3rem;
       padding: 40px 0 0 0;
     }
-
-    .hero-area h1 {
+*/
+/*    .hero-area h1 {
       font-size: 4rem;
     }
 
@@ -3005,7 +3021,7 @@ footer figure {
     .hero-area h1 {
       font-size: 6rem;
       margin-bottom: 150px;
-    }
+    }*/
 
 
     /*CALL TO ACTION*/
@@ -3099,7 +3115,7 @@ footer figure {
       width: 120%;
     }
 
-    .latest-news .content {
+    .ls-story {
       width: 75%;
     }
 

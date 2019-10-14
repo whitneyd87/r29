@@ -2,30 +2,30 @@ var clicked = 0;
 
 $(document).ready(function(){    
 
-    var date = new Date();
+    let date = new Date();
 
-    var days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THRUSDAY', 'FRIDAY', 'SATURDAY']
+    const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THRUSDAY', 'FRIDAY', 'SATURDAY']
 
-    var months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
-    var intervalBubble = null;
+    let intervalBubble = null;
 
-    var intervalScroll = null;
+    let intervalScroll = null;
 
-    var bullets = $('.bullet');
+    let bullets = $('.bullet');
 
     
-    var originalVidDots = $('.originals').find(bullets); 
+    let originalVidDots = $('.originals').find(bullets); 
 
-    var beautyPagDots = $('.beauty').find(bullets);
+    let beautyPagDots = $('.beauty').find(bullets);
 
-    var newsPagDots = $('.news').find(bullets);
+    let newsPagDots = $('.news').find(bullets);
 
-    var fashionPagDots = $('.fashion').find(bullets);
+    let fashionPagDots = $('.fashion').find(bullets);
 
-    var lifestylePagDots = $('.lifestyle').find(bullets);
+    let lifestylePagDots = $('.lifestyle').find(bullets);
 
-    var workmoneyPagDots = $('.workmoney').find(bullets);
+    let workmoneyPagDots = $('.workmoney').find(bullets);
 
 
     var collapsibles = document.querySelectorAll('.collapsible');
@@ -87,7 +87,7 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
      
-        var winY = $(window).scrollTop();
+        let winY = $(window).scrollTop();
 
         if (winY > 1100) {
             
@@ -121,7 +121,7 @@ $(document).ready(function(){
 
     $('#styleInput').on('change', function() {
         
-        var styleValue = $('#styleInput').val();
+        let styleValue = $('#styleInput').val();
     
         if(styleValue < 50) {
            
@@ -139,7 +139,7 @@ $(document).ready(function(){
 
     $('#pinterestInput').on('change', function() {
         
-        var pinValue = $('#pinterestInput').val();
+        let pinValue = $('#pinterestInput').val();
     
         if (pinValue > 50 || pinValue === 1) {
            
@@ -157,7 +157,7 @@ $(document).ready(function(){
 
     $('#podcastInput').on('change', function() {
         
-        var podValue = $('#podcastInput').val();
+        let podValue = $('#podcastInput').val();
     
         if (podValue < 50 || podValue === 100) {
            
@@ -176,7 +176,7 @@ $(document).ready(function(){
 
     $('#discover-btn').on('change', function() {
         
-        var discoverValue = $('#discover-btn').val();
+        let discoverValue = $('#discover-btn').val();
     
         if (discoverValue < 50 || discoverValue === 100) {
            
@@ -193,7 +193,7 @@ $(document).ready(function(){
 
     $('#watch-btn').on('change', function() {
         
-        var watchValue = $('#watch-btn').val();
+        let watchValue = $('#watch-btn').val();
     
         if (watchValue > 50 || watchValue === 1) {
            
@@ -211,7 +211,7 @@ $(document).ready(function(){
 
     $('#shop-btn').on('change', function() {
         
-        var shopValue = $('#shop-btn').val();
+        let shopValue = $('#shop-btn').val();
     
         if (shopValue < 50 || shopValue === 100) {
            
@@ -231,7 +231,7 @@ $(document).ready(function(){
 
     $(function(){
     
-      var tickerHeight = $('.ls-story').outerHeight();
+      let tickerHeight = $('.ls-story').outerHeight();
     
       $('.ls-story:last-child').prependTo('.latest-scroll ul');
     
@@ -266,7 +266,7 @@ $(document).ready(function(){
 
     $('.arrow-up').click(function(){
 
-        var tickerHeight = $('.ls-story').outerHeight();
+        let tickerHeight = $('.ls-story').outerHeight();
 
          $('.latest-scroll ul').animate({
     
@@ -277,7 +277,7 @@ $(document).ready(function(){
 
     $('.arrow-down').click(function(){
 
-        var tickerHeight = $('.ls-story').outerHeight();
+        let tickerHeight = $('.ls-story').outerHeight();
 
          $('.latest-scroll ul').animate({
     
@@ -291,8 +291,8 @@ $(document).ready(function(){
 
     function dragFix(event, ui) {
         
-        var contWidth = containmentArea.width()
-        var contHeight = containmentArea.height();
+        let contWidth = containmentArea.width()
+        let contHeight = containmentArea.height();
         
         ui.position.left = Math.max(
             0, 
@@ -329,7 +329,7 @@ $(document).ready(function(){
 
     setInterval( function () {
         
-        var originalVidScroll = $('.vid-gal').scrollLeft();
+        let originalVidScroll = $('.vid-gal').scrollLeft();
 
     
         if ( originalVidScroll == 0 && originalVidScroll < 200 ) {
@@ -604,15 +604,15 @@ $(document).ready(function(){
 
     setInterval(function() { 
 
-        var beautyScroll = $('.beauty-scroll').scrollLeft();
+        let beautyScroll = $('.beauty-scroll').scrollLeft();
 
-        var newsScroll = $('.news-scroll').scrollLeft();
+        let newsScroll = $('.news-scroll').scrollLeft();
 
-        var fashionScroll = $('.fashion-scroll').scrollLeft();
+        let fashionScroll = $('.fashion-scroll').scrollLeft();
 
-        var lifestyleScroll = $('.lifestyle-scroll').scrollLeft();
+        let lifestyleScroll = $('.lifestyle-scroll').scrollLeft();
 
-        var workmoneyScroll = $('.workmoney-scroll').scrollLeft();
+        let workmoneyScroll = $('.workmoney-scroll').scrollLeft();
 
 
        if ( beautyScroll == 0 && beautyScroll < 100 ) {
