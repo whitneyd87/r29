@@ -97,7 +97,7 @@ $(document).ready(function(){
             $('#logo').addClass('logoShrink');
             $('#search-box').removeClass('searchTop');
             $('#search-box').addClass('searchScroll');
-            $('header nav').css('width', '100%');
+            $('header nav').addClass('navWidth');
             $('header nav ul').addClass('navScroll');
             $('.main-li').css('margin-bottom', '0px');
 
@@ -109,7 +109,7 @@ $(document).ready(function(){
             $('#logo').addClass('logoGrow');
             $('#search-box').removeClass('searchScroll');
             $('#search-box').addClass('searchTop');
-            $('header nav').css ('width', '30%');
+            $('header nav').removeClass('navWidth');
             $('header nav ul').removeClass('navScroll');
             $('.main-li').css('margin-bottom', '10px');
         }

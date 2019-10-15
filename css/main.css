@@ -107,6 +107,13 @@ body {
   width: 100%;
 }
 
+main {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .wrapper {
   width: 90%;
 }
@@ -240,6 +247,10 @@ header figure {
 
 header nav {
   width: 30%;
+}
+
+.navWidth {
+  width: 100% !important;
 }
 
 header nav ul {
@@ -559,6 +570,7 @@ i {
   flex-flow: row wrap;
   justify-content: center;
   padding: 30px 0;
+  width: 100%;
 }
 
 .call-to-action h6, 
@@ -1024,6 +1036,7 @@ i {
   color: rgb(255,255,255);
   cursor: pointer;
   padding: 60px 0;
+  width: 100%;
 }
 
 .watch h2,
@@ -1583,6 +1596,10 @@ i {
 /*NOW ON R29*/
 
 
+.now {
+  width: 100%;
+}
+
 .now h3 {
   padding: 60px 20px;
 }
@@ -1799,6 +1816,7 @@ i {
   flex-flow: row wrap;
   justify-content: center;
   padding: 30px 0;
+  width: 100%;
 }
 
 .discover-cta,
@@ -2266,6 +2284,7 @@ footer figure {
 
 	  .searchScroll {
 	    transform: translateX(250px) translateY(-80%);
+      -webkit-transform: translateX(250px) translateY(-80%);
 	  }
 
 
@@ -2275,6 +2294,7 @@ footer figure {
     .hero-area {
       height: 600px;
       transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
     }
 
     .hero-area h3 {
@@ -2294,6 +2314,7 @@ footer figure {
     .call-to-action {
       padding: 0;
       transform: translateY(-50px);
+      -webkit-transform: translateY(-50px);
     }
 
     .call-to-action h6 {
@@ -2418,11 +2439,6 @@ footer figure {
     .trend-art1 h4 {
       font-size: 1.875rem;
       padding: 50px 40px;
-    }
-
-    .trend-art2 .content,
-    .trend-art3 .content {
-      height: 250px;
     }
 
     .trend-art2 h5, 
@@ -2671,7 +2687,7 @@ footer figure {
 
     .styleCon,
     .podCon {
-      left: -10%;
+      left: 10%;
       padding: 5px 0px;
     }
 
@@ -2792,6 +2808,10 @@ footer figure {
       width: 100%;
     }
 
+    .trending-articles {
+      padding-bottom: 60px;
+    }
+
     .sec-art1,
     .trend-art1 {
       height: 450px;
@@ -2810,10 +2830,6 @@ footer figure {
       justify-content: space-between;
       height: 450px;
       width: 45%;
-    }
-
-    .trend-art-container {
-      padding-bottom: 60px;
     }
 
     .sec-art2, 
@@ -2850,9 +2866,12 @@ footer figure {
       font-size: 1.25rem;
      }
 
-    .trend-art2,
-    .trend-art3 {
+    .trend-art2 {
       margin: 0;
+    }
+
+    .trend-art3 {
+      margin-top: 10px;
     }
 
     .trend-art2 .content,
@@ -2883,11 +2902,11 @@ footer figure {
     }
 
     .shop-opt {
-      width: 270px;
+      width: 225px;
     }
 
     .shop-opt-img {
-      height: 250px;
+      height: 225px;
     }
 
     .more-collection,
@@ -2898,6 +2917,10 @@ footer figure {
 
     /*FINAL CTA*/
 
+
+    .final-cta {
+      padding: 60px 0 0 0;
+    }
 
     .discover-cta,
     .watch-cta,
@@ -2938,7 +2961,30 @@ footer figure {
 
 
     footer {
-      padding-top: 50px;
+      padding-top: 60px;
+    }
+
+    .social-media {
+      padding: 20px 0;
+    }
+
+    .contact {
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .company {
+      width: 30%;
+    }
+
+    .company hr {
+      width: 30%;
+    }
+
+    .contact-container {
+      align-items: flex-start;
+      padding-top: 0;
+      width: 60%;
     }
 
   }
@@ -2950,13 +2996,13 @@ footer figure {
     /*HEADER*/
 
 
-    /*header figure {
+    header figure {
       padding-left: 60px;
     }
 
     header nav {
       padding-top: 10px;
-      width: 20% !important;
+      width: 15%;
     }
 
     #search-box {
@@ -2972,7 +3018,7 @@ footer figure {
     }
 
     #date {
-      font-size: 0.875rem;
+      font-size: 1.125rem;
       top: 75%;
       left: 10%;
     }
@@ -2986,28 +3032,29 @@ footer figure {
       -webkit-transform: translateX(450px) translateY(30%);
       -moz-transform: translateX(450px) translateY(30%);
 	  }
-*/
+
 
     /*HERO AREA*/
 
 
-  /*  .hero-area {
+    .hero-area {
       background-repeat: no-repeat;
       height: 625px;
+      transform: translateY(-150px);
     }
 
     .hero-area .wrapper {
       padding-top: 70px;
-      width: 80%;
+      width: 75%;
     }
 
     .hero-area h3 {
-      font-size: 3rem;
-      padding: 40px 0 0 0;
+      font-size: 2.5rem;
     }
-*/
-/*    .hero-area h1 {
-      font-size: 4rem;
+
+    .hero-area h1 {
+      font-size: 6rem;
+      padding-bottom: 5%;
     }
 
     .hero-area .hero-article {
@@ -3018,17 +3065,13 @@ footer figure {
       font-size: 2rem;
     }
 
-    .hero-area h1 {
-      font-size: 6rem;
-      margin-bottom: 150px;
-    }*/
-
 
     /*CALL TO ACTION*/
 
 
     .call-to-action {
       justify-content: space-between;
+      width: 80%;
     }
 
     .style-out-there,
@@ -3037,20 +3080,25 @@ footer figure {
       width: 33%;
     }
 
-    .call-to-action .content {
+    .styleCon,
+    .podCon,
+    .pinCon {
       left: 40px;
       width: 80%;
     }
 
-    .call-to-action .content h6 {
+    .styleCon h6, 
+    .podCon h6, 
+    .pinCon h6 {
       font-size: 0.75rem;
     }
 
-    .call-to-action .content h4 {
+    .podCon h4,
+    .pinCon h4 {
       font-size: 1.5rem;
     }
 
-    .style-out-there .content h4 {
+    .styleCon h4 {
       font-size: 1.3rem;
     }
 
