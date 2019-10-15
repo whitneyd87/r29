@@ -3018,9 +3018,9 @@ footer figure {
     }
 
     #date {
-      font-size: 1.125rem;
+      font-size: 1rem;
       top: 75%;
-      left: 10%;
+      left: 13%;
     }
 
     .headerScroll {
@@ -3039,7 +3039,7 @@ footer figure {
 
     .hero-area {
       background-repeat: no-repeat;
-      height: 625px;
+      height: 700px;
       transform: translateY(-150px);
     }
 
@@ -3049,12 +3049,13 @@ footer figure {
     }
 
     .hero-area h3 {
-      font-size: 2.5rem;
+      font-size: 2.125rem;
+      padding-top: 125px;
     }
 
     .hero-area h1 {
-      font-size: 6rem;
-      padding-bottom: 5%;
+      font-size: 5.25rem;
+      padding-bottom: 15%;
     }
 
     .hero-area .hero-article {
@@ -3071,13 +3072,14 @@ footer figure {
 
     .call-to-action {
       justify-content: space-between;
-      width: 80%;
+      padding: 0;
+      width: 85%;
     }
 
     .style-out-there,
     .pinterest,
     .podcast {
-      width: 33%;
+      width: 30%;
     }
 
     .styleCon,
@@ -3093,19 +3095,22 @@ footer figure {
       font-size: 0.75rem;
     }
 
-    .podCon h4,
-    .pinCon h4 {
-      font-size: 1.5rem;
+    .styleCon h4 {
+      font-size: 1.125rem;
     }
 
-    .styleCon h4 {
-      font-size: 1.3rem;
+    .pinCon h4 {
+      font-size: 1.25rem;
+    }
+
+    .podCon h4 {
+      font-size: 1.5rem;
     }
 
     .style-out-there .btn-container, 
     .pinterest .btn-container, 
     .podcast .btn-container {
-      height: 120px;
+      height: 100px;
       width: 100%;  
     }
 
@@ -3114,8 +3119,8 @@ footer figure {
     }
 
     .slider-btns::-webkit-slider-thumb {
-      height: 150px;
-      width: 150px;
+      height: 120px;
+      width: 120px;
     }
 
     .slider-btns::-moz-range-thumb {
@@ -3141,7 +3146,7 @@ footer figure {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 10%;
+      width: 90%;
     }
 
     .arrow-container {
@@ -3150,6 +3155,7 @@ footer figure {
       flex-flow: row wrap;
       height: 200px;
       justify-content: center;
+      padding: 0 40px;
       width: 20px;
     }
 
@@ -3174,96 +3180,59 @@ footer figure {
     .secondary-articles {
       align-items: flex-start;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       padding-top: 0;
-    }
-
-    .sec-art1,
-    .sec-art2,
-    .sec-art3 {
-      width: 50%;
+      width: 95%;
     }
 
     .triangle {
-      left: 20%;
+      left: -30%;
+    }
+
+    .sec-art1 {
+      width: 40%;
+    }
+
+    .sec-art-container {
+      flex-flow: row nowrap;
+      width: 50%;
+    }
+
+    .sec-art2 .content {
+      background-size: cover;
     }
 
     .sec-art2,
     .sec-art3 {
-      width: 23%;
-    }
-
-    .sec-art2 {
-      background-position: bottom !important;
-      height: 480px;
-      padding-top: 0;
-    }
-
-    .sec-art2 h4 {
-      height: 355px;
-      padding: 50px 10px; 
-    }
-
-    .sec-art2 h6 {
-      padding: 0 10px;
+      height: 100%; 
+      width: 45%;
     }
 
 
     /*TRENDING*/
 
 
-    .trending {
-      padding-bottom: 75px;
+    .trending-articles {
+      margin: auto;
+      width: 95%;
     }
 
-    .trending h3 {
-      padding-left: 10%;
+    .trend-art1,
+    .trend-art-container {
+      height: 495px;
     }
 
-    .trending h6 {
-      padding: 0 10%;
+    .trend-art3 {
+      margin-top: 15px;
     }
 
-    .trending .container {
+    .trend-art2 .content,
+    .trend-art3 .content {
+      height: 200px;
+    }
+
+    .art-img {
       align-items: flex-start;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .trend-art1 {
-      height: 550px;
-      width: 50%;
-    }
-
-    .trend-art1 .content {
-      width: 100%;
-    }
-
-    .trend-art1 h4 {
-      padding: 50px 10%;
-    }
-
-    .sec-art-container {
-      align-items: flex-start;
-      display: flex;
-      flex-direction: column;
-      height: 550px;
-      justify-content: space-between;
-      width: 50%;
-    }
-
-    .trend-art2 {
-      margin: 0;
-      width: 100%;
-    }
-
-    .trend-art2 .content {
-      height: 230px;
-    }
-
-    .art-img img {
-      height: 100%;
-      width: auto;
     }
 
 
