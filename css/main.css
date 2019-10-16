@@ -1339,20 +1339,6 @@ i {
   }
 }
 
-/*@keyframes tvLeftIE {
-    
-  0% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(2);
-  }
-
-  100% {
-    transform: scale(2);
-  }
-}*/
 
 .tvLeft {
   animation: tvLeft 2.5s ease 2 alternate;
@@ -1408,21 +1394,6 @@ i {
   }
 }
 
-/*@keyframes tvRightIE {
-  
-  0% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(2);
-  }
-
-  100% {
-    transform: scale(2);
-    
-  }
-}*/
 
 .tvRight {
   animation: tvRight 2.5s ease 2 alternate;
@@ -3198,14 +3169,26 @@ footer figure {
       width: 50%;
     }
 
-    .sec-art2 .content {
-      background-size: cover;
-    }
-
     .sec-art2,
     .sec-art3 {
       height: 100%; 
       width: 45%;
+    }
+
+    .sec-art2 .content {
+      background-size: cover;
+    }
+
+    .sec-art2 h6 {
+      padding: 0;
+    }
+
+    .sec-art2 h4 {
+      padding: 40px 0;
+    }
+
+    .sec-art3 .content {
+      padding: 40px 10px;
     }
 
 
@@ -3243,6 +3226,10 @@ footer figure {
       padding: 90px 0 0 0;
     }
 
+    .originals {
+      padding: 0;
+    }
+
     .vid-gal {
       overflow-scrolling: auto;
     }
@@ -3260,8 +3247,8 @@ footer figure {
       margin-left: 90px;
     }
 
-    .trending-vids {
-      padding: 70px 0;
+    .trending-vids h3 {
+      padding: 0 0 70px 120px;
     }
 
     .tv {
@@ -3279,58 +3266,211 @@ footer figure {
     .trending-vids-container {
       align-items: flex-start;
       height: 300px;
+      flex-flow: row nowrap;
       justify-content: space-around;
       margin: 50px auto;
       width: 90%;
     }
 
-    .trend-vid-container {
-      justify-content: space-between;
+    .tv-wrapper {
+      justify-content: space-around;
       margin-top: 0;
-      width: 50%;
+      width: 100%;
     }
 
-    .trend-vid-container .tv {
-      width: 100%;
+    .tv-wrapper .tv {
+      width: 30%;
     }
 
     .tv1, 
     .tv4 {
-      padding-bottom: 65%;
-      width: 65%;
+      padding-bottom: 50%;
+      width: 50%;
+    }
+
+    .tv-container {
+      width: 40%;
     }
 
     .tv2,
     .tv3 {
-      padding-bottom: 65%;
-      width: 65%;
+      padding-bottom: 130%;
+      width: 130%;
     }
 
-   .grow1 {
+    .tv2 {
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+    }
+
+    .tv3 {
+      transform: translateX(15%);
+      -webkit-transform: translateX(15%);
+      -moz-transform: translateX(15%);
+    }
+
+    @keyframes tvTopBottom {
+  
+      0% {   
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(1.3);
+      }
+
+      100% {
+        transform: scale(1.3);
+      }
+    }
+
+    @-webkit-keyframes tvTopBottom {
+      
+      0% {  
+        -webkit-transform: scale(1);
+      }
+
+      40% {  
+        -webkit-transform: scale(1.3);
+      }
+      
+      100% {
+        -webkit-transform: scale(1.3);
+      }
+    }
+
+    @-moz-keyframes tvTopBottom {
+      
+      0% {  
+        -moz-transform: scale(1);
+      }
+
+      40% {  
+        -moz-transform: scale(1.3);
+      }
+      
+      100% {
+        -moz-transform: scale(1.3);
+      }
+    }
+
+    @keyframes tvLeft {
+  
+      0% {
+        transform: translateX(-50%) scale(1);
+      }
+
+      40% {
+        transform: translateX(-50%) scale(1.3);
+      }
+
+      100% {
+        transform: translateX(-50%) scale(1.3);
+      }
+    }
+
+    @-webkit-keyframes tvLeft {
+      
+      0% {
+        -webkit-transform: translateX(-50%) scale(1);
+      }
+
+      40% {
+        -webkit-transform: translateX(-50%) scale(1.3);
+      }
+
+      100% {
+        -webkit-transform: translateX(-50%) scale(1.3);
+      }
+    }
+
+    @-moz-keyframes tvLeft {
+      
+      0% {
+        -moz-transform: translateX(-50%) scale(1);
+      }
+
+      40% {
+        -moz-transform: translateX(-50%) scale(1.3);
+      }
+
+      100% {
+        -moz-transform: translateX(-50%) scale(1.3);
+      }
+    }
+
+    @keyframes tvRight {
+      
+      0% {
+        transform: transform: translateX(15%) scale(1);
+      }
+
+      40% {
+        transform: transform: translateX(15%) scale(1.3);
+      }
+
+      100% {
+        transform: transform: translateX(15%) scale(1.3);
+        
+      }
+    }
+
+    @-webkit-keyframes tvRight {
+      
+      0% {
+        -webkit-transform: transform: translateX(15%) scale(1);
+      }
+
+      40% {
+        -webkit-transform: transform: translateX(15%) scale(1.3);
+      }
+
+      100% {
+        -webkit-transform: transform: translateX(15%) scale(1.3);  
+      }
+    }
+
+    @-moz-keyframes tvRight {
+      
+      0% {
+        -moz-transform: transform: translateX(15%) scale(1);
+      }
+
+      40% {
+        -moz-transform: transform: translateX(15%) scale(1.3);
+      }
+
+      100% {
+        -moz-transform: transform: translateX(15%) scale(1.3);  
+      }
+    }
+
+    .growLeft {
       animation: growOneIE 2.5s ease 2 alternate; 
       -webkit-animation: growOneIE 2.5s ease 2 alternate;
       z-index: 8;
     }
 
-    .grow2 {
+    .growRight {
       animation: growTwoIE 2.5s ease 2 alternate;
       -webkit-animation: growTwoIE 2.5s ease 2 alternate;
       z-index: 8;
     }
 
-    .selected1 {
-      transform: scale(2);
-      -webkit-transform: scale(2);
+  /*  .selectedLeft {
+      transform: scale(1.5);
+      -webkit-transform: scale(1.5);
       -moz-transform: scale(2);
       z-index: 9;
     }
 
-    .selected2 {
-      transform:  scale(2);
-      -webkit-transform:  scale(2);
+    .selectedRight {
+      transform:  scale(1.5);
+      -webkit-transform:  scale(1.5);
       -moz-transform:  scale(2);
       z-index: 9;
-    }
+    }*/
 
 
     /*SHOPPING*/
@@ -3340,48 +3480,51 @@ footer figure {
       padding: 0 10%;
     }
 
-    .shopping .sec-art {
-      height: 680px;
+    .shopping .ft-art {
+      height: 400px;
+      width: 50%;
     }
 
-    .shopping .sec-art h6 {
-      font-size: 1.5rem;
-      padding-left: 10%;
+    .shop-opt {
+      width: 150px;
     }
 
-    .shopping .sec-art h4 {
-      font-size: 2.5rem;
-      padding: 100px 10% 0 10%;
-    }
-
-    .presented .sec-art h4 {
-      margin: 30% 10% 0 10%;
-      padding: 40px;
+    .shop-opt-img {
+      height: 150px;
     }
 
 
     /*NOW ON R29*/
 
 
+    .now {
+      width: 80%;
+    }
+
     .now h3 {
-      padding-left: 10%;
+      padding-left: 0;
     }
 
     .now .collapsible {
       padding-left: 60px;
     }
 
-    .now-main-art {
+    .now-ft-art {
+      justify-content: space-around;
       margin: 50px auto;
-      width: 90%;
+      width: 75%;
     }
 
-    .now-main-art figure {
-      width: 30%;
+    .now-ft-art figure {
+      width: 40%;
     }
 
-    .now .sec-art {
-      height: 150px;
+    .now-ft-art .content {
+      width: 40%;
+    }
+
+    .now-hr {
+      width: 20%;
     }
 
     .now .art-img img {
@@ -3404,6 +3547,12 @@ footer figure {
     /*FINAL CTA*/
 
 
+    .final-cta {
+      justify-content: space-between;
+      padding: 60px 0;
+      width: 85%;
+    }
+
     .discover-cta,
     .watch-cta,
     .shop-cta {
@@ -3413,25 +3562,31 @@ footer figure {
     .discover-cta .btn-container,
     .watch-cta .btn-container,
     .shop-cta .btn-container {
-    	height: 120px;
-    	width: 100%;
-    }
-
-    .discover-cta .content h1,
-    .shop-cta .content h1 {
-      padding-left: 30px;
-    }
-
-    .watch-cta .content h1 {
-      padding-right: 30px;
+    	height: 100px;
     }
 
 
     /*FOOTER*/
 
 
+    footer {
+      padding-top: 60px;
+    }
+
     .social-media {
-      padding: 50px 0;
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding: 60px 0;
+    }
+
+    .social-media ul {
+      width: 60%;
+    }
+
+    .social-media i {
+      font-size: 1rem;
     }
 
     .contact {
