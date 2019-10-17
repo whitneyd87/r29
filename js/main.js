@@ -54,7 +54,7 @@ $(document).ready(function(){
 
             clicked = 1;
 
-        } else if (clicked === 1) {
+        } else  {
 
             $('#search-input').animate( {
                 
@@ -97,11 +97,12 @@ $(document).ready(function(){
             $('#logo').addClass('logoShrink');
             $('#search-box').removeClass('searchTop');
             $('#search-box').addClass('searchScroll');
-            $('header nav').addClass('navWidth');
-            $('header nav ul').addClass('navScroll');
-            $('.main-li').css('margin-bottom', '0px');
+            $('header .main-nav').addClass('navWidth');
+            $('header .main-nav ul').addClass('navScroll');
+            $('.main-li').css({'margin-bottom' : '0px', 'width' : '25%'});
+            $('#discover').css('width', '25%');
 
-        } else if (winY < 1100) {
+        } else {
 
             $('#header').removeClass('headerScroll');
             $('#date').css('display', 'block');
@@ -109,9 +110,10 @@ $(document).ready(function(){
             $('#logo').addClass('logoGrow');
             $('#search-box').removeClass('searchScroll');
             $('#search-box').addClass('searchTop');
-            $('header nav').removeClass('navWidth');
-            $('header nav ul').removeClass('navScroll');
-            $('.main-li').css('margin-bottom', '10px');
+            $('header .main-nav').removeClass('navWidth');
+            $('header .main-nav ul').removeClass('navScroll');
+            $('.main-li').css({'margin-bottom' : '10px', 'width' : '60%'});
+            $('#discover').css('width', '90%');
         }
 
     });
@@ -127,7 +129,7 @@ $(document).ready(function(){
            
             $('#styleInput').val('1');
     
-        } else if (styleValue > 50) {
+        } else {
           
             $('#styleInput').val('1');
           
@@ -145,7 +147,7 @@ $(document).ready(function(){
            
             $('#pinterestInput').val('100');
     
-        } else if (pinValue < 50) {
+        } else {
 
             $('#pinterestInput').val('100');
           
@@ -163,7 +165,7 @@ $(document).ready(function(){
            
             $('#podcastInput').val('1');
     
-        } else if (podValue > 50) {
+        } else {
            
             $('#podcastInput').val('1');
            
@@ -182,7 +184,7 @@ $(document).ready(function(){
            
             $('#discover-btn').val('1');
     
-        } else if (discoverValue > 50) {
+        } else {
           
             $('#discover-btn').val('1');
           
@@ -199,7 +201,7 @@ $(document).ready(function(){
            
             $('#watch-btn').val('100');
     
-        } else if (watchValue < 50) {
+        } else {
           
             $('#watch-btn').val('100');
           
@@ -217,7 +219,7 @@ $(document).ready(function(){
            
             $('#shop-btn').val('1');
     
-        } else if (shopValue > 50) {
+        } else {
            
             $('#shop-btn').val('1');
            
@@ -228,6 +230,7 @@ $(document).ready(function(){
 
 
 // LATEST NEWS SCROLLING ANIMATION
+
 
     $(function(){
     
@@ -264,6 +267,7 @@ $(document).ready(function(){
 
  // LATEST NEWS ARROW NAVIGATION
 
+
     $('.arrow-up').click(function(){
 
         let tickerHeight = $('.ls-story').outerHeight();
@@ -289,9 +293,10 @@ $(document).ready(function(){
 
 // DRAGGABLE PARAMETERS FOR SLIDESHOWS
 
+
     function dragFix(event, ui) {
         
-        let contWidth = containmentArea.width()
+        let contWidth = containmentArea.width();
         let contHeight = containmentArea.height();
         
         ui.position.left = Math.max(
