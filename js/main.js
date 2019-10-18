@@ -34,10 +34,12 @@ $(document).ready(function(){
 
 // DATE
 
+
     $('#date').html( days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ',' + ' ' + date.getFullYear() );
 
 
 // SEARCH BOX   
+
 
     $('#search').on('click', function(e) {
 
@@ -72,6 +74,7 @@ $(document).ready(function(){
 
 
 // INITIAL NAVIGATION ANIMATION
+
 
     $('.main-li').each( function ( i, e ) {
 
@@ -296,26 +299,28 @@ $(document).ready(function(){
 
 // DRAGGABLE PARAMETERS FOR SLIDESHOWS
 
-var percent = 1, containmentArea = $(".hide-scroll");
 
-function dragFix(event, ui) {
-    var contWidth = containmentArea.width(), contHeight = containmentArea.height();
-    ui.position.left = Math.max(0, Math.min(ui.position.left / percent , contWidth - ui.helper.width()));
-    ui.position.top = Math.max(0, Math.min(ui.position.top  / percent,  contHeight- ui.helper.height()));
-}
+// var percent = 1, containmentArea = $(".hide-scroll");
 
-$('.slideshow-vid').draggable({
-    axis: 'x',
-    drag: dragFix()
-});
+// function dragFix(event, ui) {
+//     var contWidth = containmentArea.width(), contHeight = containmentArea.height();
+//     ui.position.left = Math.max(0, Math.min(ui.position.left / percent , contWidth - ui.helper.width()));
+//     ui.position.top = Math.max(0, Math.min(ui.position.top  / percent,  contHeight- ui.helper.height()));
+// }
 
-$('.slideshow-art').draggable({
-    axis: 'x',
-    drag: dragFix()
-});
+// $('.slideshow-vid').draggable({
+//     axis: 'x',
+//     drag: dragFix()
+// });
+
+// $('.slideshow-art').draggable({
+//     axis: 'x',
+//     drag: dragFix()
+// });
 
 
 // ORIGINAL VIDEOS PAGINATION
+
 
     setInterval( function () {
         
