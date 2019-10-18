@@ -3351,10 +3351,6 @@ footer figure {
       padding-top: 60px;
     }
 
-    .vid-gal {
-      overflow-scrolling: auto;
-    }
-
     .pagination {
       visibility: hidden !important;
     }

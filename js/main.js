@@ -8,6 +8,7 @@ $(document).ready(function(){
 
     const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
+    
     let intervalBubble = null;
 
     let intervalScroll = null;
@@ -85,6 +86,7 @@ $(document).ready(function(){
 
 // SCROLLING HEADER ANIMATION
 
+
     $(window).scroll(function(){
      
         let winY = $(window).scrollTop();
@@ -120,6 +122,7 @@ $(document).ready(function(){
 
 
 // REDIRECTION OF PAGE FOR INPUT RANGE ('SLIDER') BUTTONS
+
 
     $('#styleInput').on('change', function() {
         
@@ -293,41 +296,23 @@ $(document).ready(function(){
 
 // DRAGGABLE PARAMETERS FOR SLIDESHOWS
 
+var percent = 1, containmentArea = $(".hide-scroll");
 
-    function dragFix(event, ui) {
-        
-        let contWidth = containmentArea.width();
-        let contHeight = containmentArea.height();
-        
-        ui.position.left = Math.max(
-            0, 
-            Math.min(
-                ui.position.left / percent, 
-                contWidth - ui.helper.width()
-                )
-            );
-        
-        ui.position.top = Math.max(
-            0, 
-            Math.min(
-                ui.position.top  / percent,  
-                contHeight- ui.helper.height()
-                )
-            );
-    }
+function dragFix(event, ui) {
+    var contWidth = containmentArea.width(), contHeight = containmentArea.height();
+    ui.position.left = Math.max(0, Math.min(ui.position.left / percent , contWidth - ui.helper.width()));
+    ui.position.top = Math.max(0, Math.min(ui.position.top  / percent,  contHeight- ui.helper.height()));
+}
 
+$('.slideshow-vid').draggable({
+    axis: 'x',
+    drag: dragFix()
+});
 
-    $('.slideshow-vid').draggable({
-        axis: 'x',
-        // containment: [-1200, 0, 20, 0]
-        drag: dragFix,
-    });
-
-    $('.slideshow-art').draggable({
-        axis: 'x',
-        // containment: [-2200, 0, 20, 0]
-        drag: dragFix,
-    });
+$('.slideshow-art').draggable({
+    axis: 'x',
+    drag: dragFix()
+});
 
 
 // ORIGINAL VIDEOS PAGINATION
