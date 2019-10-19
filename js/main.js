@@ -94,7 +94,7 @@ $(document).ready(function(){
      
         let winY = $(window).scrollTop();
 
-        if (winY > 1100) {
+        if (winY > 800) {
             
             $('#header').addClass('headerScroll');
             $('#date').css('display', 'none');
@@ -235,91 +235,9 @@ $(document).ready(function(){
     });
 
 
-// LATEST NEWS SCROLLING ANIMATION
-
-
-    $(function(){
-    
-      let tickerHeight = $('.ls-story').outerHeight();
-    
-      $('.ls-story:last-child').prependTo('.latest-scroll ul');
-    
-      $('.latest-scroll ul').css('marginTop',-tickerHeight);
-    
-      function moveTop(){
-    
-        $('.latest-scroll ul').animate({
-    
-          top : -tickerHeight
-    
-        },1000, function(){
-    
-         $('.ls-story:first-child').appendTo('.latest-scroll ul');
-    
-          $('.latest-scroll ul').css('top','');
-    
-        });
-    
-       }
-    
-      setInterval( function(){
-    
-        moveTop();
-    
-      }, 3000);
-
-    });
-
-
- // LATEST NEWS ARROW NAVIGATION
-
-
-    $('.arrow-up').click(function(){
-
-        let tickerHeight = $('.ls-story').outerHeight();
-
-         $('.latest-scroll ul').animate({
-    
-          top : +tickerHeight
-
-        }, 500);
-    });
-
-    $('.arrow-down').click(function(){
-
-        let tickerHeight = $('.ls-story').outerHeight();
-
-         $('.latest-scroll ul').animate({
-    
-          top : -tickerHeight
-
-        },500);
-    });
-
-
-// DRAGGABLE PARAMETERS FOR SLIDESHOWS
-
-
-// var percent = 1, containmentArea = $(".hide-scroll");
-
-// function dragFix(event, ui) {
-//     var contWidth = containmentArea.width(), contHeight = containmentArea.height();
-//     ui.position.left = Math.max(0, Math.min(ui.position.left / percent , contWidth - ui.helper.width()));
-//     ui.position.top = Math.max(0, Math.min(ui.position.top  / percent,  contHeight- ui.helper.height()));
-// }
-
-// $('.slideshow-vid').draggable({
-//     axis: 'x',
-//     drag: dragFix()
-// });
-
-// $('.slideshow-art').draggable({
-//     axis: 'x',
-//     drag: dragFix()
-// });
-
 
 // ORIGINAL VIDEOS PAGINATION
+	
 
 
     setInterval( function () {
@@ -545,48 +463,8 @@ $(document).ready(function(){
         
     }
 
-
-// ARTICLE SLIDESHOW ANIMATION
-
-    var scrolling = function() {
-
-        $(".slideshow .sec-art").each(function(i, e) {
-      
-            var animateLeft = function() {
-
-                $(".more-art").animate( {
-              
-                    scrollLeft: $(e).offset().left - $('.slideshow').offset().left
-              
-                }, 3000).delay(1500);
-
-                $('.more-art').on('touchstart', function (){
-                    
-                    $(this).stop(true, true);
-                
-                });
-
-                $('.more-art').on('click', function (){
-                    
-                    $(this).stop(true, true);
-                
-                });
-
-            } 
-
-            animateLeft();
-
-        });
-
-        return scrolling;
-
-    }
-
     intervalBubble = setInterval(loopThru(), 21000);
 
-  	intervalScroll = setInterval(scrolling(), 9000); 
-  	
-    clearInterval(intervalScroll);
 
     $('.tv figure').on('click', function () {
 
@@ -595,7 +473,14 @@ $(document).ready(function(){
     });
 
 
+// ARROW ANIMATION
+
+$()
+
+
+
 // SLIDESHOW ANIMATION/PAGINATION FOR SECONDARY ARTICLES IN 'NOW ON R29' SECTION
+
 
     setInterval(function() { 
 
@@ -610,7 +495,7 @@ $(document).ready(function(){
         let workmoneyScroll = $('.workmoney-scroll').scrollLeft();
 
 
-       if ( beautyScroll == 0 && beautyScroll < 100 ) {
+       if (beautyScroll == 0 && beautyScroll < 100) {
         
             $(beautyPagDots[0]).addClass('activeB');
         
@@ -620,7 +505,7 @@ $(document).ready(function(){
         
         }
 
-        if ( newsScroll == 0 && newsScroll < 100 ) {
+        if (newsScroll == 0 && newsScroll < 100) {
 
             $(newsPagDots[0]).addClass('activeN');
 
@@ -630,7 +515,7 @@ $(document).ready(function(){
 
         } 
 
-        if ( fashionScroll == 0 && fashionScroll < 100 ) {
+        if (fashionScroll == 0 && fashionScroll < 100) {
 
             $(fashionPagDots[0]).addClass('activeF');
 
@@ -640,7 +525,7 @@ $(document).ready(function(){
 
         } 
 
-        if ( lifestyleScroll == 0 && lifestyleScroll < 100 ) {
+        if (lifestyleScroll == 0 && lifestyleScroll < 100) {
 
             $(lifestylePagDots[0]).addClass('activeL');
 
@@ -650,7 +535,7 @@ $(document).ready(function(){
 
         } 
 
-        if ( workmoneyScroll == 0 && workmoneyScroll < 100  ) {
+        if (workmoneyScroll == 0 && workmoneyScroll < 100) {
 
             $(workmoneyPagDots[0]).addClass('activeW');
 
@@ -660,7 +545,7 @@ $(document).ready(function(){
 
         }
 
-        if ( beautyScroll > 200 && beautyScroll < 530 ) {
+        if (beautyScroll > 200 && beautyScroll < 530) {
             
             $(beautyPagDots[1]).addClass('activeB');
 
@@ -669,7 +554,7 @@ $(document).ready(function(){
             $(beautyPagDots[1]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 200 && newsScroll < 530 ) {
+        if (newsScroll > 200 && newsScroll < 530) {
 
             $(newsPagDots[1]).addClass('activeN');
 
@@ -679,7 +564,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 200 && fashionScroll < 530 ) {
+        if (fashionScroll > 200 && fashionScroll < 530) {
 
             $(fashionPagDots[1]).addClass('activeF');
 
@@ -689,7 +574,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 200 && lifestyleScroll < 530 ) {
+        if (lifestyleScroll > 200 && lifestyleScroll < 530) {
 
             $(lifestylePagDots[1]).addClass('activeL');
 
@@ -699,7 +584,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 200 && workmoneyScroll < 530 ) {
+        if (workmoneyScroll > 200 && workmoneyScroll < 530) {
 
             $(workmoneyPagDots[1]).addClass('activeW');
 
@@ -708,7 +593,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[1]).removeClass('activeW');
         }
 
-        if ( beautyScroll > 600 && beautyScroll < 850 ) {
+        if (beautyScroll > 600 && beautyScroll < 850) {
             
             $(beautyPagDots[2]).addClass('activeB');
 
@@ -717,7 +602,7 @@ $(document).ready(function(){
             $(beautyPagDots[2]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 600 && newsScroll < 850 ) {
+        if (newsScroll > 600 && newsScroll < 850) {
 
             $(newsPagDots[2]).addClass('activeN');
 
@@ -727,7 +612,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 600 && fashionScroll < 850 ) {
+        if (fashionScroll > 600 && fashionScroll < 850) {
 
             $(fashionPagDots[2]).addClass('activeF');
 
@@ -737,7 +622,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 600 && lifestyleScroll < 850 ) {
+        if (lifestyleScroll > 600 && lifestyleScroll < 850) {
 
             $(lifestylePagDots[2]).addClass('activeL');
 
@@ -747,7 +632,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 600 && workmoneyScroll < 850 ) {
+        if (workmoneyScroll > 600 && workmoneyScroll < 850) {
 
             $(workmoneyPagDots[2]).addClass('activeW');
 
@@ -756,7 +641,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[2]).removeClass('activeW');
         }
 
-        if ( beautyScroll > 900 && beautyScroll < 1280 ) {
+        if (beautyScroll > 900 && beautyScroll < 1280) {
             
             $(beautyPagDots[3]).addClass('activeB');
 
@@ -765,7 +650,7 @@ $(document).ready(function(){
             $(beautyPagDots[3]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 900 && newsScroll < 1280 ) {
+        if (newsScroll > 900 && newsScroll < 1280) {
 
             $(newsPagDots[3]).addClass('activeN');
 
@@ -775,7 +660,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 900 && fashionScroll < 1280 ) {
+        if (fashionScroll > 900 && fashionScroll < 1280) {
 
             $(fashionPagDots[3]).addClass('activeF');
 
@@ -785,7 +670,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 900 && lifestyleScroll < 1280 ) {
+        if (lifestyleScroll > 900 && lifestyleScroll < 1280) {
 
             $(lifestylePagDots[3]).addClass('activeL');
 
@@ -795,7 +680,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 900 && workmoneyScroll < 1280 ) {
+        if (workmoneyScroll > 900 && workmoneyScroll < 1280) {
 
             $(workmoneyPagDots[3]).addClass('activeW');
 
@@ -804,7 +689,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[3]).removeClass('activeW');
         }
         
-        if ( beautyScroll > 1300 && beautyScroll < 1620 ) {
+        if (beautyScroll > 1300 && beautyScroll < 1620) {
             
             $(beautyPagDots[4]).addClass('activeB');
 
@@ -813,7 +698,7 @@ $(document).ready(function(){
             $(beautyPagDots[4]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 1300 && newsScroll < 1620 ) {
+        if (newsScroll > 1300 && newsScroll < 1620) {
 
             $(newsPagDots[4]).addClass('activeN');
 
@@ -823,7 +708,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 1300 && fashionScroll < 1620 ) {
+        if (fashionScroll > 1300 && fashionScroll < 1620) {
 
             $(fashionPagDots[4]).addClass('activeF');
 
@@ -833,7 +718,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 1300 && lifestyleScroll < 1620 ) {
+        if (lifestyleScroll > 1300 && lifestyleScroll < 1620) {
 
             $(lifestylePagDots[4]).addClass('activeL');
 
@@ -843,7 +728,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 1300 && workmoneyScroll < 1620 ) {
+        if (workmoneyScroll > 1300 && workmoneyScroll < 1620) {
 
             $(workmoneyPagDots[4]).addClass('activeW');
 
@@ -852,7 +737,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[4]).removeClass('activeW');
         }
         
-        if ( beautyScroll > 1650 && beautyScroll < 1950 ) {
+        if (beautyScroll > 1650 && beautyScroll < 1950) {
             
             $(beautyPagDots[5]).addClass('activeB');
 
@@ -861,7 +746,7 @@ $(document).ready(function(){
             $(beautyPagDots[5]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 1650 && newsScroll < 1950 ) {
+        if (newsScroll > 1650 && newsScroll < 1950) {
 
             $(newsPagDots[5]).addClass('activeN');
 
@@ -871,7 +756,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 1650 && fashionScroll < 1950 ) {
+        if (fashionScroll > 1650 && fashionScroll < 1950) {
 
             $(fashionPagDots[5]).addClass('activeF');
 
@@ -881,7 +766,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 1650 && lifestyleScroll < 1950 ) {
+        if (lifestyleScroll > 1650 && lifestyleScroll < 1950) {
 
             $(lifestylePagDots[5]).addClass('activeL');
 
@@ -891,7 +776,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 1650 && workmoneyScroll < 1950 ) {
+        if (workmoneyScroll > 1650 && workmoneyScroll < 1950) {
 
             $(workmoneyPagDots[5]).addClass('activeW');
 
@@ -900,7 +785,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[5]).removeClass('activeW');
         }
 
-        if ( beautyScroll > 2000 && beautyScroll < 2250 ) {
+        if (beautyScroll > 2000 && beautyScroll < 2250) {
             
             $(beautyPagDots[6]).addClass('activeB');
 
@@ -909,7 +794,7 @@ $(document).ready(function(){
             $(beautyPagDots[6]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 2000 && newsScroll < 2250 ) {
+        if (newsScroll > 2000 && newsScroll < 2250) {
 
             $(newsPagDots[6]).addClass('activeN');
 
@@ -919,7 +804,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 2000 && fashionScroll < 2250 ) {
+        if (fashionScroll > 2000 && fashionScroll < 2250) {
 
             $(fashionPagDots[6]).addClass('activeF');
 
@@ -929,7 +814,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 2000 && lifestyleScroll < 2250 ) {
+        if (lifestyleScroll > 2000 && lifestyleScroll < 2250) {
 
             $(lifestylePagDots[6]).addClass('activeL');
 
@@ -939,7 +824,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 2000 && workmoneyScroll < 2250 ) {
+        if (workmoneyScroll > 2000 && workmoneyScroll < 2250) {
 
             $(workmoneyPagDots[6]).addClass('activeW');
 
@@ -948,7 +833,7 @@ $(document).ready(function(){
             $(workmoneyPagDots[6]).removeClass('activeW');
         }
 
-        if ( beautyScroll > 2300 ) {
+        if (beautyScroll > 2300) {
             
             $(beautyPagDots[7]).addClass('activeB');
 
@@ -957,7 +842,7 @@ $(document).ready(function(){
             $(beautyPagDots[7]).removeClass('activeB');
         }    
 
-        if ( newsScroll > 2300 ) {
+        if (newsScroll > 2300) {
 
             $(newsPagDots[7]).addClass('activeN');
 
@@ -967,7 +852,7 @@ $(document).ready(function(){
        
         }    
 
-        if ( fashionScroll > 2300 ) {
+        if (fashionScroll > 2300) {
 
             $(fashionPagDots[7]).addClass('activeF');
 
@@ -977,7 +862,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( lifestyleScroll > 2300 ) {
+        if (lifestyleScroll > 2300) {
 
             $(lifestylePagDots[7]).addClass('activeL');
 
@@ -987,7 +872,7 @@ $(document).ready(function(){
 
         }    
 
-        if ( workmoneyScroll > 2300 ) {
+        if (workmoneyScroll > 2300) {
 
            $(workmoneyPagDots[7]).addClass('activeW');
 

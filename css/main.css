@@ -102,6 +102,7 @@ textarea {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #FCF7E8;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -366,7 +367,7 @@ header .main-nav ul .slide {
 }
 
 .headerScroll {
-  background-color: white;
+  background-color: #FCF7E8;
   height: 50px;
   opacity: 1;
   overflow: visible;
@@ -767,57 +768,6 @@ i {
 }
 
 
-/*LATEST NEWS*/
-
-
-.latest-news {
-  padding: 0 20px;
-}
-
-.arrow-container {
-  display: none;
-}
-
-.hide-ticker {
-  overflow: hidden;
-}
-
-.latest-scroll {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  height: 150px;
-  justify-content: flex-start;
-  margin-top: 50px;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  width: 110%;
-}
-
-.latest-scroll ul {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  list-style: none;
-  margin: 0;
-  position: relative; 
-}
-
-.ls-story {
-  height: 150px;
-  width: 90%;
-}
-
-.ls-story h6 {
-  margin-bottom: 10px;
-}
-
-.ls-story h4 {
-  padding-bottom: 10px;
-}
-
-
 /*SECONDARY ARTICLES*/
 
 
@@ -839,6 +789,7 @@ i {
 .sec-art1,
 .sec-art2,
 .sec-art3 {
+  background-color: #ffffff;
   height: 500px;
   width: 100%;
 }
@@ -1008,6 +959,7 @@ i {
 .trend-art2 .content,
 .trend-art3 .content {
   align-items: center;
+  background-color: #ffffff;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -1403,7 +1355,6 @@ i {
   }
 }
 
-
 .tvRight {
   animation: tvRight 2.5s ease 2 alternate;
   -webkit-animation: tvRight 2.5s ease 2 alternate;
@@ -1593,6 +1544,7 @@ i {
 }
 
 .now-ft-art {
+  background-color: #ffffff;
   height: auto;
   margin: 50px 0 0 0;
 }
@@ -1696,6 +1648,7 @@ i {
 
 .now .sec-art .content {
   align-items: center;
+  background-color: #ffffff;
   display: flex;
   flex-flow: row wrap;
   height: 100%;
@@ -1713,6 +1666,10 @@ i {
   font-size: 0.6875rem;
   margin: 0;
   vertical-align: bottom;
+}
+
+.arrow-container {
+  display: none;
 }
 
 .now .pagination {
@@ -2347,18 +2304,6 @@ footer figure {
     }
 
 
-    /*LATEST NEWS*/
-
-
-    .latest-news {
-      padding: 0 40px;
-    }
-
-    .ls-story {
-      width: 550px;
-    }
-
-
     /*SECONDARY ARTICLES*/
 
 
@@ -2611,6 +2556,7 @@ footer figure {
     }
 
     #date {
+      font-size: 1rem;
     	top: 90%;
     }
 
@@ -2762,23 +2708,6 @@ footer figure {
 
     #podcastInput.slider-btns::-ms-thumb {
       border: 10px solid rgb(255,128,48);
-    }
-
-
-    /*LATEST NEWS*/
-
-
-    .latest-scroll {
-      height: 100px;
-      width: 90%;
-    }
-
-    .ls-story {
-      width: 650px;
-    }
-
-    .ls-story h4 {
-      font-size: 1.25rem;
     }
 
 
@@ -2944,6 +2873,7 @@ footer figure {
       padding: 40px 0 0 0;
     }
 
+
     /*FINAL CTA*/
 
 
@@ -3027,6 +2957,7 @@ footer figure {
 
     header figure {
       padding-left: 60px;
+      width: 150px;
     }
 
     header .main-nav {
@@ -3035,21 +2966,24 @@ footer figure {
     }
 
     #search-box {
-      top: 15%;
+      top: 12%;
       left: 35%;
       width: 30%;
     }
 
+    #search-box i {
+      font-size: 1rem;
+    }
+
     #search-input {
       display: block;
-      margin-left: 20px;
+      margin: 0 0 0 20px;
       width: 80%;
     }
 
     #date {
-      font-size: 1rem;
       top: 75%;
-      left: 13%;
+      left: 17%;
     }
 
     .headerScroll {
@@ -3062,8 +2996,8 @@ footer figure {
       -moz-transform: translateX(350px) translateY(30%);
 	  }
 
-    header nav ul .main-li {
-      font-size: 0.5rem;
+    header .main-nav {
+      padding-top: 0;
     }
 
     @keyframes logoShrink {
@@ -3121,30 +3055,32 @@ footer figure {
       transform: translateY(-150px);
       -webkit-transform: translateY(-150px);
       -moz-transform: translateY(-150px);
+      width: 90%;
     }
 
     .hero-area .wrapper {
       padding-top: 70px;
-      width: 75%;
+      width: 74%;
     }
 
     .hero-area h3 {
       font-size: 2.125rem;
-      padding-top: 125px;
+      padding: 15% 0 2% 0;
     }
 
     .hero-area h1 {
       font-size: 5.5rem;
-      padding-bottom: 10%;
+      padding-bottom: 7%;
     }
 
     .hero-area .hero-article {
-      padding: 50px;
+      padding: 20px 40px;
       width: 90%;
     }
 
-    .hero-article h3 {
+    .hero-area .hero-article h3 {
       font-size: 2rem;
+      padding: 40px 0;
     }
 
 
@@ -3220,42 +3156,6 @@ footer figure {
     }
 
 
-    /*LATEST NEWS*/
-
-
-    .latest-news {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      width: 90%;
-    }
-
-    .arrow-container {
-      align-items: center;
-      display: flex;
-      flex-flow: row wrap;
-      height: 200px;
-      justify-content: center;
-      padding: 0 40px;
-      width: 20px;
-    }
-
-    .hide-ticker {
-      overflow: hidden;
-      width: 60%;
-    }
-
-    .latest-scroll {
-      pointer-events: none;
-      width: 120%;
-    }
-
-    .ls-story {
-      width: 75%;
-    }
-
-
     /*SECONDARY ARTICLES*/
 
 
@@ -3294,7 +3194,7 @@ footer figure {
     }
 
     .sec-art2 h4 {
-      padding: 40px 0;
+      padding: 40px 10px;
     }
 
     .sec-art3 .content {
@@ -3396,8 +3296,8 @@ footer figure {
 
     .tv1, 
     .tv4 {
-      padding-bottom: 50%;
-      width: 50%;
+      padding-bottom: 55%;
+      width: 55%;
     }
 
     .tv-container {
@@ -3406,8 +3306,8 @@ footer figure {
 
     .tv2,
     .tv3 {
-      padding-bottom: 130%;
-      width: 130%;
+      padding-bottom: 135%;
+      width: 135%;
     }
 
     .tv2 {
@@ -3559,8 +3459,6 @@ footer figure {
     }
 
 
-
-
     /*SHOPPING*/
 
 
@@ -3601,6 +3499,7 @@ footer figure {
     .now-ft-art {
       justify-content: space-around;
       margin: 50px auto;
+      padding: 20px 0;
       width: 75%;
     }
 
@@ -3623,6 +3522,16 @@ footer figure {
     .art-img img {
       width: auto;
     }
+
+    .arrow-container {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      padding-top: 80px;
+      width: 50%; 
+    }
+
 
 
     /*MISSION*/
