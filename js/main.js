@@ -2,237 +2,237 @@ var clicked = 0;
 
 $(document).ready(function(){    
 
-    let date = new Date();
+let date = new Date();
 
-    const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THRUSDAY', 'FRIDAY', 'SATURDAY']
+const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THRUSDAY', 'FRIDAY', 'SATURDAY']
 
-    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
-
-    
-    let intervalBubble = null;
-
-    let intervalScroll = null;
-
-    let bullets = $('.bullet');
-
-    
-    let originalVidDots = $('.originals').find(bullets); 
-
-    let beautyPagDots = $('.beauty').find(bullets);
-
-    let newsPagDots = $('.news').find(bullets);
-
-    let fashionPagDots = $('.fashion').find(bullets);
-
-    let lifestylePagDots = $('.lifestyle').find(bullets);
-
-    let workmoneyPagDots = $('.workmoney').find(bullets);
+const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
 
-    var collapsibles = document.querySelectorAll('.collapsible');
+let intervalBubble = null;
+
+let intervalScroll = null;
+
+let bullets = $('.bullet');
+
+
+let originalVidDots = $('.originals').find(bullets); 
+
+let beautyPagDots = $('.beauty').find(bullets);
+
+let newsPagDots = $('.news').find(bullets);
+
+let fashionPagDots = $('.fashion').find(bullets);
+
+let lifestylePagDots = $('.lifestyle').find(bullets);
+
+let workmoneyPagDots = $('.workmoney').find(bullets);
+
+
+var collapsibles = document.querySelectorAll('.collapsible');
 
 
 // DATE
 
 
-    $('#date').html( days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ',' + ' ' + date.getFullYear() );
+$('#date').html( days[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ',' + ' ' + date.getFullYear() );
 
 
 // SEARCH BOX   
 
 
-    $('#search').on('click', function(e) {
+$('#search').on('click', function(e) {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        if(clicked === 0) {
+    if(clicked === 0) {
 
-            $('#search-input').show();
-        
-            $('#search-input').animate( {
+        $('#search-input').show();
+    
+        $('#search-input').animate( {
 
-                width: '70%'
+            width: '70%'
 
-            }, 'slow');    
+        }, 'slow');    
 
-            clicked = 1;
+        clicked = 1;
 
-        } else  {
+    } else  {
 
-            $('#search-input').animate( {
-                
-                width: '0',
+        $('#search-input').animate( {
+            
+            width: '0',
 
-            }, 'slow');
+        }, 'slow');
 
-            $('#search-input').hide(0);
+        $('#search-input').hide(0);
 
-            clicked = 0;
-        }
-           
-    });
+        clicked = 0;
+    }
+       
+});
 
 
 // INITIAL NAVIGATION ANIMATION
 
 
-    $('.main-li').each( function ( i, e ) {
+$('.main-li').each( function ( i, e ) {
 
-        $(e).delay(i * 500).queue( function () {
+    $(e).delay(i * 500).queue( function () {
 
-            $(this).addClass('slide');
-
-        });
+        $(this).addClass('slide');
 
     });
+
+});
 
 
 // SCROLLING HEADER ANIMATION
 
 
-    $(window).scroll(function(){
-     
-        let winY = $(window).scrollTop();
+$(window).scroll(function(){
+ 
+    let winY = $(window).scrollTop();
 
-        if (winY > 800) {
-            
-            $('#header').addClass('headerScroll');
-            $('#date').css('display', 'none');
-            $('#logo').removeClass('logoGrow');
-            $('#logo').addClass('logoShrink');
-            $('#search-box').removeClass('searchTop');
-            $('#search-box').addClass('searchScroll');
-            $('header .main-nav').addClass('navWidth');
-            $('header .main-nav ul').addClass('navScroll');
-            $('.main-li').css({'margin-bottom' : '0px', 'width' : '25%'});
-            $('#discover').css('width', '25%');
+    if (winY > 800) {
+        
+        $('#header').addClass('headerScroll');
+        $('#date').css('display', 'none');
+        $('#logo').removeClass('logoGrow');
+        $('#logo').addClass('logoShrink');
+        $('#search-box').removeClass('searchTop');
+        $('#search-box').addClass('searchScroll');
+        $('header .main-nav').addClass('navWidth');
+        $('header .main-nav ul').addClass('navScroll');
+        $('.main-li').css({'margin-bottom' : '0px', 'width' : '25%'});
+        $('#discover').css('width', '25%');
 
-        } else {
+    } else {
 
-            $('#header').removeClass('headerScroll');
-            $('#date').css('display', 'block');
-            $('#logo').removeClass('logoShrink');
-            $('#logo').addClass('logoGrow');
-            $('#search-box').removeClass('searchScroll');
-            $('#search-box').addClass('searchTop');
-            $('header .main-nav').removeClass('navWidth');
-            $('header .main-nav ul').removeClass('navScroll');
-            $('.main-li').css({'margin-bottom' : '10px', 'width' : '60%'});
-            $('#discover').css('width', '90%');
-        }
+        $('#header').removeClass('headerScroll');
+        $('#date').css('display', 'block');
+        $('#logo').removeClass('logoShrink');
+        $('#logo').addClass('logoGrow');
+        $('#search-box').removeClass('searchScroll');
+        $('#search-box').addClass('searchTop');
+        $('header .main-nav').removeClass('navWidth');
+        $('header .main-nav ul').removeClass('navScroll');
+        $('.main-li').css({'margin-bottom' : '10px', 'width' : '60%'});
+        $('#discover').css('width', '90%');
+    }
 
-    });
+});
 
 
 // REDIRECTION OF PAGE FOR INPUT RANGE ('SLIDER') BUTTONS
 
 
-    $('#styleInput').on('change', function() {
-        
-        let styleValue = $('#styleInput').val();
+$('#styleInput').on('change', function() {
     
-        if(styleValue < 50) {
-           
-            $('#styleInput').val('1');
-    
-        } else {
-          
-            $('#styleInput').val('1');
-          
-            window.open('https://www.refinery29.com/en-us/2019/05/231982/homeless-women-hair-beauty-services-los-angeles' , '_blank');
-        
-        } 
+    let styleValue = $('#styleInput').val();
 
-    });    
-
-    $('#pinterestInput').on('change', function() {
-        
-        let pinValue = $('#pinterestInput').val();
-    
-        if (pinValue > 50 || pinValue === 1) {
-           
-            $('#pinterestInput').val('100');
-    
-        } else {
-
-            $('#pinterestInput').val('100');
-          
-            window.open('https://www.pinterest.com/refinery29/?auto_follow=true' , '_blank');
-        
-        }
-        
-    });    
-
-    $('#podcastInput').on('change', function() {
-        
-        let podValue = $('#podcastInput').val();
-    
-        if (podValue < 50 || podValue === 100) {
-           
-            $('#podcastInput').val('1');
-    
-        } else {
-           
-            $('#podcastInput').val('1');
-           
-            window.open('https://podcasts.apple.com/us/podcast/unstyled/id1171140955?mt=2', '_blank');
+    if(styleValue < 50) {
        
-        }
-        
-    });
+        $('#styleInput').val('1');
+
+    } else {
+      
+        $('#styleInput').val('1');
+      
+        window.open('https://www.refinery29.com/en-us/2019/05/231982/homeless-women-hair-beauty-services-los-angeles' , '_blank');
+    
+    } 
+
+});    
+
+$('#pinterestInput').on('change', function() {
+    
+    let pinValue = $('#pinterestInput').val();
+
+    if (pinValue > 50 || pinValue === 1) {
+       
+        $('#pinterestInput').val('100');
+
+    } else {
+
+        $('#pinterestInput').val('100');
+      
+        window.open('https://www.pinterest.com/refinery29/?auto_follow=true' , '_blank');
+    
+    }
+    
+});    
+
+$('#podcastInput').on('change', function() {
+    
+    let podValue = $('#podcastInput').val();
+
+    if (podValue < 50 || podValue === 100) {
+       
+        $('#podcastInput').val('1');
+
+    } else {
+       
+        $('#podcastInput').val('1');
+       
+        window.open('https://podcasts.apple.com/us/podcast/unstyled/id1171140955?mt=2', '_blank');
+   
+    }
+    
+});
 
 
-    $('#discover-btn').on('change', function() {
-        
-        let discoverValue = $('#discover-btn').val();
+$('#discover-btn').on('change', function() {
     
-        if (discoverValue < 50 || discoverValue === 100) {
-           
-            $('#discover-btn').val('1');
-    
-        } else {
-          
-            $('#discover-btn').val('1');
-          
-            window.open('https://www.refinery29.com/en-us', '_blank');
-        }
+    let discoverValue = $('#discover-btn').val();
 
-    });    
+    if (discoverValue < 50 || discoverValue === 100) {
+       
+        $('#discover-btn').val('1');
 
-    $('#watch-btn').on('change', function() {
-        
-        let watchValue = $('#watch-btn').val();
-    
-        if (watchValue > 50 || watchValue === 1) {
-           
-            $('#watch-btn').val('100');
-    
-        } else {
-          
-            $('#watch-btn').val('100');
-          
-            window.open('https://www.refinery29.com/en-us/video', '_blank');
-        
-        }
-        
-    });    
+    } else {
+      
+        $('#discover-btn').val('1');
+      
+        window.open('https://www.refinery29.com/en-us', '_blank');
+    }
 
-    $('#shop-btn').on('change', function() {
-        
-        let shopValue = $('#shop-btn').val();
-    
-        if (shopValue < 50 || shopValue === 100) {
-           
-            $('#shop-btn').val('1');
-    
-        } else {
-           
-            $('#shop-btn').val('1');
-           
-           window.open('https://www.refinery29.com/en-us/shop', '_blank');
-        }
+});    
 
-    });
+$('#watch-btn').on('change', function() {
+    
+    let watchValue = $('#watch-btn').val();
+
+    if (watchValue > 50 || watchValue === 1) {
+       
+        $('#watch-btn').val('100');
+
+    } else {
+      
+        $('#watch-btn').val('100');
+      
+        window.open('https://www.refinery29.com/en-us/video', '_blank');
+    
+    }
+    
+});    
+
+$('#shop-btn').on('change', function() {
+    
+    let shopValue = $('#shop-btn').val();
+
+    if (shopValue < 50 || shopValue === 100) {
+       
+        $('#shop-btn').val('1');
+
+    } else {
+       
+        $('#shop-btn').val('1');
+       
+       window.open('https://www.refinery29.com/en-us/shop', '_blank');
+    }
+
+});
 
 
 
@@ -240,237 +240,237 @@ $(document).ready(function(){
 	
 
 
-    setInterval( function () {
-        
-        let originalVidScroll = $('.vid-gal').scrollLeft();
-
+setInterval( function () {
     
-        if ( originalVidScroll == 0 && originalVidScroll < 200 ) {
-    
-            $(originalVidDots[0]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[0]).removeClass('activeO');
-    
-        }
-
-    
-        if (originalVidScroll > 250 && originalVidScroll < 650) {
-    
-            $(originalVidDots[1]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[1]).removeClass('activeO');
-    
-        }   
+    let originalVidScroll = $('.vid-gal').scrollLeft();
 
 
-        if (originalVidScroll > 690 && originalVidScroll < 1050) {
-    
-            $(originalVidDots[2]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[2]).removeClass('activeO');
-    
-        }   
+    if ( originalVidScroll == 0 && originalVidScroll < 200 ) {
 
-    
-        if (originalVidScroll > 1100 && originalVidScroll < 1400) {
-    
-            $(originalVidDots[3]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[3]).removeClass('activeO');
-    
-        }   
+        $(originalVidDots[0]).addClass('activeO');
 
-    
-        if (originalVidScroll > 1450 && originalVidScroll < 1800) {
-    
-            $(originalVidDots[4]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[4]).removeClass('activeO');
-    
-        }   
+    } else {
 
-    
-        if (originalVidScroll >= 1850) {
-    
-            $(originalVidDots[5]).addClass('activeO');
-    
-        } else {
-    
-            $(originalVidDots[5]).removeClass('activeO');
-    
-        }
+        $(originalVidDots[0]).removeClass('activeO');
 
-    },500);
+    }
+
+
+    if (originalVidScroll > 250 && originalVidScroll < 650) {
+
+        $(originalVidDots[1]).addClass('activeO');
+
+    } else {
+
+        $(originalVidDots[1]).removeClass('activeO');
+
+    }   
+
+
+    if (originalVidScroll > 690 && originalVidScroll < 1050) {
+
+        $(originalVidDots[2]).addClass('activeO');
+
+    } else {
+
+        $(originalVidDots[2]).removeClass('activeO');
+
+    }   
+
+
+    if (originalVidScroll > 1100 && originalVidScroll < 1400) {
+
+        $(originalVidDots[3]).addClass('activeO');
+
+    } else {
+
+        $(originalVidDots[3]).removeClass('activeO');
+
+    }   
+
+
+    if (originalVidScroll > 1450 && originalVidScroll < 1800) {
+
+        $(originalVidDots[4]).addClass('activeO');
+
+    } else {
+
+        $(originalVidDots[4]).removeClass('activeO');
+
+    }   
+
+
+    if (originalVidScroll >= 1850) {
+
+        $(originalVidDots[5]).addClass('activeO');
+
+    } else {
+
+        $(originalVidDots[5]).removeClass('activeO');
+
+    }
+
+},500);
 
 
 
 // TRENDING VIDEOS ANIMATION
 
 
-    var loopThru = function() {
+var loopThru = function() {
 
-        $('.watch').click(function () {
+    $('.watch').click(function () {
+
+        $('.tv1.selected').removeClass('selected');
+
+        $('.tv4.selected').removeClass('selected');
+
+        $('.tv2.selectedLeft').removeClass('selectedLeft');
+
+        $('.tv3.selectedRight').removeClass('selectedRight');
+
+        $('.tv-frame.bright').removeClass('bright');
+
+    });
+
+    $('.tv figure').on('click', function (e){
+            
+        e.stopPropagation(); 
+        
+        clearTimeout(vid1);
+        
+        clearTimeout(vid2);
+        
+        clearTimeout(vid3);
+        
+        clearTimeout(vid4);
+
+        $(this).removeClass('tvTopBottom tvLeft tvRight');
+                
+            
+        if($(this).hasClass('tv1')) {
     
-            $('.tv1.selected').removeClass('selected');
-
             $('.tv4.selected').removeClass('selected');
     
             $('.tv2.selectedLeft').removeClass('selectedLeft');
     
             $('.tv3.selectedRight').removeClass('selectedRight');
-
-            $('.tv-frame.bright').removeClass('bright');
     
-        });
-
-        $('.tv figure').on('click', function (e){
-                
-            e.stopPropagation(); 
-            
-            clearTimeout(vid1);
-            
-            clearTimeout(vid2);
-            
-            clearTimeout(vid3);
-            
-            clearTimeout(vid4);
-
-            $(this).removeClass('tvTopBottom tvLeft tvRight');
-                    
-                
-            if($(this).hasClass('tv1')) {
-        
-                $('.tv4.selected').removeClass('selected');
-        
-                $('.tv2.selectedLeft').removeClass('selectedLeft');
-        
-                $('.tv3.selectedRight').removeClass('selectedRight');
-        
-                $(this).addClass('selected');
-        
-                $(this).children('.tv-frame').addClass('bright');
-            }
-
-            if($(this).hasClass('tv4')) {
-        
-                $('.tv1.selected').removeClass('selected');
-        
-                $('.tv2.selectedLeft').removeClass('selectedLeft');
-        
-                $('.tv3.selectedRight').removeClass('selectedRight');
-        
-                $(this).addClass('selected');
-        
-                $(this).children('.tv-frame').addClass('bright');
-            }
-
-            if($(this).hasClass('tv2')) {
-        
-                $('.tv1.selected').removeClass('selected');
-
-                $('.tv4.selected').removeClass('selected');
-
-                $('.tv3.selectedRight').removeClass('selectedRight');
-        
-                $(this).addClass('selectedLeft');
-        
-                $(this).children('.tv-frame').addClass('bright');
-            }
-
-            if($(this).hasClass('tv3')) {
-        
-                $('.tv1.selected').removeClass('selected');
-
-                $('.tv4.selected').removeClass('selected');
-
-                $('.tv2.selectedLeft').removeClass('selectedLeft');
-        
-                $(this).addClass('selectedRight');
-        
-                $(this).children('.tv-frame').addClass('bright');
-            }
-
-        });
-
-        var vid1 = setTimeout (function () { 
-
-            $('.tv4').removeClass('tvTopBottom');
-        
-            $('.tv4-content').removeClass('show');
-        
-            $('.tv4 .tv-frame').removeClass('bright');
-        
-            $('.tv1').addClass('tvTopBottom').delay(500);
-        
-            $('.tv1 .tv-frame').addClass('bright'); 
-
-        }, 5000);
-
-        var vid2 = setTimeout (function () { 
-            
-            $('.tv1').removeClass('tvTopBottom');
-        
-            $('.tv1-content').removeClass('show');
-        
-            $('.tv1 .tv-frame').removeClass('bright');
-        
-            $('.tv2').addClass('tvLeft');
-        
-            $('.tv2 .tv-frame').addClass('bright');
-
-
-        }, 10000);
-
-        var vid3 = setTimeout (function () { 
-            
-            $('.tv2').removeClass('tvLeft');
-        
-            $('.tv2-content').removeClass('show');
-        
-            $('.tv2 .tv-frame').removeClass('bright');
-        
-            $('.tv3').addClass('tvRight');
-        
-            $('.tv3 .tv-frame').addClass('bright');
-
-        }, 15000);
-
-        var vid4 = setTimeout (function () { 
-        
-            $('.tv3').removeClass('tvRight');
-        
-            $('.tv3-content').removeClass('show');
-        
-            $('.tv3 .tv-frame').removeClass('bright');
-        
-            $('.tv4').addClass('tvTopBottom');
-        
-            $('.tv4 .tv-frame').addClass('bright');
-
-        }, 20000);
-
-        return loopThru;
-        
-    }
-
-    intervalBubble = setInterval(loopThru(), 21000);
-
-
-    $('.tv figure').on('click', function () {
-
-        clearInterval(intervalBubble);
+            $(this).addClass('selected');
     
+            $(this).children('.tv-frame').addClass('bright');
+        }
+
+        if($(this).hasClass('tv4')) {
+    
+            $('.tv1.selected').removeClass('selected');
+    
+            $('.tv2.selectedLeft').removeClass('selectedLeft');
+    
+            $('.tv3.selectedRight').removeClass('selectedRight');
+    
+            $(this).addClass('selected');
+    
+            $(this).children('.tv-frame').addClass('bright');
+        }
+
+        if($(this).hasClass('tv2')) {
+    
+            $('.tv1.selected').removeClass('selected');
+
+            $('.tv4.selected').removeClass('selected');
+
+            $('.tv3.selectedRight').removeClass('selectedRight');
+    
+            $(this).addClass('selectedLeft');
+    
+            $(this).children('.tv-frame').addClass('bright');
+        }
+
+        if($(this).hasClass('tv3')) {
+    
+            $('.tv1.selected').removeClass('selected');
+
+            $('.tv4.selected').removeClass('selected');
+
+            $('.tv2.selectedLeft').removeClass('selectedLeft');
+    
+            $(this).addClass('selectedRight');
+    
+            $(this).children('.tv-frame').addClass('bright');
+        }
+
     });
+
+    var vid1 = setTimeout (function () { 
+
+        $('.tv4').removeClass('tvTopBottom');
+    
+        $('.tv4-content').removeClass('show');
+    
+        $('.tv4 .tv-frame').removeClass('bright');
+    
+        $('.tv1').addClass('tvTopBottom').delay(500);
+    
+        $('.tv1 .tv-frame').addClass('bright'); 
+
+    }, 5000);
+
+    var vid2 = setTimeout (function () { 
+        
+        $('.tv1').removeClass('tvTopBottom');
+    
+        $('.tv1-content').removeClass('show');
+    
+        $('.tv1 .tv-frame').removeClass('bright');
+    
+        $('.tv2').addClass('tvLeft');
+    
+        $('.tv2 .tv-frame').addClass('bright');
+
+
+    }, 10000);
+
+    var vid3 = setTimeout (function () { 
+        
+        $('.tv2').removeClass('tvLeft');
+    
+        $('.tv2-content').removeClass('show');
+    
+        $('.tv2 .tv-frame').removeClass('bright');
+    
+        $('.tv3').addClass('tvRight');
+    
+        $('.tv3 .tv-frame').addClass('bright');
+
+    }, 15000);
+
+    var vid4 = setTimeout (function () { 
+    
+        $('.tv3').removeClass('tvRight');
+    
+        $('.tv3-content').removeClass('show');
+    
+        $('.tv3 .tv-frame').removeClass('bright');
+    
+        $('.tv4').addClass('tvTopBottom');
+    
+        $('.tv4 .tv-frame').addClass('bright');
+
+    }, 20000);
+
+    return loopThru;
+    
+}
+
+intervalBubble = setInterval(loopThru(), 21000);
+
+
+$('.tv figure').on('click', function () {
+
+    clearInterval(intervalBubble);
+
+});
 
 
 // ARROW ANIMATION
@@ -482,407 +482,407 @@ $()
 // SLIDESHOW ANIMATION/PAGINATION FOR SECONDARY ARTICLES IN 'NOW ON R29' SECTION
 
 
-    setInterval(function() { 
+setInterval(function() { 
 
-        let beautyScroll = $('.beauty-scroll').scrollLeft();
+    let beautyScroll = $('.beauty-scroll').scrollLeft();
 
-        let newsScroll = $('.news-scroll').scrollLeft();
+    let newsScroll = $('.news-scroll').scrollLeft();
 
-        let fashionScroll = $('.fashion-scroll').scrollLeft();
+    let fashionScroll = $('.fashion-scroll').scrollLeft();
 
-        let lifestyleScroll = $('.lifestyle-scroll').scrollLeft();
+    let lifestyleScroll = $('.lifestyle-scroll').scrollLeft();
 
-        let workmoneyScroll = $('.workmoney-scroll').scrollLeft();
+    let workmoneyScroll = $('.workmoney-scroll').scrollLeft();
 
 
-       if (beautyScroll == 0 && beautyScroll < 100) {
+   if (beautyScroll == 0 && beautyScroll < 100) {
+    
+        $(beautyPagDots[0]).addClass('activeB');
+    
+    } else {
         
-            $(beautyPagDots[0]).addClass('activeB');
+        $(beautyPagDots[0]).removeClass('activeB');
+    
+    }
+
+    if (newsScroll == 0 && newsScroll < 100) {
+
+        $(newsPagDots[0]).addClass('activeN');
+
+    } else {
+
+        $(newsPagDots[0]).removeClass('activeN');
+
+    } 
+
+    if (fashionScroll == 0 && fashionScroll < 100) {
+
+        $(fashionPagDots[0]).addClass('activeF');
+
+    } else {
+
+        $(fashionPagDots[0]).removeClass('activeF');
+
+    } 
+
+    if (lifestyleScroll == 0 && lifestyleScroll < 100) {
+
+        $(lifestylePagDots[0]).addClass('activeL');
+
+    } else {
+
+        $(lifestylePagDots[0]).removeClass('activeL');
+
+    } 
+
+    if (workmoneyScroll == 0 && workmoneyScroll < 100) {
+
+        $(workmoneyPagDots[0]).addClass('activeW');
+
+    } else {
+
+        $(workmoneyPagDots[0]).removeClass('activeW');
+
+    }
+
+    if (beautyScroll > 200 && beautyScroll < 530) {
         
-        } else {
-            
-            $(beautyPagDots[0]).removeClass('activeB');
+        $(beautyPagDots[1]).addClass('activeB');
+
+    } else {
         
-        }
+        $(beautyPagDots[1]).removeClass('activeB');
+    }    
 
-        if (newsScroll == 0 && newsScroll < 100) {
+    if (newsScroll > 200 && newsScroll < 530) {
 
-            $(newsPagDots[0]).addClass('activeN');
+        $(newsPagDots[1]).addClass('activeN');
 
-        } else {
+    } else {
 
-            $(newsPagDots[0]).removeClass('activeN');
+        $(newsPagDots[1]).removeClass('activeN');
+   
+    }    
 
-        } 
+    if (fashionScroll > 200 && fashionScroll < 530) {
 
-        if (fashionScroll == 0 && fashionScroll < 100) {
+        $(fashionPagDots[1]).addClass('activeF');
 
-            $(fashionPagDots[0]).addClass('activeF');
+    } else {
 
-        } else {
+        $(fashionPagDots[1]).removeClass('activeF');
 
-            $(fashionPagDots[0]).removeClass('activeF');
+    }    
 
-        } 
+    if (lifestyleScroll > 200 && lifestyleScroll < 530) {
 
-        if (lifestyleScroll == 0 && lifestyleScroll < 100) {
+        $(lifestylePagDots[1]).addClass('activeL');
 
-            $(lifestylePagDots[0]).addClass('activeL');
+    } else {
 
-        } else {
+        $(lifestylePagDots[1]).removeClass('activeL');
 
-            $(lifestylePagDots[0]).removeClass('activeL');
+    }    
 
-        } 
+    if (workmoneyScroll > 200 && workmoneyScroll < 530) {
 
-        if (workmoneyScroll == 0 && workmoneyScroll < 100) {
+        $(workmoneyPagDots[1]).addClass('activeW');
 
-            $(workmoneyPagDots[0]).addClass('activeW');
+    } else {
 
-        } else {
+        $(workmoneyPagDots[1]).removeClass('activeW');
+    }
 
-            $(workmoneyPagDots[0]).removeClass('activeW');
-
-        }
-
-        if (beautyScroll > 200 && beautyScroll < 530) {
-            
-            $(beautyPagDots[1]).addClass('activeB');
-
-        } else {
-            
-            $(beautyPagDots[1]).removeClass('activeB');
-        }    
-
-        if (newsScroll > 200 && newsScroll < 530) {
-
-            $(newsPagDots[1]).addClass('activeN');
-
-        } else {
-
-            $(newsPagDots[1]).removeClass('activeN');
-       
-        }    
-
-        if (fashionScroll > 200 && fashionScroll < 530) {
-
-            $(fashionPagDots[1]).addClass('activeF');
-
-        } else {
-
-            $(fashionPagDots[1]).removeClass('activeF');
-
-        }    
-
-        if (lifestyleScroll > 200 && lifestyleScroll < 530) {
-
-            $(lifestylePagDots[1]).addClass('activeL');
-
-        } else {
-
-            $(lifestylePagDots[1]).removeClass('activeL');
-
-        }    
-
-        if (workmoneyScroll > 200 && workmoneyScroll < 530) {
-
-            $(workmoneyPagDots[1]).addClass('activeW');
-
-        } else {
-
-            $(workmoneyPagDots[1]).removeClass('activeW');
-        }
-
-        if (beautyScroll > 600 && beautyScroll < 850) {
-            
-            $(beautyPagDots[2]).addClass('activeB');
-
-        } else {
-            
-            $(beautyPagDots[2]).removeClass('activeB');
-        }    
-
-        if (newsScroll > 600 && newsScroll < 850) {
-
-            $(newsPagDots[2]).addClass('activeN');
-
-        } else {
-
-            $(newsPagDots[2]).removeClass('activeN');
-       
-        }    
-
-        if (fashionScroll > 600 && fashionScroll < 850) {
-
-            $(fashionPagDots[2]).addClass('activeF');
-
-        } else {
-
-            $(fashionPagDots[2]).removeClass('activeF');
-
-        }    
-
-        if (lifestyleScroll > 600 && lifestyleScroll < 850) {
-
-            $(lifestylePagDots[2]).addClass('activeL');
-
-        } else {
-
-            $(lifestylePagDots[2]).removeClass('activeL');
-
-        }    
-
-        if (workmoneyScroll > 600 && workmoneyScroll < 850) {
-
-            $(workmoneyPagDots[2]).addClass('activeW');
-
-        } else {
-
-            $(workmoneyPagDots[2]).removeClass('activeW');
-        }
-
-        if (beautyScroll > 900 && beautyScroll < 1280) {
-            
-            $(beautyPagDots[3]).addClass('activeB');
-
-        } else {
-            
-            $(beautyPagDots[3]).removeClass('activeB');
-        }    
-
-        if (newsScroll > 900 && newsScroll < 1280) {
-
-            $(newsPagDots[3]).addClass('activeN');
-
-        } else {
-
-            $(newsPagDots[3]).removeClass('activeN');
-       
-        }    
-
-        if (fashionScroll > 900 && fashionScroll < 1280) {
-
-            $(fashionPagDots[3]).addClass('activeF');
-
-        } else {
-
-            $(fashionPagDots[3]).removeClass('activeF');
-
-        }    
-
-        if (lifestyleScroll > 900 && lifestyleScroll < 1280) {
-
-            $(lifestylePagDots[3]).addClass('activeL');
-
-        } else {
-
-            $(lifestylePagDots[3]).removeClass('activeL');
-
-        }    
-
-        if (workmoneyScroll > 900 && workmoneyScroll < 1280) {
-
-            $(workmoneyPagDots[3]).addClass('activeW');
-
-        } else {
-
-            $(workmoneyPagDots[3]).removeClass('activeW');
-        }
+    if (beautyScroll > 600 && beautyScroll < 850) {
         
-        if (beautyScroll > 1300 && beautyScroll < 1620) {
-            
-            $(beautyPagDots[4]).addClass('activeB');
+        $(beautyPagDots[2]).addClass('activeB');
 
-        } else {
-            
-            $(beautyPagDots[4]).removeClass('activeB');
-        }    
-
-        if (newsScroll > 1300 && newsScroll < 1620) {
-
-            $(newsPagDots[4]).addClass('activeN');
-
-        } else {
-
-            $(newsPagDots[4]).removeClass('activeN');
-       
-        }    
-
-        if (fashionScroll > 1300 && fashionScroll < 1620) {
-
-            $(fashionPagDots[4]).addClass('activeF');
-
-        } else {
-
-            $(fashionPagDots[4]).removeClass('activeF');
-
-        }    
-
-        if (lifestyleScroll > 1300 && lifestyleScroll < 1620) {
-
-            $(lifestylePagDots[4]).addClass('activeL');
-
-        } else {
-
-            $(lifestylePagDots[4]).removeClass('activeL');
-
-        }    
-
-        if (workmoneyScroll > 1300 && workmoneyScroll < 1620) {
-
-            $(workmoneyPagDots[4]).addClass('activeW');
-
-        } else {
-
-            $(workmoneyPagDots[4]).removeClass('activeW');
-        }
+    } else {
         
-        if (beautyScroll > 1650 && beautyScroll < 1950) {
-            
-            $(beautyPagDots[5]).addClass('activeB');
+        $(beautyPagDots[2]).removeClass('activeB');
+    }    
 
-        } else {
-            
-            $(beautyPagDots[5]).removeClass('activeB');
-        }    
+    if (newsScroll > 600 && newsScroll < 850) {
 
-        if (newsScroll > 1650 && newsScroll < 1950) {
+        $(newsPagDots[2]).addClass('activeN');
 
-            $(newsPagDots[5]).addClass('activeN');
+    } else {
 
-        } else {
+        $(newsPagDots[2]).removeClass('activeN');
+   
+    }    
 
-            $(newsPagDots[5]).removeClass('activeN');
-       
-        }    
+    if (fashionScroll > 600 && fashionScroll < 850) {
 
-        if (fashionScroll > 1650 && fashionScroll < 1950) {
+        $(fashionPagDots[2]).addClass('activeF');
 
-            $(fashionPagDots[5]).addClass('activeF');
+    } else {
 
-        } else {
+        $(fashionPagDots[2]).removeClass('activeF');
 
-            $(fashionPagDots[5]).removeClass('activeF');
+    }    
 
-        }    
+    if (lifestyleScroll > 600 && lifestyleScroll < 850) {
 
-        if (lifestyleScroll > 1650 && lifestyleScroll < 1950) {
+        $(lifestylePagDots[2]).addClass('activeL');
 
-            $(lifestylePagDots[5]).addClass('activeL');
+    } else {
 
-        } else {
+        $(lifestylePagDots[2]).removeClass('activeL');
 
-            $(lifestylePagDots[5]).removeClass('activeL');
+    }    
 
-        }    
+    if (workmoneyScroll > 600 && workmoneyScroll < 850) {
 
-        if (workmoneyScroll > 1650 && workmoneyScroll < 1950) {
+        $(workmoneyPagDots[2]).addClass('activeW');
 
-            $(workmoneyPagDots[5]).addClass('activeW');
+    } else {
 
-        } else {
+        $(workmoneyPagDots[2]).removeClass('activeW');
+    }
 
-            $(workmoneyPagDots[5]).removeClass('activeW');
-        }
+    if (beautyScroll > 900 && beautyScroll < 1280) {
+        
+        $(beautyPagDots[3]).addClass('activeB');
 
-        if (beautyScroll > 2000 && beautyScroll < 2250) {
-            
-            $(beautyPagDots[6]).addClass('activeB');
+    } else {
+        
+        $(beautyPagDots[3]).removeClass('activeB');
+    }    
 
-        } else {
-            
-            $(beautyPagDots[6]).removeClass('activeB');
-        }    
+    if (newsScroll > 900 && newsScroll < 1280) {
 
-        if (newsScroll > 2000 && newsScroll < 2250) {
+        $(newsPagDots[3]).addClass('activeN');
 
-            $(newsPagDots[6]).addClass('activeN');
+    } else {
 
-        } else {
+        $(newsPagDots[3]).removeClass('activeN');
+   
+    }    
 
-            $(newsPagDots[6]).removeClass('activeN');
-       
-        }    
+    if (fashionScroll > 900 && fashionScroll < 1280) {
 
-        if (fashionScroll > 2000 && fashionScroll < 2250) {
+        $(fashionPagDots[3]).addClass('activeF');
 
-            $(fashionPagDots[6]).addClass('activeF');
+    } else {
 
-        } else {
+        $(fashionPagDots[3]).removeClass('activeF');
 
-            $(fashionPagDots[6]).removeClass('activeF');
+    }    
 
-        }    
+    if (lifestyleScroll > 900 && lifestyleScroll < 1280) {
 
-        if (lifestyleScroll > 2000 && lifestyleScroll < 2250) {
+        $(lifestylePagDots[3]).addClass('activeL');
 
-            $(lifestylePagDots[6]).addClass('activeL');
+    } else {
 
-        } else {
+        $(lifestylePagDots[3]).removeClass('activeL');
 
-            $(lifestylePagDots[6]).removeClass('activeL');
+    }    
 
-        }    
+    if (workmoneyScroll > 900 && workmoneyScroll < 1280) {
 
-        if (workmoneyScroll > 2000 && workmoneyScroll < 2250) {
+        $(workmoneyPagDots[3]).addClass('activeW');
 
-            $(workmoneyPagDots[6]).addClass('activeW');
+    } else {
 
-        } else {
+        $(workmoneyPagDots[3]).removeClass('activeW');
+    }
+    
+    if (beautyScroll > 1300 && beautyScroll < 1620) {
+        
+        $(beautyPagDots[4]).addClass('activeB');
 
-            $(workmoneyPagDots[6]).removeClass('activeW');
-        }
+    } else {
+        
+        $(beautyPagDots[4]).removeClass('activeB');
+    }    
 
-        if (beautyScroll > 2300) {
-            
-            $(beautyPagDots[7]).addClass('activeB');
+    if (newsScroll > 1300 && newsScroll < 1620) {
 
-        } else {
-            
-            $(beautyPagDots[7]).removeClass('activeB');
-        }    
+        $(newsPagDots[4]).addClass('activeN');
 
-        if (newsScroll > 2300) {
+    } else {
 
-            $(newsPagDots[7]).addClass('activeN');
+        $(newsPagDots[4]).removeClass('activeN');
+   
+    }    
 
-        } else {
+    if (fashionScroll > 1300 && fashionScroll < 1620) {
 
-            $(newsPagDots[7]).removeClass('activeN');
-       
-        }    
+        $(fashionPagDots[4]).addClass('activeF');
 
-        if (fashionScroll > 2300) {
+    } else {
 
-            $(fashionPagDots[7]).addClass('activeF');
+        $(fashionPagDots[4]).removeClass('activeF');
 
-        } else {
+    }    
 
-            $(fashionPagDots[7]).removeClass('activeF');
+    if (lifestyleScroll > 1300 && lifestyleScroll < 1620) {
 
-        }    
+        $(lifestylePagDots[4]).addClass('activeL');
 
-        if (lifestyleScroll > 2300) {
+    } else {
 
-            $(lifestylePagDots[7]).addClass('activeL');
+        $(lifestylePagDots[4]).removeClass('activeL');
 
-        } else {
+    }    
 
-            $(lifestylePagDots[7]).removeClass('activeL');
+    if (workmoneyScroll > 1300 && workmoneyScroll < 1620) {
 
-        }    
+        $(workmoneyPagDots[4]).addClass('activeW');
 
-        if (workmoneyScroll > 2300) {
+    } else {
 
-           $(workmoneyPagDots[7]).addClass('activeW');
+        $(workmoneyPagDots[4]).removeClass('activeW');
+    }
+    
+    if (beautyScroll > 1650 && beautyScroll < 1950) {
+        
+        $(beautyPagDots[5]).addClass('activeB');
 
-        } else {
+    } else {
+        
+        $(beautyPagDots[5]).removeClass('activeB');
+    }    
 
-            $(workmoneyPagDots[7]).removeClass('activeW');
+    if (newsScroll > 1650 && newsScroll < 1950) {
 
-        }
+        $(newsPagDots[5]).addClass('activeN');
 
-    }, 500);
+    } else {
+
+        $(newsPagDots[5]).removeClass('activeN');
+   
+    }    
+
+    if (fashionScroll > 1650 && fashionScroll < 1950) {
+
+        $(fashionPagDots[5]).addClass('activeF');
+
+    } else {
+
+        $(fashionPagDots[5]).removeClass('activeF');
+
+    }    
+
+    if (lifestyleScroll > 1650 && lifestyleScroll < 1950) {
+
+        $(lifestylePagDots[5]).addClass('activeL');
+
+    } else {
+
+        $(lifestylePagDots[5]).removeClass('activeL');
+
+    }    
+
+    if (workmoneyScroll > 1650 && workmoneyScroll < 1950) {
+
+        $(workmoneyPagDots[5]).addClass('activeW');
+
+    } else {
+
+        $(workmoneyPagDots[5]).removeClass('activeW');
+    }
+
+    if (beautyScroll > 2000 && beautyScroll < 2250) {
+        
+        $(beautyPagDots[6]).addClass('activeB');
+
+    } else {
+        
+        $(beautyPagDots[6]).removeClass('activeB');
+    }    
+
+    if (newsScroll > 2000 && newsScroll < 2250) {
+
+        $(newsPagDots[6]).addClass('activeN');
+
+    } else {
+
+        $(newsPagDots[6]).removeClass('activeN');
+   
+    }    
+
+    if (fashionScroll > 2000 && fashionScroll < 2250) {
+
+        $(fashionPagDots[6]).addClass('activeF');
+
+    } else {
+
+        $(fashionPagDots[6]).removeClass('activeF');
+
+    }    
+
+    if (lifestyleScroll > 2000 && lifestyleScroll < 2250) {
+
+        $(lifestylePagDots[6]).addClass('activeL');
+
+    } else {
+
+        $(lifestylePagDots[6]).removeClass('activeL');
+
+    }    
+
+    if (workmoneyScroll > 2000 && workmoneyScroll < 2250) {
+
+        $(workmoneyPagDots[6]).addClass('activeW');
+
+    } else {
+
+        $(workmoneyPagDots[6]).removeClass('activeW');
+    }
+
+    if (beautyScroll > 2300) {
+        
+        $(beautyPagDots[7]).addClass('activeB');
+
+    } else {
+        
+        $(beautyPagDots[7]).removeClass('activeB');
+    }    
+
+    if (newsScroll > 2300) {
+
+        $(newsPagDots[7]).addClass('activeN');
+
+    } else {
+
+        $(newsPagDots[7]).removeClass('activeN');
+   
+    }    
+
+    if (fashionScroll > 2300) {
+
+        $(fashionPagDots[7]).addClass('activeF');
+
+    } else {
+
+        $(fashionPagDots[7]).removeClass('activeF');
+
+    }    
+
+    if (lifestyleScroll > 2300) {
+
+        $(lifestylePagDots[7]).addClass('activeL');
+
+    } else {
+
+        $(lifestylePagDots[7]).removeClass('activeL');
+
+    }    
+
+    if (workmoneyScroll > 2300) {
+
+       $(workmoneyPagDots[7]).addClass('activeW');
+
+    } else {
+
+        $(workmoneyPagDots[7]).removeClass('activeW');
+
+    }
+
+}, 500);
 
 
 // COLLAPSIBLE ANIMATION FOR 'NOW ON R29' SECTIONS

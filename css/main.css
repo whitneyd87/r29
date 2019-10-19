@@ -3263,6 +3263,11 @@ footer figure {
       padding-bottom: 70px;
     }
 
+    .trending-vids p {
+      font-size: 0.9rem;
+    }
+
+
     .tv {
       width: 25%;
     }
@@ -3273,6 +3278,13 @@ footer figure {
     .tv4-content {
       height: 55%;
       top: 90px;
+    }
+
+    .tv1-content h6,
+    .tv2-content h6,
+    .tv3-content h6,
+    .tv4-content h6 {
+      font-size: 0.5rem;
     }
 
     .trending-vids-container {
@@ -3531,7 +3543,6 @@ footer figure {
       padding-top: 80px;
       width: 50%; 
     }
-
 
 
     /*MISSION*/
