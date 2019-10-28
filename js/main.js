@@ -235,17 +235,14 @@ $('#shop-btn').on('change', function() {
 });
 
 
-
 // ORIGINAL VIDEOS PAGINATION
 	
 
+setInterval(function () {
 
-setInterval( function () {
-    
-    let originalVidScroll = $('.vid-gal').scrollLeft();
+var originalVidScroll = $('.originals .vid-gal').scrollLeft();
 
-
-    if ( originalVidScroll == 0 && originalVidScroll < 200 ) {
+    if (originalVidScroll == 0 && originalVidScroll < 200) {
 
         $(originalVidDots[0]).addClass('activeO');
 
@@ -310,7 +307,83 @@ setInterval( function () {
 
     }
 
-},500);
+}, 200);
+
+
+
+// ARROW NAVIGATION ANIMATION
+    
+
+    // let slideshows = $('body').find('.slideshow');
+
+    // console.log(slideshows);
+
+
+    $('.animate-scroll').each(function() { 
+
+        let arrowRight = $(this).find('.arrow-right');
+        let arrowLeft = $(this).find('.arrow-left');
+        let slideShow = $(this).find('.slideshow');
+        let counter = -1;
+        let scrolling = null;
+
+       $(arrowRight).on('click', function() {
+
+           let continScroll = "-=1000";
+           
+           if (counter < 0 && counter >= -2000) {
+   
+               scrolling = continScroll; 
+
+                $(slideShow).animate({
+                    
+                   left: scrolling
+
+                }, 500);  
+
+                counter -= 1000;    
+                
+            } else {
+
+                scrolling = 0;
+
+            }
+
+            console.log(counter);
+
+        });
+
+        $(arrowLeft).on('click', function(){
+
+           let continScroll = "+=1000";
+        
+            if (counter >= -2001 && counter < -1) {
+
+                scrolling = continScroll;
+
+                $(slideShow).animate({
+                    
+                    left: scrolling
+
+                }, 500); 
+
+                counter += 1000;  
+
+            } else {
+
+                scrolling = 0; 
+            }
+
+            console.log(counter);
+
+        });
+
+    });
+
+
+
+
+    
 
 
 
@@ -333,7 +406,7 @@ var loopThru = function() {
 
     });
 
-    $('.tv figure').on('click', function (e){
+    $('.tv figure').on('click', function(e) {
             
         e.stopPropagation(); 
         
@@ -471,12 +544,6 @@ $('.tv figure').on('click', function () {
     clearInterval(intervalBubble);
 
 });
-
-
-// ARROW ANIMATION
-
-$()
-
 
 
 // SLIDESHOW ANIMATION/PAGINATION FOR SECONDARY ARTICLES IN 'NOW ON R29' SECTION
@@ -886,6 +953,7 @@ setInterval(function() {
 
 
 // COLLAPSIBLE ANIMATION FOR 'NOW ON R29' SECTIONS
+
 
     $(collapsibles).each(function (){
     
