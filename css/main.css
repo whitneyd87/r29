@@ -590,7 +590,7 @@ i {
 .podcast {
   margin: 20px 0;
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 
 .styleCon, 
@@ -1009,7 +1009,8 @@ i {
 }
 
 .originals {
-  padding: 50px 0;
+  padding-top: 50px;
+  width: 100%;
 }
 
 .originals h3 {
@@ -1031,9 +1032,23 @@ i {
 .slideshow {
   align-items: flex-end;
   display: flex;
-  margin: 0 -2000px 0 0;
+  justify-content: space-around;
+  margin: 0 -2400px 0 0;
   position: relative; 
 }
+
+.arrow-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding: 60px 0;
+  width: 50%; 
+}
+
+.originals .arrow-container i {
+    color: white;
+  }
 
 .og-vid {
   display: flex;
@@ -1067,39 +1082,9 @@ i {
   top: 0;
 }
 
-.originals .pagination {
-  align-items: center;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  margin: 50px 0;
-}
-
-.pagination ul {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.originals .pagination li .bullet {
-  align-items: center;
-  background-color: rgba(85,85,85,0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  height: 15px;
-  justify-content: center;
-  margin: 0 15px;
-  text-decoration: none;
-  width: 15px;
-}
-
-.originals .pagination li .bullet.activeO {
-  background-color: rgba(255,65,180,1);
-}
-
 .trending-vids {
   padding: 60px 0;
+  width: 100%;
 }
 
 .trending-vids h3 {
@@ -1660,52 +1645,6 @@ i {
   font-size: 0.6875rem;
   margin: 0;
   vertical-align: bottom;
-}
-
-.arrow-container {
-  display: none;
-}
-
-.now .pagination {
-  align-items: center;
-  display: flex;
-  height: 20px;
-  justify-content: center;
-  margin: 50px 0 100px 0;
-  width: 100%;
-}
-
-.now .pagination li .bullet {
-  align-items: center;
-  background-color: rgba(0,0,0,0.7);
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-block;
-  height: 10px;
-  justify-content: center;
-  margin: 0 10px;
-  text-decoration: none;
-  width: 10px;
-}
-
-.now .pagination li .bullet.activeB {
-  background-color: rgba(252,24,33,1);
-}
-
-.now .pagination li .bullet.activeN {
-  background-color: rgba(255,65,180,1);
-}
-
-.now .pagination li .bullet.activeF {
-  background-color: rgba(255,128,48,1);
-}
-
-.now .pagination li .bullet.activeL {
-  background-color: rgba(12,0,255,1);
-}
-
-.now .pagination li .bullet.activeW {
-  background-color: rgba(32,215,2,1);
 }
 
 
@@ -2841,11 +2780,11 @@ footer figure {
     }
 
     .shop-opt {
-      width: 225px;
+      width: 125px;
     }
 
     .shop-opt-img {
-      height: 225px;
+      height: 125px;
     }
 
     .presented .ft-art h4 {
@@ -3245,18 +3184,6 @@ footer figure {
       padding-top: 60px;
     }
 
-    .originals .arrow-container i {
-      color: white;
-    }
-
-    .pagination {
-      visibility: hidden !important;
-    }
-
-    #og1 {
-      margin-left: 90px;
-    }
-
     .trending-vids h3 {
       padding-bottom: 70px;
     }
@@ -3264,7 +3191,6 @@ footer figure {
     .trending-vids p {
       font-size: 0.9rem;
     }
-
 
     .tv {
       width: 25%;
@@ -3533,15 +3459,6 @@ footer figure {
       width: auto;
     }
 
-    .arrow-container {
-      align-items: center;
-      display: flex;
-      justify-content: space-around;
-      margin: auto;
-      padding-top: 80px;
-      width: 50%; 
-    }
-
 
     /*MISSION*/
 
@@ -3549,6 +3466,7 @@ footer figure {
     .mission {
       padding: 60px 140px;
     }
+
     .mission p {
       font-size: 2.5rem;
       line-height: 2;
