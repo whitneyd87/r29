@@ -237,7 +237,7 @@ header {
   z-index: 100;
 }
 
-header figure {
+#logo {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
@@ -551,7 +551,7 @@ i {
 }
 
 .hero-area h1 {
-  padding-bottom: 85%;
+  padding-bottom: 300px;
 }
 
 .hero-area .hero-article {
@@ -590,7 +590,7 @@ i {
 .podcast {
   margin: 20px 0;
   position: relative;
-  width: 90%;
+  width: 375px;
 }
 
 .styleCon, 
@@ -1693,7 +1693,7 @@ i {
 .shop-cta {
   margin: 20px 0;
   position: relative;
-  width: 90%;
+  width: 375px;
 }
 
 .discoverCon,
@@ -2122,25 +2122,25 @@ footer figure {
     /*HEADER*/
 
 
-    header figure {
-      padding-left: 40px;
-      width: 200px
+    #logo {
+      padding-left: 35px;
+      width: 150px
     }
 
     #search-box {
-      left: 40px;
-      top: 60%;
+      left: 50px;
+      top: 50%;
       width: 50%;
     }
 
     #search i {
-      font-size: 1.2rem;
+      font-size: 0.875rem;
     }
 
     #date {
-      font-size: 1.125rem;
-      left: 40px;
-      top: 90%;
+      font-size: 0.875rem;
+      left: 35px;
+      top: 85%;
     }
 
     .headerScroll {
@@ -2148,8 +2148,8 @@ footer figure {
     }
 
 	  .searchScroll {
-	    transform: translateX(250px) translateY(-80%);
-      -webkit-transform: translateX(250px) translateY(-80%);
+	    transform: translateX(350px) translateY(-50%);
+      -webkit-transform: translateX(350px) translateY(-50%);
 	  }
 
     header .main-nav {
@@ -2161,19 +2161,19 @@ footer figure {
 
 
     .hero-area {
-      height: 600px;
-      transform: translateY(-100px);
-      -webkit-transform: translateY(-100px);
+      height: 550px;
+      transform: translateY(-125px);
+      -webkit-transform: translateY(-125px);
     }
 
     .hero-area h3 {
       font-size: 2rem;
-      padding-top: 150px;
+      padding-top: 140px;
     }
 
     .hero-area h1 {
       font-size: 3.5rem;
-      padding-bottom: 20%;
+      padding-bottom: 60px;
     }
 
 
@@ -2186,50 +2186,13 @@ footer figure {
       -webkit-transform: translateY(-50px);
     }
 
-    .call-to-action h6 {
-      font-size: 1.125rem;
-    }
-
-    .call-to-action h4 {
-      font-size: 1.875rem;
-    }
-
-    .styleCon,
-    .podCon {
-      left: 3%;
-    }
-
-    .pinCon {
-      left: 15%;
-    }
-
-    .styleCon h4 {
-      font-size: 1.5rem;
-    }
-
-    .podCon h4 {
-      font-size: 2.125rem;
-      padding-top: 20px;
-    }
-
-    .style-out-there .btn-container,
-    .pinterest .btn-container,
-    .podcast .btn-container {
-      align-items: center;
-      display: flex;
-      height: 150px;
-      justify-content: center;
-      margin: 0 auto;
-      width: 80%;
-    }
-
     .slider-btns::-webkit-slider-thumb {
-      height: 200px;
-      width: 200px;
+      height: 145px;
+      width: 145px;
     }
 
     .slider-btns::-moz-range-thumb {
-      height: 200px;
+      height: 150px;
     }
 
     .slider-btns::-ms-thumb {
@@ -2245,10 +2208,10 @@ footer figure {
     }
 
     .triangle {
-      border-top: 340px solid transparent;
-      border-left: 340px solid transparent;
-      border-right: 340px solid rgba(0,0,0,0.5);
-      border-bottom: 340px solid rgba(0,0,0,0.5);
+      border-top: 400px solid transparent;
+      border-left: 400px solid transparent;
+      border-right: 400px solid rgba(0,0,0,0.5);
+      border-bottom: 400px solid rgba(0,0,0,0.5);
       top: 0;
       left: 0;
     }
@@ -2431,28 +2394,6 @@ footer figure {
       padding-top: 60px;
     }
 
-    .discover-cta .btn-container,
-    .watch-cta .btn-container,
-    .shop-cta .btn-container {
-      align-items: center;
-      display: flex;
-      height: 150px;
-      justify-content: center;
-      margin: 0 auto;
-      width: 80%;
-    }
-
-    .discoverCon h1,
-    .shopCon h1 {
-      font-size: 4.5rem;
-      padding-left: 100px;
-    }
-
-    .watchCon h1 {
-      font-size: 4.5rem;
-      padding-right: 100px;
-    }
-
 
     /*FOOTER*/
 
@@ -2474,29 +2415,34 @@ footer figure {
     /*HEADER*/
 
 
+
     #logo {
       padding-left: 35px;
+      width: 175px;
     }
 
     #search-box {
     	top: 50%;
-      width: 40%;
+      width: 45%;
     }
 
-    #search i,
     i {
       font-size: 1.5rem;
     }
 
+    #search i {
+      font-size: 1.125rem;
+    }
+    
     #date {
       font-size: 1rem;
     	top: 90%;
     }
 
     .searchScroll {
-	    transform: translateX(250px) translateY(-50%);
-      -webkit-transform: translateX(250px) translateY(-50%);
-      -moz-transform: translateX(250px) translateY(-50%);
+	    transform: translateX(425px) translateY(-50%);
+      -webkit-transform: translateX(425px) translateY(-50%);
+      -moz-transform: translateX(425px) translateY(-50%);
 	  }
 
     header .main-nav {
@@ -2514,7 +2460,7 @@ footer figure {
     }
 
     .hero-area h1 {
-      padding-bottom: 15%;
+      padding-bottom: 13%;
     }
 
 
@@ -2540,7 +2486,7 @@ footer figure {
     .pinterest,
     .podcast {
       margin: 0;
-      width: 32%;
+      width: 300px;
     }
 
     .call-to-action h6 {
@@ -2580,14 +2526,6 @@ footer figure {
       width: 100%;
     }
 
-    .btn-container {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      width: 30%;
-    }
-
     .slider-btns {
       height: 100%;
       width: 100%;
@@ -2595,7 +2533,7 @@ footer figure {
 
     .slider-btns::-webkit-slider-thumb {
       height: 100px;
-      width: 40%;
+      width: 100px;
     }
 
     .slider-btns::-moz-range-thumb {
@@ -2676,7 +2614,14 @@ footer figure {
     }
 
     .triangle {
-      left: -50%;
+      top: -20%;
+      left: -60%;
+    }
+
+    #triangle-container .content {
+      top: 35%;
+      left: 0%;
+      width: 90%;
     }
 
     .sec-art-container,
@@ -2818,7 +2763,7 @@ footer figure {
     .watch-cta,
     .shop-cta {
       margin: 0;
-      width: 32%;
+      width: 300px;
     }
 
     .discover-cta .btn-container,
@@ -2888,7 +2833,7 @@ footer figure {
     /*HEADER*/
 
 
-    header figure {
+    #logo {
       padding-left: 60px;
       width: 150px;
     }
@@ -2924,9 +2869,9 @@ footer figure {
     }
 
     .searchScroll {
-	    transform: translateX(350px) translateY(30%);
-      -webkit-transform: translateX(350px) translateY(30%);
-      -moz-transform: translateX(350px) translateY(30%);
+	    transform: translateX(505px) translateY(30%);
+      -webkit-transform: translateX(505px) translateY(30%);
+      -moz-transform: translateX(505px) translateY(30%);
 	  }
 
     header .main-nav {
@@ -3029,7 +2974,7 @@ footer figure {
     .style-out-there,
     .pinterest,
     .podcast {
-      width: 28%;
+      width: 350px;
     }
 
     .styleCon,
@@ -3065,7 +3010,7 @@ footer figure {
     }
 
     .slider-btns {
-      height: 120px;
+      height: 100px;
     }
 
     .slider-btns::-webkit-slider-thumb {
@@ -3485,7 +3430,7 @@ footer figure {
     .discover-cta,
     .watch-cta,
     .shop-cta {
-      width: 28%;
+      width: 350px;
     }
 
     .discover-cta .btn-container,
