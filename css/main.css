@@ -2607,23 +2607,6 @@ footer figure {
       padding-bottom: 60px;
     }
 
-    .sec-art1,
-    .trend-art1 {
-      height: 450px;
-      width: 50%;
-    }
-
-    .triangle {
-      top: -20%;
-      left: -60%;
-    }
-
-    #triangle-container .content {
-      top: 35%;
-      left: 0%;
-      width: 90%;
-    }
-
     .sec-art-container,
     .trend-art-container {
       align-items: center;
@@ -2634,38 +2617,71 @@ footer figure {
       width: 45%;
     }
 
+    .sec-art1,
+    .trend-art1 {
+      height: 450px;
+      width: 50%;
+    }
+
+    .triangle {
+      top: -20%;
+      left: -51%;
+    }
+
+    #triangle-container .content {
+      top: 50%;
+      left: 0%;
+      width: 90%;
+    }
+
+    .sec-art1 h4 {
+      font-size: 1.25rem;
+    }
+
     .sec-art2, 
     .sec-art3 {
-      height: 220px;
-      padding-top: 0px;
+      height: 210px;
+      padding-top: 10px;
       width: 100%;
     } 
 
-    .sec-art3 {
-      margin-top: 0;
+    .sec-art1 h6,
+    .sec-art2 h6,
+    .sec-art3 h6 {
+      font-size: 0.75rem;
+    }
+
+    .sec-art2 h4,
+    .sec-art3 h4 {
+      font-size: 1.25rem;
     }
 
     .sec-art2 .content {
       background-size: contain;
     }
 
-    .sec-art1 h4 {
-      font-size: 1.5rem;
-    }
-
-    .sec-art2 h6,
-    .sec-art3 h6 {
-      font-size: 0.75rem;
-      padding-top: 0;
+    .sec-art2 h6 {
+      padding: 0 20px;
     }
 
     .sec-art2 h4 {
-      padding: 20px 40px 40px 40px;
+      padding: 20px 20px 20px 20px;
     }
 
-    .sec-art2 h4,
-    .sec-art3 h4 {
-      font-size: 1.25rem;
+    .sec-art3 {
+      margin-top: 0;
+    }
+
+    .sec-art3 .content {
+      padding: 20px;
+    }
+
+    .sec-art3 h6 {
+      padding: 0;
+    }
+
+    .trending-articles h6 {
+      padding: 0 20px;
     }
 
     .trend-art2 {
@@ -2692,7 +2708,7 @@ footer figure {
 
     .trend-art2 h5,
     .trend-art3 h5 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
 
 
