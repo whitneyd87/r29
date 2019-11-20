@@ -77,7 +77,7 @@ $(window).scroll(function(){
  
     let winY = $(window).scrollTop();
 
-    if (winY > 800) {
+    if (winY > 400) {
         
         $('#header').addClass('headerScroll');
         $('#date').css('display', 'none');

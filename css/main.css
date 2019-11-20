@@ -246,8 +246,13 @@ header {
   width: 150px;
 }
 
+header .nav-wrapper {
+	height: auto;
+	width: 30%;
+}
+
 header .main-nav {
-  width: 30%;
+  width: 100%;
 }
 
 header .main-nav ul {
@@ -1376,9 +1381,9 @@ i {
 }
 
 .selected {
-  transform: scale(2);
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
   z-index: 9;
 }
 
@@ -2174,12 +2179,12 @@ footer figure {
       height: 60px;
     }
 
-	  .searchScroll {
-	    transform: translateX(350px) translateY(-50%);
-      -webkit-transform: translateX(350px) translateY(-50%);
-	  }
+	.searchScroll {
+	  transform: translateX(350px) translateY(-50%);
+	  -webkit-transform: translateX(350px) translateY(-50%);
+	}
 
-    header .main-nav {
+    header .nav-wrapper {
       width: 25%;
     }
 
@@ -2464,7 +2469,7 @@ footer figure {
       -moz-transform: translateX(425px) translateY(-50%);
 	  }
 
-    header .main-nav {
+    header .nav-wrapper {
       width: 20%;
     }
 
@@ -3017,9 +3022,12 @@ footer figure {
       width: 150px;
     }
 
+    header .nav-wrapper {
+    	width: 15%;
+    }
+
     header .main-nav {
-      padding-top: 10px;
-      width: 15%;
+      padding-top: 0px;
     }
 
     #search-box {
@@ -3052,10 +3060,6 @@ footer figure {
       -webkit-transform: translateX(505px) translateY(30%);
       -moz-transform: translateX(505px) translateY(30%);
 	  }
-
-    header .main-nav {
-      padding-top: 0;
-    }
 
     @keyframes logoShrink {
       
@@ -3372,9 +3376,9 @@ footer figure {
     }
 
     .tv3 {
-      transform: translateX(15%);
-      -webkit-transform: translateX(15%);
-      -moz-transform: translateX(15%);
+      transform: translateX(20%);
+      -webkit-transform: translateX(20%);
+      -moz-transform: translateX(20%);
     }
 
     @keyframes tvTopBottom {
@@ -3513,6 +3517,19 @@ footer figure {
       }
     }
 
+    .selectedLeft {
+  	  transform: translateX(-55%) scale(1.5);
+	  -webkit-transform: translateX(-55%) scale(1.5);
+	  -moz-transform: translateX(-55%) scale(1.5);
+	  z-index: 9;
+	}
+
+	.selectedRight {
+	  transform: translateX(20%) scale(1.5);
+	  -webkit-transform: translateX(20%) scale(1.5);
+	  -moz-transform: translateX(20%) scale(1.5);
+	  z-index: 9;
+	}
 
     /*SHOPPING*/
 
